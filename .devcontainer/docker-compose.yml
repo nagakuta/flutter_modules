@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  modules:
+    build:
+      context: .
+      dockerfile: modules/Dockerfile
+    volumes:
+      # Dart files
+      - ../.fvm:/workspace/modules/.fvm:cached
+      - ../packages:/workspace/modules/packages:cached
+      - ../analysis_options.yaml:/workspace/modules/analysis_options.yaml:cached
+      - ../all_lint_rules.yaml:/workspace/modules/all_lint_rules.yaml:cached
+      - ../melos.yaml:/workspace/modules/melos.yaml:cached
+      # VSCode settings
+      - ../.vscode:/workspace/.vscode:cached
+      # Git
+      - ../.git:/workspace/modules/.git:cached
+      - ../.gitignore:/workspace/modules/.gitignore:cached
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    env_file:
+      - modules/.dart.env
