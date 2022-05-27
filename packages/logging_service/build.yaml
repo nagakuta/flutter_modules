@@ -1,0 +1,13 @@
+targets:
+  $default:
+    builders:
+      freezed:
+        enabled: true
+        generate_for:
+          include:
+            - lib/src/option.dart
+      mockito:
+        enabled: true
+        generate_for:
+          include:
+            - test/client.dart
