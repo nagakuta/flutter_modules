@@ -1,0 +1,43 @@
+name: modules
+packages:
+  - packages/**
+scripts:
+  # Set up
+  setup:
+    run: melos run setup:dart && melos run setup:flutter
+  setup:dart:
+    run: melos exec -c 1 --fail-fast --no-flutter -- fvm dart pub get
+  setup:flutter:
+    run: melos exec -c 1 --fail-fast --flutter -- fvm flutter pub get
+
+  # Build
+  build:
+    run: melos run build:dart && melos run build:flutter
+  build:dart:
+    run: melos exec -c 1 --fail-fast --no-flutter --file-exists="build.yaml" -- fvm dart pub run build_runner build --delete-conflicting-outputs
+  build:flutter:
+    run: melos exec -c 1 --fail-fast --flutter --file-exists="build.yaml" -- fvm flutter pub run build_runner build --delete-conflicting-outputs
+
+  # Analyze
+  analyze:
+    run: melos run analyze:dart && melos run analyze:flutter
+  analyze:dart:
+    run: melos exec -c 1 --fail-fast --no-flutter -- fvm dart analyze . --fatal-infos
+  analyze:flutter:
+    run: melos exec -c 1 --fail-fast --flutter -- fvm flutter analyze . --fatal-infos
+
+  # Upgrade
+  upgrade:
+    run: melos run upgrade:dart && melos run upgrade:flutter
+  upgrade:dart:
+    run: melos exec -c 1 --no-flutter -- fvm dart pub upgrade --null-safety
+  upgrade:flutter:
+    run: melos exec -c 1 --flutter -- fvm flutter pub upgrade --null-safety
+
+  # Test
+  test:
+    run: melos run test:dart && melos run test:flutter
+  test:dart:
+    run: melos exec -c 1 --fail-fast --no-flutter --dir-exists="test" -- fvm dart test
+  test:flutter:
+    run: melos exec -c 1 --fail-fast --flutter --dir-exists="test" -- fvm flutter test
