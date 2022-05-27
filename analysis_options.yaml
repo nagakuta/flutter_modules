@@ -1,0 +1,12 @@
+include: all_lint_rules.yaml
+analyzer:
+  strong-mode:
+    implicit-casts: false
+    implicit-dynamic: false
+  errors:
+    included_file_warning: ignore
+  exclude:
+    - packages/**/*.freezed.dart
+    - packages/**/*.mocks.dart
+# Additional information about this file can be found at
+# https://dart.dev/guides/language/analysis-options
