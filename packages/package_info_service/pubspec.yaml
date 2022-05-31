@@ -15,9 +15,21 @@ dependencies:
   flutter_web_plugins:
     sdk: flutter
 
+  # Mockito
+  mockito: ^5.2.0
+
+  # Package Info Plus
+  package_info_plus: ^1.4.2
+
   plugin_platform_interface: ^2.1.2
 
+  # Riverpod
+  riverpod: ^1.0.3
+
 dev_dependencies:
+  # Build Runner
+  build_runner: ^2.1.11
+
   flutter_lints: ^2.0.1
 
   flutter_test:
