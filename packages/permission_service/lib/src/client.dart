@@ -34,7 +34,7 @@ abstract class PermissionClient {
   Future<handler.PermissionStatus> getPhotosStatus();
 
   /// The current status of this permission.
-  Future<handler.PermissionStatus> getPhotosAddOnly();
+  Future<handler.PermissionStatus> getPhotosAddOnlyStatus();
 
   /// The current status of this permission.
   Future<handler.PermissionStatus> getRemindersStatus();
@@ -327,7 +327,7 @@ class PermissionClientImpl implements PermissionClient {
       handler.Permission.phone.status;
 
   @override
-  Future<handler.PermissionStatus> getPhotosAddOnly() =>
+  Future<handler.PermissionStatus> getPhotosAddOnlyStatus() =>
       handler.Permission.photosAddOnly.status;
 
   @override
