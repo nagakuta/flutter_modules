@@ -9,6 +9,10 @@ targets:
     builders:
       freezed:
         enabled: true
+        generate_for:
+          include:
+            - lib/src/exception.dart
+            - lib/src/types.dart
       mockito:
         enabled: true
         generate_for:
