@@ -3,6 +3,9 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
+  crashlytics_service
+  firebase_service
+  package_info_service
   permission_service
 )
 
