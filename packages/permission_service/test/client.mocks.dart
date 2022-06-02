@@ -87,11 +87,11 @@ class MockPermissionClient extends _i1.Mock implements _i2.PermissionClient {
               Future<_i4.PermissionStatus>.value(_i4.PermissionStatus.denied))
       as _i3.Future<_i4.PermissionStatus>);
   @override
-  _i3.Future<_i4.PermissionStatus> getPhotosAddOnly() => (super.noSuchMethod(
-          Invocation.method(#getPhotosAddOnly, []),
-          returnValue:
-              Future<_i4.PermissionStatus>.value(_i4.PermissionStatus.denied))
-      as _i3.Future<_i4.PermissionStatus>);
+  _i3.Future<_i4.PermissionStatus> getPhotosAddOnlyStatus() =>
+      (super.noSuchMethod(Invocation.method(#getPhotosAddOnlyStatus, []),
+              returnValue: Future<_i4.PermissionStatus>.value(
+                  _i4.PermissionStatus.denied))
+          as _i3.Future<_i4.PermissionStatus>);
   @override
   _i3.Future<_i4.PermissionStatus> getRemindersStatus() => (super.noSuchMethod(
           Invocation.method(#getRemindersStatus, []),
