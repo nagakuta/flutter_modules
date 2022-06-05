@@ -282,6 +282,73 @@ void main() {
             isA<DeniedPermissionStatus>(),
           );
           expect(service.debugState.unknown, isA<DeniedPermissionStatus>());
+
+          verifyInOrder(
+            <Future<handler.PermissionStatus>>[
+              mockPermissionClient.getCalendarStatus(),
+              mockPermissionClient.getCameraStatus(),
+              mockPermissionClient.getContactsStatus(),
+              mockPermissionClient.getLocationStatus(),
+              mockPermissionClient.getLocationAlwaysStatus(),
+              mockPermissionClient.getLocationWhenInUseStatus(),
+              mockPermissionClient.getMediaLibraryStatus(),
+              mockPermissionClient.getMicrophoneStatus(),
+              mockPermissionClient.getPhoneStatus(),
+              mockPermissionClient.getPhotosStatus(),
+              mockPermissionClient.getPhotosAddOnlyStatus(),
+              mockPermissionClient.getRemindersStatus(),
+              mockPermissionClient.getSensorsStatus(),
+              mockPermissionClient.getSmsStatus(),
+              mockPermissionClient.getSpeechStatus(),
+              mockPermissionClient.getStorageStatus(),
+              mockPermissionClient.getIgnoreBatteryOptimizationsStatus(),
+              mockPermissionClient.getNotificationStatus(),
+              mockPermissionClient.getAccessMediaLocationStatus(),
+              mockPermissionClient.getActivityRecognitionStatus(),
+              mockPermissionClient.getUnknownStatus(),
+              mockPermissionClient.getBluetoothStatus(),
+              mockPermissionClient.getManageExternalStorageStatus(),
+              mockPermissionClient.getSystemAlertWindowStatus(),
+              mockPermissionClient.getRequestInstallPackagesStatus(),
+              mockPermissionClient.getAppTrackingTransparencyStatus(),
+              mockPermissionClient.getCriticalAlertsStatus(),
+              mockPermissionClient.getAccessNotificationPolicyStatus(),
+              mockPermissionClient.getBluetoothScanStatus(),
+              mockPermissionClient.getBluetoothAdvertiseStatus(),
+              mockPermissionClient.getBluetoothConnectStatus(),
+              mockPermissionClient.getCalendarStatus(),
+              mockPermissionClient.getCameraStatus(),
+              mockPermissionClient.getContactsStatus(),
+              mockPermissionClient.getLocationStatus(),
+              mockPermissionClient.getLocationAlwaysStatus(),
+              mockPermissionClient.getLocationWhenInUseStatus(),
+              mockPermissionClient.getMediaLibraryStatus(),
+              mockPermissionClient.getMicrophoneStatus(),
+              mockPermissionClient.getPhoneStatus(),
+              mockPermissionClient.getPhotosStatus(),
+              mockPermissionClient.getPhotosAddOnlyStatus(),
+              mockPermissionClient.getRemindersStatus(),
+              mockPermissionClient.getSensorsStatus(),
+              mockPermissionClient.getSmsStatus(),
+              mockPermissionClient.getSpeechStatus(),
+              mockPermissionClient.getStorageStatus(),
+              mockPermissionClient.getIgnoreBatteryOptimizationsStatus(),
+              mockPermissionClient.getNotificationStatus(),
+              mockPermissionClient.getAccessMediaLocationStatus(),
+              mockPermissionClient.getActivityRecognitionStatus(),
+              mockPermissionClient.getUnknownStatus(),
+              mockPermissionClient.getBluetoothStatus(),
+              mockPermissionClient.getManageExternalStorageStatus(),
+              mockPermissionClient.getSystemAlertWindowStatus(),
+              mockPermissionClient.getRequestInstallPackagesStatus(),
+              mockPermissionClient.getAppTrackingTransparencyStatus(),
+              mockPermissionClient.getCriticalAlertsStatus(),
+              mockPermissionClient.getAccessNotificationPolicyStatus(),
+              mockPermissionClient.getBluetoothScanStatus(),
+              mockPermissionClient.getBluetoothAdvertiseStatus(),
+              mockPermissionClient.getBluetoothConnectStatus(),
+            ],
+          );
         } on Exception catch (exception) {
           fail(exception.toString());
         }
@@ -384,6 +451,73 @@ void main() {
             isA<DeniedPermissionStatus>(),
           );
           expect(service.debugState.unknown, isA<DeniedPermissionStatus>());
+
+          verifyInOrder(
+            <Future<handler.PermissionStatus>>[
+              mockPermissionClient.getCalendarStatus(),
+              mockPermissionClient.getCameraStatus(),
+              mockPermissionClient.getContactsStatus(),
+              mockPermissionClient.getLocationStatus(),
+              mockPermissionClient.getLocationAlwaysStatus(),
+              mockPermissionClient.getLocationWhenInUseStatus(),
+              mockPermissionClient.getMediaLibraryStatus(),
+              mockPermissionClient.getMicrophoneStatus(),
+              mockPermissionClient.getPhoneStatus(),
+              mockPermissionClient.getPhotosStatus(),
+              mockPermissionClient.getPhotosAddOnlyStatus(),
+              mockPermissionClient.getRemindersStatus(),
+              mockPermissionClient.getSensorsStatus(),
+              mockPermissionClient.getSmsStatus(),
+              mockPermissionClient.getSpeechStatus(),
+              mockPermissionClient.getStorageStatus(),
+              mockPermissionClient.getIgnoreBatteryOptimizationsStatus(),
+              mockPermissionClient.getNotificationStatus(),
+              mockPermissionClient.getAccessMediaLocationStatus(),
+              mockPermissionClient.getActivityRecognitionStatus(),
+              mockPermissionClient.getUnknownStatus(),
+              mockPermissionClient.getBluetoothStatus(),
+              mockPermissionClient.getManageExternalStorageStatus(),
+              mockPermissionClient.getSystemAlertWindowStatus(),
+              mockPermissionClient.getRequestInstallPackagesStatus(),
+              mockPermissionClient.getAppTrackingTransparencyStatus(),
+              mockPermissionClient.getCriticalAlertsStatus(),
+              mockPermissionClient.getAccessNotificationPolicyStatus(),
+              mockPermissionClient.getBluetoothScanStatus(),
+              mockPermissionClient.getBluetoothAdvertiseStatus(),
+              mockPermissionClient.getBluetoothConnectStatus(),
+              mockPermissionClient.getCalendarStatus(),
+              mockPermissionClient.getCameraStatus(),
+              mockPermissionClient.getContactsStatus(),
+              mockPermissionClient.getLocationStatus(),
+              mockPermissionClient.getLocationAlwaysStatus(),
+              mockPermissionClient.getLocationWhenInUseStatus(),
+              mockPermissionClient.getMediaLibraryStatus(),
+              mockPermissionClient.getMicrophoneStatus(),
+              mockPermissionClient.getPhoneStatus(),
+              mockPermissionClient.getPhotosStatus(),
+              mockPermissionClient.getPhotosAddOnlyStatus(),
+              mockPermissionClient.getRemindersStatus(),
+              mockPermissionClient.getSensorsStatus(),
+              mockPermissionClient.getSmsStatus(),
+              mockPermissionClient.getSpeechStatus(),
+              mockPermissionClient.getStorageStatus(),
+              mockPermissionClient.getIgnoreBatteryOptimizationsStatus(),
+              mockPermissionClient.getNotificationStatus(),
+              mockPermissionClient.getAccessMediaLocationStatus(),
+              mockPermissionClient.getActivityRecognitionStatus(),
+              mockPermissionClient.getUnknownStatus(),
+              mockPermissionClient.getBluetoothStatus(),
+              mockPermissionClient.getManageExternalStorageStatus(),
+              mockPermissionClient.getSystemAlertWindowStatus(),
+              mockPermissionClient.getRequestInstallPackagesStatus(),
+              mockPermissionClient.getAppTrackingTransparencyStatus(),
+              mockPermissionClient.getCriticalAlertsStatus(),
+              mockPermissionClient.getAccessNotificationPolicyStatus(),
+              mockPermissionClient.getBluetoothScanStatus(),
+              mockPermissionClient.getBluetoothAdvertiseStatus(),
+              mockPermissionClient.getBluetoothConnectStatus(),
+            ],
+          );
         } on Exception catch (exception) {
           fail(exception.toString());
         }
@@ -410,6 +544,10 @@ void main() {
 
             expect(status, isA<DisabledServiceStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.getLocationServiceStatus(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -437,6 +575,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.getLocationServiceStatus(),
+          ).called(1);
         });
       });
 
@@ -459,6 +601,10 @@ void main() {
 
             expect(status, isA<DisabledServiceStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.getLocationAlwaysServiceStatus(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -486,6 +632,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.getLocationAlwaysServiceStatus(),
+          ).called(1);
         });
       });
 
@@ -508,6 +658,10 @@ void main() {
 
             expect(status, isA<DisabledServiceStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.getLocationWhenInUseServiceStatus(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -537,6 +691,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.getLocationWhenInUseServiceStatus(),
+          ).called(1);
         });
       });
 
@@ -559,6 +717,10 @@ void main() {
 
             expect(status, isA<DisabledServiceStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.getPhoneServiceStatus(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -584,6 +746,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.getPhoneServiceStatus(),
+          ).called(1);
         });
       });
     });
@@ -608,6 +774,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestAccessMediaLocationPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -637,6 +807,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestAccessMediaLocationPermission(),
+          ).called(1);
         });
       });
 
@@ -659,6 +833,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestAccessNotificationPolicyPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -688,6 +866,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestAccessNotificationPolicyPermission(),
+          ).called(1);
         });
       });
 
@@ -710,6 +892,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestActivityRecognitionPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -739,6 +925,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestActivityRecognitionPermission(),
+          ).called(1);
         });
       });
 
@@ -761,6 +951,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestAppTrackingTransparencyPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -790,6 +984,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestAppTrackingTransparencyPermission(),
+          ).called(1);
         });
       });
 
@@ -812,6 +1010,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestBluetoothAdvertisePermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -841,6 +1043,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestBluetoothAdvertisePermission(),
+          ).called(1);
         });
       });
 
@@ -863,6 +1069,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestBluetoothConnectPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -890,6 +1100,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestBluetoothConnectPermission(),
+          ).called(1);
         });
       });
 
@@ -912,6 +1126,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestBluetoothPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -939,6 +1157,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestBluetoothPermission(),
+          ).called(1);
         });
       });
 
@@ -961,6 +1183,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestBluetoothScanPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -988,6 +1214,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestBluetoothScanPermission(),
+          ).called(1);
         });
       });
 
@@ -1010,6 +1240,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestCalendarPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -1037,6 +1271,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestCalendarPermission(),
+          ).called(1);
         });
       });
 
@@ -1059,6 +1297,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestCameraPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -1086,6 +1328,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestCameraPermission(),
+          ).called(1);
         });
       });
 
@@ -1108,6 +1354,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestContactsPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -1135,6 +1385,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestContactsPermission(),
+          ).called(1);
         });
       });
 
@@ -1157,6 +1411,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestCriticalAlertsPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -1184,6 +1442,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestCriticalAlertsPermission(),
+          ).called(1);
         });
       });
 
@@ -1206,6 +1468,11 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient
+                  .requestIgnoreBatteryOptimizationsPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -1236,6 +1503,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestIgnoreBatteryOptimizationsPermission(),
+          ).called(1);
         });
       });
 
@@ -1258,6 +1529,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestInstallPackagesPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -1285,6 +1560,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestInstallPackagesPermission(),
+          ).called(1);
         });
       });
 
@@ -1307,6 +1586,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestLocationAlwaysPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -1334,6 +1617,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestLocationAlwaysPermission(),
+          ).called(1);
         });
       });
 
@@ -1356,6 +1643,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestLocationPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -1363,7 +1654,7 @@ void main() {
 
         test("failed", () async {
           when(
-            mockPermissionClient.requestAccessNotificationPolicyPermission(),
+            mockPermissionClient.requestLocationPermission(),
           ).thenThrow(
             Exception("MOCKED REQUEST LOCATION PERMISSION EXCEPTION"),
           );
@@ -1372,7 +1663,7 @@ void main() {
               container.refresh(permissionServiceProvider);
 
           await expectLater(
-            service.requestPermissions(PermissionType.accessNotificationPolicy),
+            service.requestPermissions(PermissionType.location),
             throwsA(
               isException.having(
                 (final Exception exception) => exception.toString(),
@@ -1383,6 +1674,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestLocationPermission(),
+          ).called(1);
         });
       });
 
@@ -1405,6 +1700,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestLocationWhenInUsePermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -1434,6 +1733,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestLocationWhenInUsePermission(),
+          ).called(1);
         });
       });
 
@@ -1456,6 +1759,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestManageExternalStoragePermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -1485,6 +1792,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestManageExternalStoragePermission(),
+          ).called(1);
         });
       });
 
@@ -1507,6 +1818,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestMediaLibraryPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -1534,6 +1849,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestMediaLibraryPermission(),
+          ).called(1);
         });
       });
 
@@ -1556,6 +1875,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestMicrophonePermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -1583,6 +1906,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestMicrophonePermission(),
+          ).called(1);
         });
       });
 
@@ -1605,6 +1932,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestNotificationPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -1632,6 +1963,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestNotificationPermission(),
+          ).called(1);
         });
       });
 
@@ -1654,6 +1989,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestPhonePermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -1681,6 +2020,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestPhonePermission(),
+          ).called(1);
         });
       });
 
@@ -1703,6 +2046,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestPhotosAddOnlyPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -1730,6 +2077,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestPhotosAddOnlyPermission(),
+          ).called(1);
         });
       });
 
@@ -1752,6 +2103,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestPhotosPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -1779,6 +2134,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestPhotosPermission(),
+          ).called(1);
         });
       });
 
@@ -1801,6 +2160,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestRemindersPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -1828,6 +2191,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestRemindersPermission(),
+          ).called(1);
         });
       });
 
@@ -1850,6 +2217,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestSensorsPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -1877,6 +2248,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestSensorsPermission(),
+          ).called(1);
         });
       });
 
@@ -1899,6 +2274,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestSmsPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -1926,6 +2305,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestSmsPermission(),
+          ).called(1);
         });
       });
 
@@ -1948,6 +2331,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestSpeechPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -1975,6 +2362,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestSpeechPermission(),
+          ).called(1);
         });
       });
 
@@ -1997,6 +2388,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestStoragePermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -2024,6 +2419,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestStoragePermission(),
+          ).called(1);
         });
       });
 
@@ -2046,6 +2445,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestSystemAlertWindowPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -2076,6 +2479,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestSystemAlertWindowPermission(),
+          ).called(1);
         });
       });
 
@@ -2098,6 +2505,10 @@ void main() {
 
             expect(status, isA<GrantedPermissionStatus>());
             expect(status, isNotNull);
+
+            verify(
+              mockPermissionClient.requestUnkwownPermission(),
+            ).called(1);
           } on Exception catch (exception) {
             fail(exception.toString());
           }
@@ -2125,6 +2536,10 @@ void main() {
               ),
             ),
           );
+
+          verify(
+            mockPermissionClient.requestUnkwownPermission(),
+          ).called(1);
         });
       });
     });
