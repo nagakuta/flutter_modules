@@ -134,11 +134,6 @@ class PermissionService extends StateNotifier<Permission> {
   Future<PermissionStatus> requestPermissions(
     final PermissionType type,
   ) async {
-    final PermissionStatus status = await _getPermissionStatus(type);
-    if (status is GrantedPermissionStatus) {
-      return status;
-    }
-
     late PermissionStatus permissionStatus;
     switch (type) {
       case PermissionType.calendar:
