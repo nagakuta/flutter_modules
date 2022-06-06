@@ -9,6 +9,9 @@ targets:
     builders:
       freezed:
         enabled: true
+        generate_for:
+          include:
+            - lib/src/method/method.dart
       mockito:
         enabled: true
         generate_for:
