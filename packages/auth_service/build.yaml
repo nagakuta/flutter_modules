@@ -12,6 +12,7 @@ targets:
         generate_for:
           include:
             - lib/src/method/method.dart
+            - lib/src/exception.dart
       mockito:
         enabled: true
         generate_for:
