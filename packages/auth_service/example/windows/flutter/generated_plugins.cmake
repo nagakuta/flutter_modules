@@ -4,6 +4,9 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   auth_service
+  crashlytics_service
+  firebase_service
+  package_info_service
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST
