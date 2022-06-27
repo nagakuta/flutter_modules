@@ -81,8 +81,11 @@ class CrashlyticsClientImpl implements CrashlyticsClient {
 final Provider<CrashlyticsClient> crashlyticsClientProvider =
     Provider<CrashlyticsClient>(
   (final _) {
-    final FirebaseCrashlytics crashlytics = FirebaseCrashlytics.instance
-      ..setCrashlyticsCollectionEnabled(!kDebugMode);
+    final FirebaseCrashlytics crashlytics = FirebaseCrashlytics.instance;
+
+    if (!kIsWeb) {
+      crashlytics.setCrashlyticsCollectionEnabled(!kDebugMode);
+    }
 
     return CrashlyticsClientImpl(crashlytics: crashlytics);
   },
