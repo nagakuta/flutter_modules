@@ -1,6 +1,6 @@
 name: analytics_service
 description: A new Flutter package project.
-version: 0.1.0
+version: 0.1.0+1
 homepage: https://github.com/nagakuta
 publish_to: https://dart.cloudsmith.io/nagakuta_flutter/modules/
 
@@ -14,10 +14,10 @@ dependencies:
     hosted:
       url: https://dart.cloudsmith.io/nagakuta_flutter/modules/
       name: crashlytics_service
-    version: ^0.1.0+1
+    version: ^0.1.1+1
 
   # Firebase Analytics
-  firebase_analytics: ^9.1.9
+  firebase_analytics: ^9.1.10
 
   # Firebase Service
   firebase_service:
@@ -34,7 +34,7 @@ dependencies:
     hosted:
       url: https://dart.cloudsmith.io/nagakuta_flutter/modules/
       name: logging_service
-    version: ^0.1.0
+    version: ^0.1.0+1
 
   # Mockito
   mockito: ^5.2.0
