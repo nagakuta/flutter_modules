@@ -9,3 +9,7 @@
 ## 0.1.1
 
 * Disabled Crashlytics collection on web.
+
+## 0.1.1+1
+
+* Upgrade dependent packages.
