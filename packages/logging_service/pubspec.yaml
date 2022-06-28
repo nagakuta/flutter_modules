@@ -1,6 +1,6 @@
 name: logging_service
 description: Module of Logging service.
-version: 0.1.0
+version: 0.1.0+1
 homepage: https://github.com/nagakuta
 publish_to: https://dart.cloudsmith.io/nagakuta_flutter/modules/
 
@@ -28,4 +28,4 @@ dev_dependencies:
   freezed: ^2.0.3+1
 
   # Test
-  test: ^1.21.1
+  test: ^1.21.3
