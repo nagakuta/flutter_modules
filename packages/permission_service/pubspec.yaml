@@ -1,6 +1,6 @@
 name: permission_service
 description: A new Flutter plugin project.
-version: 0.1.0
+version: 0.1.0+1
 homepage: https://github.com/nagakuta
 publish_to: https://dart.cloudsmith.io/nagakuta_flutter/modules/
 
@@ -14,14 +14,14 @@ dependencies:
     hosted:
       url: https://dart.cloudsmith.io/nagakuta_flutter/modules/
       name: analytics_service
-    version: ^0.1.0
+    version: ^0.1.0+1
 
   # Crashlytics Service
   crashlytics_service:
     hosted:
       url: https://dart.cloudsmith.io/nagakuta_flutter/modules/
       name: crashlytics_service
-    version: ^0.1.0+1
+    version: ^0.1.1+1
 
   flutter:
     sdk: flutter
@@ -36,7 +36,7 @@ dependencies:
   mockito: ^5.2.0
 
   # Permission Handler
-  permission_handler: ^9.2.0
+  permission_handler: ^10.0.0
 
   plugin_platform_interface: ^2.1.2
 

@@ -1,6 +1,6 @@
 name: firebase_service
 description: A new Flutter plugin project.
-version: 0.1.0
+version: 0.1.0+1
 homepage: https://github.com/nagakuta
 publish_to: https://dart.cloudsmith.io/nagakuta_flutter/modules/
 
@@ -10,10 +10,10 @@ environment:
 
 dependencies:
   # Firebase Core
-  firebase_core: ^1.17.1
+  firebase_core: ^1.18.0
 
   # Firebase Core Platform Interface
-  firebase_core_platform_interface: ^4.4.0
+  firebase_core_platform_interface: ^4.4.1
 
   flutter:
     sdk: flutter
@@ -26,7 +26,7 @@ dependencies:
     hosted:
       url: https://dart.cloudsmith.io/nagakuta_flutter/modules/
       name: logging_service
-    version: ^0.1.0
+    version: ^0.1.0+1
 
   # Mockito
   mockito: ^5.2.0
