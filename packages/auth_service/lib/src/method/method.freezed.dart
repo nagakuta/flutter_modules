@@ -76,6 +76,18 @@ mixin _$AuthMethod {
     TResult Function(PhoneAuthMethod value)? phone,
   }) =>
       throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AnonymousAuthMethod value)? anonymous,
+    TResult Function(EmailAuthMethod value)? email,
+    TResult Function(GoogleAuthMethod value)? google,
+    TResult Function(FacebookAuthMethod value)? facebook,
+    TResult Function(AppleAuthMethod value)? apple,
+    TResult Function(TwitterAuthMethod value)? twitter,
+    TResult Function(PhoneAuthMethod value)? phone,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -208,6 +220,24 @@ class _$AnonymousAuthMethod extends AnonymousAuthMethod {
     TResult Function(PhoneAuthMethod value)? phone,
   }) {
     return anonymous?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AnonymousAuthMethod value)? anonymous,
+    TResult Function(EmailAuthMethod value)? email,
+    TResult Function(GoogleAuthMethod value)? google,
+    TResult Function(FacebookAuthMethod value)? facebook,
+    TResult Function(AppleAuthMethod value)? apple,
+    TResult Function(TwitterAuthMethod value)? twitter,
+    TResult Function(PhoneAuthMethod value)? phone,
+    required TResult orElse(),
+  }) {
+    if (anonymous != null) {
+      return anonymous(this);
+    }
+    return orElse();
   }
 }
 
@@ -366,6 +396,24 @@ class _$EmailAuthMethod extends EmailAuthMethod {
   }) {
     return email?.call(this);
   }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AnonymousAuthMethod value)? anonymous,
+    TResult Function(EmailAuthMethod value)? email,
+    TResult Function(GoogleAuthMethod value)? google,
+    TResult Function(FacebookAuthMethod value)? facebook,
+    TResult Function(AppleAuthMethod value)? apple,
+    TResult Function(TwitterAuthMethod value)? twitter,
+    TResult Function(PhoneAuthMethod value)? phone,
+    required TResult orElse(),
+  }) {
+    if (email != null) {
+      return email(this);
+    }
+    return orElse();
+  }
 }
 
 abstract class EmailAuthMethod extends AuthMethod {
@@ -374,8 +422,8 @@ abstract class EmailAuthMethod extends AuthMethod {
       required final String password}) = _$EmailAuthMethod;
   const EmailAuthMethod._() : super._();
 
-  String get email => throw _privateConstructorUsedError;
-  String get password => throw _privateConstructorUsedError;
+  String get email;
+  String get password;
   @JsonKey(ignore: true)
   _$$EmailAuthMethodCopyWith<_$EmailAuthMethod> get copyWith =>
       throw _privateConstructorUsedError;
@@ -495,6 +543,24 @@ class _$GoogleAuthMethod extends GoogleAuthMethod {
     TResult Function(PhoneAuthMethod value)? phone,
   }) {
     return google?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AnonymousAuthMethod value)? anonymous,
+    TResult Function(EmailAuthMethod value)? email,
+    TResult Function(GoogleAuthMethod value)? google,
+    TResult Function(FacebookAuthMethod value)? facebook,
+    TResult Function(AppleAuthMethod value)? apple,
+    TResult Function(TwitterAuthMethod value)? twitter,
+    TResult Function(PhoneAuthMethod value)? phone,
+    required TResult orElse(),
+  }) {
+    if (google != null) {
+      return google(this);
+    }
+    return orElse();
   }
 }
 
@@ -618,6 +684,24 @@ class _$FacebookAuthMethod extends FacebookAuthMethod {
   }) {
     return facebook?.call(this);
   }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AnonymousAuthMethod value)? anonymous,
+    TResult Function(EmailAuthMethod value)? email,
+    TResult Function(GoogleAuthMethod value)? google,
+    TResult Function(FacebookAuthMethod value)? facebook,
+    TResult Function(AppleAuthMethod value)? apple,
+    TResult Function(TwitterAuthMethod value)? twitter,
+    TResult Function(PhoneAuthMethod value)? phone,
+    required TResult orElse(),
+  }) {
+    if (facebook != null) {
+      return facebook(this);
+    }
+    return orElse();
+  }
 }
 
 abstract class FacebookAuthMethod extends AuthMethod {
@@ -739,6 +823,24 @@ class _$AppleAuthMethod extends AppleAuthMethod {
     TResult Function(PhoneAuthMethod value)? phone,
   }) {
     return apple?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AnonymousAuthMethod value)? anonymous,
+    TResult Function(EmailAuthMethod value)? email,
+    TResult Function(GoogleAuthMethod value)? google,
+    TResult Function(FacebookAuthMethod value)? facebook,
+    TResult Function(AppleAuthMethod value)? apple,
+    TResult Function(TwitterAuthMethod value)? twitter,
+    TResult Function(PhoneAuthMethod value)? phone,
+    required TResult orElse(),
+  }) {
+    if (apple != null) {
+      return apple(this);
+    }
+    return orElse();
   }
 }
 
@@ -911,6 +1013,24 @@ class _$TwitterAuthMethod extends TwitterAuthMethod {
   }) {
     return twitter?.call(this);
   }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AnonymousAuthMethod value)? anonymous,
+    TResult Function(EmailAuthMethod value)? email,
+    TResult Function(GoogleAuthMethod value)? google,
+    TResult Function(FacebookAuthMethod value)? facebook,
+    TResult Function(AppleAuthMethod value)? apple,
+    TResult Function(TwitterAuthMethod value)? twitter,
+    TResult Function(PhoneAuthMethod value)? phone,
+    required TResult orElse(),
+  }) {
+    if (twitter != null) {
+      return twitter(this);
+    }
+    return orElse();
+  }
 }
 
 abstract class TwitterAuthMethod extends AuthMethod {
@@ -920,9 +1040,9 @@ abstract class TwitterAuthMethod extends AuthMethod {
       required final String redirectURI}) = _$TwitterAuthMethod;
   const TwitterAuthMethod._() : super._();
 
-  String get apiKey => throw _privateConstructorUsedError;
-  String get apiSecretKey => throw _privateConstructorUsedError;
-  String get redirectURI => throw _privateConstructorUsedError;
+  String get apiKey;
+  String get apiSecretKey;
+  String get redirectURI;
   @JsonKey(ignore: true)
   _$$TwitterAuthMethodCopyWith<_$TwitterAuthMethod> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1079,6 +1199,24 @@ class _$PhoneAuthMethod extends PhoneAuthMethod {
   }) {
     return phone?.call(this);
   }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AnonymousAuthMethod value)? anonymous,
+    TResult Function(EmailAuthMethod value)? email,
+    TResult Function(GoogleAuthMethod value)? google,
+    TResult Function(FacebookAuthMethod value)? facebook,
+    TResult Function(AppleAuthMethod value)? apple,
+    TResult Function(TwitterAuthMethod value)? twitter,
+    TResult Function(PhoneAuthMethod value)? phone,
+    required TResult orElse(),
+  }) {
+    if (phone != null) {
+      return phone(this);
+    }
+    return orElse();
+  }
 }
 
 abstract class PhoneAuthMethod extends AuthMethod {
@@ -1087,8 +1225,8 @@ abstract class PhoneAuthMethod extends AuthMethod {
       required final String smsCode}) = _$PhoneAuthMethod;
   const PhoneAuthMethod._() : super._();
 
-  String get verificationId => throw _privateConstructorUsedError;
-  String get smsCode => throw _privateConstructorUsedError;
+  String get verificationId;
+  String get smsCode;
   @JsonKey(ignore: true)
   _$$PhoneAuthMethodCopyWith<_$PhoneAuthMethod> get copyWith =>
       throw _privateConstructorUsedError;

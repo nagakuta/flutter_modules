@@ -191,8 +191,8 @@ abstract class ShoutLogOption extends LogOption {
       final StackTrace? stackTrace}) = _$ShoutLogOption;
   const ShoutLogOption._() : super._();
 
-  Object get error => throw _privateConstructorUsedError;
-  StackTrace? get stackTrace => throw _privateConstructorUsedError;
+  Object get error;
+  StackTrace? get stackTrace;
   @JsonKey(ignore: true)
   _$$ShoutLogOptionCopyWith<_$ShoutLogOption> get copyWith =>
       throw _privateConstructorUsedError;
@@ -323,8 +323,8 @@ abstract class SevereLogOption extends LogOption {
       final StackTrace? stackTrace}) = _$SevereLogOption;
   const SevereLogOption._() : super._();
 
-  Object get error => throw _privateConstructorUsedError;
-  StackTrace? get stackTrace => throw _privateConstructorUsedError;
+  Object get error;
+  StackTrace? get stackTrace;
   @JsonKey(ignore: true)
   _$$SevereLogOptionCopyWith<_$SevereLogOption> get copyWith =>
       throw _privateConstructorUsedError;
@@ -456,8 +456,8 @@ abstract class WarningLogOption extends LogOption {
       final StackTrace? stackTrace}) = _$WarningLogOption;
   const WarningLogOption._() : super._();
 
-  Exception get exception => throw _privateConstructorUsedError;
-  StackTrace? get stackTrace => throw _privateConstructorUsedError;
+  Exception get exception;
+  StackTrace? get stackTrace;
   @JsonKey(ignore: true)
   _$$WarningLogOptionCopyWith<_$WarningLogOption> get copyWith =>
       throw _privateConstructorUsedError;
@@ -575,7 +575,7 @@ abstract class InfoLogOption extends LogOption {
       _$InfoLogOption;
   const InfoLogOption._() : super._();
 
-  String get message => throw _privateConstructorUsedError;
+  String get message;
   @JsonKey(ignore: true)
   _$$InfoLogOptionCopyWith<_$InfoLogOption> get copyWith =>
       throw _privateConstructorUsedError;
