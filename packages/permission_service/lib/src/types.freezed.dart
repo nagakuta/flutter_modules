@@ -1071,74 +1071,67 @@ abstract class _Permission extends Permission {
   const _Permission._() : super._();
 
   @override
-  PermissionStatus get calendar => throw _privateConstructorUsedError;
+  PermissionStatus get calendar;
   @override
-  PermissionStatus get camera => throw _privateConstructorUsedError;
+  PermissionStatus get camera;
   @override
-  PermissionStatus get contacts => throw _privateConstructorUsedError;
+  PermissionStatus get contacts;
   @override
-  PermissionStatus get location => throw _privateConstructorUsedError;
+  PermissionStatus get location;
   @override
-  PermissionStatus get locationAlways => throw _privateConstructorUsedError;
+  PermissionStatus get locationAlways;
   @override
-  PermissionStatus get locationWhenInUse => throw _privateConstructorUsedError;
+  PermissionStatus get locationWhenInUse;
   @override
-  PermissionStatus get mediaLibrary => throw _privateConstructorUsedError;
+  PermissionStatus get mediaLibrary;
   @override
-  PermissionStatus get microphone => throw _privateConstructorUsedError;
+  PermissionStatus get microphone;
   @override
-  PermissionStatus get phone => throw _privateConstructorUsedError;
+  PermissionStatus get phone;
   @override
-  PermissionStatus get photos => throw _privateConstructorUsedError;
+  PermissionStatus get photos;
   @override
-  PermissionStatus get photosAddOnly => throw _privateConstructorUsedError;
+  PermissionStatus get photosAddOnly;
   @override
-  PermissionStatus get reminders => throw _privateConstructorUsedError;
+  PermissionStatus get reminders;
   @override
-  PermissionStatus get sensors => throw _privateConstructorUsedError;
+  PermissionStatus get sensors;
   @override
-  PermissionStatus get sms => throw _privateConstructorUsedError;
+  PermissionStatus get sms;
   @override
-  PermissionStatus get speech => throw _privateConstructorUsedError;
+  PermissionStatus get speech;
   @override
-  PermissionStatus get storage => throw _privateConstructorUsedError;
+  PermissionStatus get storage;
   @override
-  PermissionStatus get ignoreBatteryOptimizations =>
-      throw _privateConstructorUsedError;
+  PermissionStatus get ignoreBatteryOptimizations;
   @override
-  PermissionStatus get notification => throw _privateConstructorUsedError;
+  PermissionStatus get notification;
   @override
-  PermissionStatus get accessMediaLocation =>
-      throw _privateConstructorUsedError;
+  PermissionStatus get accessMediaLocation;
   @override
-  PermissionStatus get activityRecognition =>
-      throw _privateConstructorUsedError;
+  PermissionStatus get activityRecognition;
   @override
-  PermissionStatus get unknown => throw _privateConstructorUsedError;
+  PermissionStatus get unknown;
   @override
-  PermissionStatus get bluetooth => throw _privateConstructorUsedError;
+  PermissionStatus get bluetooth;
   @override
-  PermissionStatus get manageExternalStorage =>
-      throw _privateConstructorUsedError;
+  PermissionStatus get manageExternalStorage;
   @override
-  PermissionStatus get systemAlertWindow => throw _privateConstructorUsedError;
+  PermissionStatus get systemAlertWindow;
   @override
-  PermissionStatus get requestInstallPackages =>
-      throw _privateConstructorUsedError;
+  PermissionStatus get requestInstallPackages;
   @override
-  PermissionStatus get appTrackingTransparency =>
-      throw _privateConstructorUsedError;
+  PermissionStatus get appTrackingTransparency;
   @override
-  PermissionStatus get criticalAlerts => throw _privateConstructorUsedError;
+  PermissionStatus get criticalAlerts;
   @override
-  PermissionStatus get accessNotificationPolicy =>
-      throw _privateConstructorUsedError;
+  PermissionStatus get accessNotificationPolicy;
   @override
-  PermissionStatus get bluetoothScan => throw _privateConstructorUsedError;
+  PermissionStatus get bluetoothScan;
   @override
-  PermissionStatus get bluetoothAdvertise => throw _privateConstructorUsedError;
+  PermissionStatus get bluetoothAdvertise;
   @override
-  PermissionStatus get bluetoothConnect => throw _privateConstructorUsedError;
+  PermissionStatus get bluetoothConnect;
   @override
   @JsonKey(ignore: true)
   _$$_PermissionCopyWith<_$_Permission> get copyWith =>

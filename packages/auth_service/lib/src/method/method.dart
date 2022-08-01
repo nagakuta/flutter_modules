@@ -3,7 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'method.freezed.dart';
 
 /// AuthMethod
-@Freezed(map: FreezedMapOptions(maybeMap: false))
+@freezed
 class AuthMethod with _$AuthMethod {
   // ignore: public_member_api_docs
   const factory AuthMethod.anonymous() = AnonymousAuthMethod;
