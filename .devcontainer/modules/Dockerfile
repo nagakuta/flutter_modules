@@ -9,7 +9,7 @@ WORKDIR /workspace/modules
 
 # Install Flutter
 ARG PATH=/root/.pub-cache/bin:$PATH
-ARG FLUTTER_VERSION=3.0.1
+ARG FLUTTER_VERSION=3.0.4
 RUN dart pub global activate melos --verbose && \
     dart pub global activate fvm --verbose && \
     fvm doctor --verbose && \
