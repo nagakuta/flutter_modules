@@ -9,19 +9,65 @@ environment:
   flutter: ">=2.5.0"
 
 dependencies:
+  # Analytics Service
+  analytics_service:
+    hosted:
+      url: https://dart.cloudsmith.io/nagakuta_flutter/modules/
+      name: analytics_service
+    version: ^0.1.0+2
+
+  # Crashlytics Service
+  crashlytics_service:
+    hosted:
+      url: https://dart.cloudsmith.io/nagakuta_flutter/modules/
+      name: crashlytics_service
+    version: ^0.1.1+2
+
+  # Firebase Service
+  firebase_service:
+    hosted:
+      url: https://dart.cloudsmith.io/nagakuta_flutter/modules/
+      name: firebase_service
+    version: ^0.1.0+2
+
   flutter:
     sdk: flutter
 
   flutter_web_plugins:
     sdk: flutter
 
+  # Freezed Annotation
+  freezed_annotation: ^2.1.0
+
+  # Image Picker
+  image_picker: ^0.8.5+3
+
+  # Permission Service
+  permission_service:
+    hosted:
+      url: https://dart.cloudsmith.io/nagakuta_flutter/modules/
+      name: permission_service
+    version: ^0.1.0+2
+
   plugin_platform_interface: ^2.1.2
 
+  # Riverpod
+  riverpod: ^1.0.3
+
 dev_dependencies:
+  # Build Runner
+  build_runner: ^2.2.0
+
   flutter_lints: ^2.0.1
 
   flutter_test:
     sdk: flutter
+
+  # Freezed
+  freezed: ^2.1.0+1
+
+  # Mockito
+  mockito: ^5.3.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -40,14 +86,14 @@ flutter:
   # adding or updating assets for this project.
   plugin:
     platforms:
-    # This plugin project was generated without specifying any
-    # platforms with the `--platform` argument. If you see the `some_platform` map below, remove it and
-    # then add platforms following the instruction here:
-    # https://flutter.dev/docs/development/packages-and-plugins/developing-packages#plugin-platforms
-    # -------------------
+      # This plugin project was generated without specifying any
+      # platforms with the `--platform` argument. If you see the `some_platform` map below, remove it and
+      # then add platforms following the instruction here:
+      # https://flutter.dev/docs/development/packages-and-plugins/developing-packages#plugin-platforms
+      # -------------------
       some_platform:
         pluginClass: somePluginClass
-    # -------------------
+      # -------------------
       android:
         package: com.github.nagakuta.gallery_service
         pluginClass: GalleryServicePlugin

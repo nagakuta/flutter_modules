@@ -3,7 +3,12 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
+  crashlytics_service
+  firebase_service
   gallery_service
+  package_info_service
+  permission_handler_windows
+  permission_service
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST
