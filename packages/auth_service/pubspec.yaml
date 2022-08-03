@@ -1,6 +1,6 @@
 name: auth_service
 description: A new Flutter package project.
-version: 0.1.0+1
+version: 0.1.0+2
 homepage: https://github.com/nagakuta
 publish_to: https://dart.cloudsmith.io/nagakuta_flutter/modules/
 
@@ -14,48 +14,48 @@ dependencies:
     hosted:
       url: https://dart.cloudsmith.io/nagakuta_flutter/modules/
       name: analytics_service
-    version: ^0.1.0+1
+    version: ^0.1.0+2
 
   # Crashlytics Service
   crashlytics_service:
     hosted:
       url: https://dart.cloudsmith.io/nagakuta_flutter/modules/
       name: crashlytics_service
-    version: ^0.1.1+1
+    version: ^0.1.1+2
 
   # Crypto
   crypto: ^3.0.2
 
   # Firebase Auth
-  firebase_auth: ^3.3.20
+  firebase_auth: ^3.6.1
 
   # Firebase Auth Platform Interface
-  firebase_auth_platform_interface: ^6.2.8
+  firebase_auth_platform_interface: ^6.5.1
 
   # Firebase Service
   firebase_service:
     hosted:
       url: https://dart.cloudsmith.io/nagakuta_flutter/modules/
       name: firebase_service
-    version: ^0.1.0
+    version: ^0.1.0+2
 
   flutter:
     sdk: flutter
 
   # Flutter Facebook Auth
-  flutter_facebook_auth: ^4.3.4+2
+  flutter_facebook_auth: ^4.4.0+1
 
   flutter_web_plugins:
     sdk: flutter
 
   # Freezed Annotation
-  freezed_annotation: ^2.0.3
+  freezed_annotation: ^2.1.0
 
   # Google Sign In
-  google_sign_in: ^5.3.3
+  google_sign_in: ^5.4.0
 
   # Mockito
-  mockito: ^5.2.0
+  mockito: ^5.3.0
 
   plugin_platform_interface: ^2.1.2
 
@@ -63,7 +63,7 @@ dependencies:
   riverpod: ^1.0.3
 
   # Sign In With Apple
-  sign_in_with_apple: ^4.0.0
+  sign_in_with_apple: ^4.1.0
 
   # State Notifier
   state_notifier: ^0.7.2+1
@@ -73,7 +73,7 @@ dependencies:
 
 dev_dependencies:
   # Build Runner
-  build_runner: ^2.1.11
+  build_runner: ^2.2.0
 
   flutter_lints: ^2.0.1
 
@@ -81,7 +81,7 @@ dev_dependencies:
     sdk: flutter
 
   # Freezed
-  freezed: ^2.0.3+1
+  freezed: ^2.1.0+1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -100,14 +100,14 @@ flutter:
   # adding or updating assets for this project.
   plugin:
     platforms:
-    # This plugin project was generated without specifying any
-    # platforms with the `--platform` argument. If you see the `some_platform` map below, remove it and
-    # then add platforms following the instruction here:
-    # https://flutter.dev/docs/development/packages-and-plugins/developing-packages#plugin-platforms
-    # -------------------
+      # This plugin project was generated without specifying any
+      # platforms with the `--platform` argument. If you see the `some_platform` map below, remove it and
+      # then add platforms following the instruction here:
+      # https://flutter.dev/docs/development/packages-and-plugins/developing-packages#plugin-platforms
+      # -------------------
       some_platform:
         pluginClass: somePluginClass
-    # -------------------
+      # -------------------
       android:
         package: com.github.nagakuta.auth_service
         pluginClass: AuthServicePlugin
