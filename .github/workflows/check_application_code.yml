@@ -1,0 +1,25 @@
+name: Check Application Code
+on:
+  pull_request_target:
+    types:
+      - opened
+      - reopened
+      - synchronize
+    branches:
+      - stable
+      - develop
+      - feature/**/main
+jobs:
+  check-application-code:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 2
+    - name: Setup Application
+      uses: ./.github/actions/setup/flutter
+    - name: Analyze
+      run: melos run analyze
+    - name: Test
+      run: melos run test

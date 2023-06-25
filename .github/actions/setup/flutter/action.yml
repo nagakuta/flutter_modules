@@ -1,0 +1,10 @@
+name: Setup Flutter Application
+runs:
+  using: composite
+  steps:
+  - name: Setup FVM
+    uses: ./.github/actions/setup/flutter/steps/setup_flutter_sdk
+  - name: Install Melos
+    run: fvm dart pub global activate melos
+  - name: Bootstrap
+    run: melos bootstrap

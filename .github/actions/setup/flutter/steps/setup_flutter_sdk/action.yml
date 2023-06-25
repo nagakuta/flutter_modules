@@ -1,0 +1,10 @@
+name: Setup Flutter SDK using FVM
+runs:
+  using: composite
+  steps:
+  - name: Setup Dart SDK
+    uses: dart-lang/setup-dart@v1
+  - name: Install FVM
+    run: dart pub global activate fvm
+  - name: Install
+    run: fvm install
