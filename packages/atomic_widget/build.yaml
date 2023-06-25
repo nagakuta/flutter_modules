@@ -11,3 +11,4 @@ targets:
           include:
             - lib/src/internal/adaptive_view/types.dart
             - lib/src/internal/device_size.dart
+            - lib/src/internal/exception.dart
