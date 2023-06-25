@@ -1,0 +1,13 @@
+targets:
+  $default:
+    sources:
+      - $package$
+      - lib/$lib$
+      - lib/**.dart
+    builders:
+      freezed:
+        enabled: false
+      mockito:
+        enabled: false
+      riverpod_generator:
+        enabled: false
