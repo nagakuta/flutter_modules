@@ -6,8 +6,8 @@ targets:
       - lib/**.dart
     builders:
       freezed:
-        enabled: false
-      mockito:
-        enabled: false
-      riverpod_generator:
-        enabled: false
+        enabled: true
+        generate_for:
+          include:
+            - lib/src/internal/adaptive_view/types.dart
+            - lib/src/internal/device_size.dart
