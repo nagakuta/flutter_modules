@@ -6,6 +6,9 @@
 # Env files
 **.env**
 
+# Mason
+.mason/
+
 # pubspec_overrides.yaml
 pubspec_overrides.yaml
 

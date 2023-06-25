@@ -1,0 +1,18 @@
+{
+  "bricks": {
+    "dart_package": {
+      "git": {
+        "url": "https://github.com/nagakuta/flutter_templates.git",
+        "path": "dart_package",
+        "ref": "2decd6418f32ebb9e4fd0e4241bf9741c141ca59"
+      }
+    },
+    "flutter_plugin": {
+      "git": {
+        "url": "https://github.com/nagakuta/flutter_templates.git",
+        "path": "flutter_plugin",
+        "ref": "2decd6418f32ebb9e4fd0e4241bf9741c141ca59"
+      }
+    }
+  }
+}
