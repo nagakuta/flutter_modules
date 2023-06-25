@@ -12,16 +12,34 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # Flutter Riverpod
+  flutter_riverpod: ^2.0.0
+
   flutter_web_plugins:
     sdk: flutter
+
+  # Freezed Annotation
+  freezed_annotation: ^2.0.0
+
+  # Golden Toolkit
+  golden_toolkit: ^0.15.0
+
+  # Meta
+  meta: ^1.0.0
 
   plugin_platform_interface: ^2.0.0
 
 dev_dependencies:
+  # Build Runner
+  build_runner: ^2.0.0
+
   flutter_lints: ^3.0.0
 
   flutter_test:
     sdk: flutter
+
+  # Freezed
+  freezed: ^2.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
