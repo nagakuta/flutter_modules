@@ -1,0 +1,127 @@
+name: modules
+sdkPath: .fvm/flutter_sdk
+
+# Packages
+packages:
+  - packages/**
+
+# Command
+command:
+  bootstrap:
+    hooks:
+      pre: melos clean
+    usePubspecOverrides: true
+
+# Scripts
+scripts:
+  # Build
+  build:
+    run: fvm dart pub run build_runner build --delete-conflicting-outputs
+    exec:
+      orderDependents: true
+    packageFilters:
+      fileExists: "build.yaml"
+  build:all:
+    run: fvm dart pub run build_runner build --delete-conflicting-outputs
+    exec:
+      concurrency: 5
+    packageFilters:
+      fileExists: "build.yaml"
+  clean_build:
+    run: |
+      fvm dart pub run build_runner clean && \
+      fvm dart pub run build_runner build --delete-conflicting-outputs
+    exec:
+      orderDependents: true
+    packageFilters:
+      fileExists: "build.yaml"
+  clean_build:all:
+    run: |
+      fvm dart pub run build_runner clean && \
+      fvm dart pub run build_runner build --delete-conflicting-outputs
+    exec:
+      concurrency: 5
+    packageFilters:
+      fileExists: "build.yaml"
+
+  # Analyze
+  analyze:
+    run: fvm dart analyze . --fatal-infos
+    exec:
+      concurrency: 5
+
+  # Upgrade
+  upgrade:deep:
+    run: |
+      melos run upgrade:major_versions && \
+      melos run upgrade
+  upgrade:with_build:
+    run: |
+      melos run upgrade:deep && \
+      melos run clean_build:all
+
+  upgrade:
+    run: |
+      melos run upgrade:dart && \
+      melos run upgrade:flutter
+  upgrade:major_versions:
+    run: |
+      melos run upgrade:major_versions:dart && \
+      melos run upgrade:major_versions:flutter
+  upgrade:dart:
+    run: fvm dart pub upgrade
+    exec:
+      concurrency: 1
+    packageFilters:
+      flutter: false
+  upgrade:flutter:
+    run: fvm flutter pub upgrade
+    exec:
+      concurrency: 1
+    packageFilters:
+      flutter: true
+
+  upgrade:major_versions:dart:
+    run: fvm dart pub upgrade --major-versions
+    exec:
+      concurrency: 1
+    packageFilters:
+      flutter: false
+  upgrade:major_versions:flutter:
+    run: fvm flutter pub upgrade --major-versions
+    exec:
+      concurrency: 1
+    packageFilters:
+      flutter: true
+
+  # Test
+  test:
+    run: |
+      melos run test:dart && \
+      melos run test:flutter
+
+  test:dart:
+    run: fvm dart test
+    exec:
+      concurrency: 5
+      failFast: true
+    packageFilters:
+      flutter: false
+      dirExists: "test"
+
+  test:flutter:
+    run: fvm flutter test
+    exec:
+      concurrency: 5
+      failFast: true
+    packageFilters:
+      flutter: true
+      dirExists: "test"
+
+  # Clean Up
+  cleanup:
+    run: |
+      melos clean && \
+      melos run clean:deep
+  clean:deep:
+    run: git clean -x -d -f -q

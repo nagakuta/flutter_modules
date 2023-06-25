@@ -1,0 +1,9 @@
+name: modules_workspace
+description: A Dart / Flutter modules project.
+homepage: https://github.com/nagakuta
+
+environment:
+  sdk: ^3.0.0
+
+dev_dependencies:
+  melos: ^3.0.0
