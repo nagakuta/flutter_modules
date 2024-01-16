@@ -6,10 +6,10 @@ services:
       dockerfile: flutter_modules/Dockerfile
     volumes:
       # Dart files
-      - ../.fvm/fvm_config.json:/workspace/flutter_modules/.fvm/fvm_config.json:cached
       - ../packages:/workspace/flutter_modules/packages:cached
       - ../mason-lock.json:/workspace/flutter_modules/mason-lock.json:cached
       - ../mason.yaml:/workspace/flutter_modules/mason.yaml:cached
+      - ../.fvmrc:/workspace/flutter_modules/.fvmrc:cached
       - ../analysis_options.yaml:/workspace/flutter_modules/analysis_options.yaml:cached
       - ../all_lint_rules.yaml:/workspace/flutter_modules/all_lint_rules.yaml:cached
       - ../melos.yaml:/workspace/flutter_modules/melos.yaml:cached
