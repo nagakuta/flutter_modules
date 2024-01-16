@@ -12,7 +12,7 @@ part of 'device_size.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$DeviceSize {
@@ -153,25 +153,25 @@ class _$DeviceSizeCopyWithImpl<$Res, $Val extends DeviceSize>
 }
 
 /// @nodoc
-abstract class _$$GalaxyS8DeviceSizeCopyWith<$Res> {
-  factory _$$GalaxyS8DeviceSizeCopyWith(_$GalaxyS8DeviceSize value,
-          $Res Function(_$GalaxyS8DeviceSize) then) =
-      __$$GalaxyS8DeviceSizeCopyWithImpl<$Res>;
+abstract class _$$GalaxyS8DeviceSizeImplCopyWith<$Res> {
+  factory _$$GalaxyS8DeviceSizeImplCopyWith(_$GalaxyS8DeviceSizeImpl value,
+          $Res Function(_$GalaxyS8DeviceSizeImpl) then) =
+      __$$GalaxyS8DeviceSizeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$GalaxyS8DeviceSizeCopyWithImpl<$Res>
-    extends _$DeviceSizeCopyWithImpl<$Res, _$GalaxyS8DeviceSize>
-    implements _$$GalaxyS8DeviceSizeCopyWith<$Res> {
-  __$$GalaxyS8DeviceSizeCopyWithImpl(
-      _$GalaxyS8DeviceSize _value, $Res Function(_$GalaxyS8DeviceSize) _then)
+class __$$GalaxyS8DeviceSizeImplCopyWithImpl<$Res>
+    extends _$DeviceSizeCopyWithImpl<$Res, _$GalaxyS8DeviceSizeImpl>
+    implements _$$GalaxyS8DeviceSizeImplCopyWith<$Res> {
+  __$$GalaxyS8DeviceSizeImplCopyWithImpl(_$GalaxyS8DeviceSizeImpl _value,
+      $Res Function(_$GalaxyS8DeviceSizeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$GalaxyS8DeviceSize extends GalaxyS8DeviceSize {
-  const _$GalaxyS8DeviceSize() : super._();
+class _$GalaxyS8DeviceSizeImpl extends GalaxyS8DeviceSize {
+  const _$GalaxyS8DeviceSizeImpl() : super._();
 
   @override
   String toString() {
@@ -179,9 +179,9 @@ class _$GalaxyS8DeviceSize extends GalaxyS8DeviceSize {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$GalaxyS8DeviceSize);
+        (other.runtimeType == runtimeType && other is _$GalaxyS8DeviceSizeImpl);
   }
 
   @override
@@ -329,30 +329,30 @@ class _$GalaxyS8DeviceSize extends GalaxyS8DeviceSize {
 }
 
 abstract class GalaxyS8DeviceSize extends DeviceSize {
-  const factory GalaxyS8DeviceSize() = _$GalaxyS8DeviceSize;
+  const factory GalaxyS8DeviceSize() = _$GalaxyS8DeviceSizeImpl;
   const GalaxyS8DeviceSize._() : super._();
 }
 
 /// @nodoc
-abstract class _$$iPhoneSEDeviceSizeCopyWith<$Res> {
-  factory _$$iPhoneSEDeviceSizeCopyWith(_$iPhoneSEDeviceSize value,
-          $Res Function(_$iPhoneSEDeviceSize) then) =
-      __$$iPhoneSEDeviceSizeCopyWithImpl<$Res>;
+abstract class _$$iPhoneSEDeviceSizeImplCopyWith<$Res> {
+  factory _$$iPhoneSEDeviceSizeImplCopyWith(_$iPhoneSEDeviceSizeImpl value,
+          $Res Function(_$iPhoneSEDeviceSizeImpl) then) =
+      __$$iPhoneSEDeviceSizeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$iPhoneSEDeviceSizeCopyWithImpl<$Res>
-    extends _$DeviceSizeCopyWithImpl<$Res, _$iPhoneSEDeviceSize>
-    implements _$$iPhoneSEDeviceSizeCopyWith<$Res> {
-  __$$iPhoneSEDeviceSizeCopyWithImpl(
-      _$iPhoneSEDeviceSize _value, $Res Function(_$iPhoneSEDeviceSize) _then)
+class __$$iPhoneSEDeviceSizeImplCopyWithImpl<$Res>
+    extends _$DeviceSizeCopyWithImpl<$Res, _$iPhoneSEDeviceSizeImpl>
+    implements _$$iPhoneSEDeviceSizeImplCopyWith<$Res> {
+  __$$iPhoneSEDeviceSizeImplCopyWithImpl(_$iPhoneSEDeviceSizeImpl _value,
+      $Res Function(_$iPhoneSEDeviceSizeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$iPhoneSEDeviceSize extends iPhoneSEDeviceSize {
-  const _$iPhoneSEDeviceSize() : super._();
+class _$iPhoneSEDeviceSizeImpl extends iPhoneSEDeviceSize {
+  const _$iPhoneSEDeviceSizeImpl() : super._();
 
   @override
   String toString() {
@@ -360,9 +360,9 @@ class _$iPhoneSEDeviceSize extends iPhoneSEDeviceSize {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$iPhoneSEDeviceSize);
+        (other.runtimeType == runtimeType && other is _$iPhoneSEDeviceSizeImpl);
   }
 
   @override
@@ -510,30 +510,30 @@ class _$iPhoneSEDeviceSize extends iPhoneSEDeviceSize {
 }
 
 abstract class iPhoneSEDeviceSize extends DeviceSize {
-  const factory iPhoneSEDeviceSize() = _$iPhoneSEDeviceSize;
+  const factory iPhoneSEDeviceSize() = _$iPhoneSEDeviceSizeImpl;
   const iPhoneSEDeviceSize._() : super._();
 }
 
 /// @nodoc
-abstract class _$$iPhoneXRDeviceSizeCopyWith<$Res> {
-  factory _$$iPhoneXRDeviceSizeCopyWith(_$iPhoneXRDeviceSize value,
-          $Res Function(_$iPhoneXRDeviceSize) then) =
-      __$$iPhoneXRDeviceSizeCopyWithImpl<$Res>;
+abstract class _$$iPhoneXRDeviceSizeImplCopyWith<$Res> {
+  factory _$$iPhoneXRDeviceSizeImplCopyWith(_$iPhoneXRDeviceSizeImpl value,
+          $Res Function(_$iPhoneXRDeviceSizeImpl) then) =
+      __$$iPhoneXRDeviceSizeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$iPhoneXRDeviceSizeCopyWithImpl<$Res>
-    extends _$DeviceSizeCopyWithImpl<$Res, _$iPhoneXRDeviceSize>
-    implements _$$iPhoneXRDeviceSizeCopyWith<$Res> {
-  __$$iPhoneXRDeviceSizeCopyWithImpl(
-      _$iPhoneXRDeviceSize _value, $Res Function(_$iPhoneXRDeviceSize) _then)
+class __$$iPhoneXRDeviceSizeImplCopyWithImpl<$Res>
+    extends _$DeviceSizeCopyWithImpl<$Res, _$iPhoneXRDeviceSizeImpl>
+    implements _$$iPhoneXRDeviceSizeImplCopyWith<$Res> {
+  __$$iPhoneXRDeviceSizeImplCopyWithImpl(_$iPhoneXRDeviceSizeImpl _value,
+      $Res Function(_$iPhoneXRDeviceSizeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$iPhoneXRDeviceSize extends iPhoneXRDeviceSize {
-  const _$iPhoneXRDeviceSize() : super._();
+class _$iPhoneXRDeviceSizeImpl extends iPhoneXRDeviceSize {
+  const _$iPhoneXRDeviceSizeImpl() : super._();
 
   @override
   String toString() {
@@ -541,9 +541,9 @@ class _$iPhoneXRDeviceSize extends iPhoneXRDeviceSize {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$iPhoneXRDeviceSize);
+        (other.runtimeType == runtimeType && other is _$iPhoneXRDeviceSizeImpl);
   }
 
   @override
@@ -691,30 +691,31 @@ class _$iPhoneXRDeviceSize extends iPhoneXRDeviceSize {
 }
 
 abstract class iPhoneXRDeviceSize extends DeviceSize {
-  const factory iPhoneXRDeviceSize() = _$iPhoneXRDeviceSize;
+  const factory iPhoneXRDeviceSize() = _$iPhoneXRDeviceSizeImpl;
   const iPhoneXRDeviceSize._() : super._();
 }
 
 /// @nodoc
-abstract class _$$iPhone12ProDeviceSizeCopyWith<$Res> {
-  factory _$$iPhone12ProDeviceSizeCopyWith(_$iPhone12ProDeviceSize value,
-          $Res Function(_$iPhone12ProDeviceSize) then) =
-      __$$iPhone12ProDeviceSizeCopyWithImpl<$Res>;
+abstract class _$$iPhone12ProDeviceSizeImplCopyWith<$Res> {
+  factory _$$iPhone12ProDeviceSizeImplCopyWith(
+          _$iPhone12ProDeviceSizeImpl value,
+          $Res Function(_$iPhone12ProDeviceSizeImpl) then) =
+      __$$iPhone12ProDeviceSizeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$iPhone12ProDeviceSizeCopyWithImpl<$Res>
-    extends _$DeviceSizeCopyWithImpl<$Res, _$iPhone12ProDeviceSize>
-    implements _$$iPhone12ProDeviceSizeCopyWith<$Res> {
-  __$$iPhone12ProDeviceSizeCopyWithImpl(_$iPhone12ProDeviceSize _value,
-      $Res Function(_$iPhone12ProDeviceSize) _then)
+class __$$iPhone12ProDeviceSizeImplCopyWithImpl<$Res>
+    extends _$DeviceSizeCopyWithImpl<$Res, _$iPhone12ProDeviceSizeImpl>
+    implements _$$iPhone12ProDeviceSizeImplCopyWith<$Res> {
+  __$$iPhone12ProDeviceSizeImplCopyWithImpl(_$iPhone12ProDeviceSizeImpl _value,
+      $Res Function(_$iPhone12ProDeviceSizeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$iPhone12ProDeviceSize extends iPhone12ProDeviceSize {
-  const _$iPhone12ProDeviceSize() : super._();
+class _$iPhone12ProDeviceSizeImpl extends iPhone12ProDeviceSize {
+  const _$iPhone12ProDeviceSizeImpl() : super._();
 
   @override
   String toString() {
@@ -722,9 +723,10 @@ class _$iPhone12ProDeviceSize extends iPhone12ProDeviceSize {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$iPhone12ProDeviceSize);
+        (other.runtimeType == runtimeType &&
+            other is _$iPhone12ProDeviceSizeImpl);
   }
 
   @override
@@ -872,30 +874,30 @@ class _$iPhone12ProDeviceSize extends iPhone12ProDeviceSize {
 }
 
 abstract class iPhone12ProDeviceSize extends DeviceSize {
-  const factory iPhone12ProDeviceSize() = _$iPhone12ProDeviceSize;
+  const factory iPhone12ProDeviceSize() = _$iPhone12ProDeviceSizeImpl;
   const iPhone12ProDeviceSize._() : super._();
 }
 
 /// @nodoc
-abstract class _$$Pixel5DeviceSizeCopyWith<$Res> {
-  factory _$$Pixel5DeviceSizeCopyWith(
-          _$Pixel5DeviceSize value, $Res Function(_$Pixel5DeviceSize) then) =
-      __$$Pixel5DeviceSizeCopyWithImpl<$Res>;
+abstract class _$$Pixel5DeviceSizeImplCopyWith<$Res> {
+  factory _$$Pixel5DeviceSizeImplCopyWith(_$Pixel5DeviceSizeImpl value,
+          $Res Function(_$Pixel5DeviceSizeImpl) then) =
+      __$$Pixel5DeviceSizeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$Pixel5DeviceSizeCopyWithImpl<$Res>
-    extends _$DeviceSizeCopyWithImpl<$Res, _$Pixel5DeviceSize>
-    implements _$$Pixel5DeviceSizeCopyWith<$Res> {
-  __$$Pixel5DeviceSizeCopyWithImpl(
-      _$Pixel5DeviceSize _value, $Res Function(_$Pixel5DeviceSize) _then)
+class __$$Pixel5DeviceSizeImplCopyWithImpl<$Res>
+    extends _$DeviceSizeCopyWithImpl<$Res, _$Pixel5DeviceSizeImpl>
+    implements _$$Pixel5DeviceSizeImplCopyWith<$Res> {
+  __$$Pixel5DeviceSizeImplCopyWithImpl(_$Pixel5DeviceSizeImpl _value,
+      $Res Function(_$Pixel5DeviceSizeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$Pixel5DeviceSize extends Pixel5DeviceSize {
-  const _$Pixel5DeviceSize() : super._();
+class _$Pixel5DeviceSizeImpl extends Pixel5DeviceSize {
+  const _$Pixel5DeviceSizeImpl() : super._();
 
   @override
   String toString() {
@@ -903,9 +905,9 @@ class _$Pixel5DeviceSize extends Pixel5DeviceSize {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$Pixel5DeviceSize);
+        (other.runtimeType == runtimeType && other is _$Pixel5DeviceSizeImpl);
   }
 
   @override
@@ -1053,30 +1055,32 @@ class _$Pixel5DeviceSize extends Pixel5DeviceSize {
 }
 
 abstract class Pixel5DeviceSize extends DeviceSize {
-  const factory Pixel5DeviceSize() = _$Pixel5DeviceSize;
+  const factory Pixel5DeviceSize() = _$Pixel5DeviceSizeImpl;
   const Pixel5DeviceSize._() : super._();
 }
 
 /// @nodoc
-abstract class _$$GalaxyS8PlusDeviceSizeCopyWith<$Res> {
-  factory _$$GalaxyS8PlusDeviceSizeCopyWith(_$GalaxyS8PlusDeviceSize value,
-          $Res Function(_$GalaxyS8PlusDeviceSize) then) =
-      __$$GalaxyS8PlusDeviceSizeCopyWithImpl<$Res>;
+abstract class _$$GalaxyS8PlusDeviceSizeImplCopyWith<$Res> {
+  factory _$$GalaxyS8PlusDeviceSizeImplCopyWith(
+          _$GalaxyS8PlusDeviceSizeImpl value,
+          $Res Function(_$GalaxyS8PlusDeviceSizeImpl) then) =
+      __$$GalaxyS8PlusDeviceSizeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$GalaxyS8PlusDeviceSizeCopyWithImpl<$Res>
-    extends _$DeviceSizeCopyWithImpl<$Res, _$GalaxyS8PlusDeviceSize>
-    implements _$$GalaxyS8PlusDeviceSizeCopyWith<$Res> {
-  __$$GalaxyS8PlusDeviceSizeCopyWithImpl(_$GalaxyS8PlusDeviceSize _value,
-      $Res Function(_$GalaxyS8PlusDeviceSize) _then)
+class __$$GalaxyS8PlusDeviceSizeImplCopyWithImpl<$Res>
+    extends _$DeviceSizeCopyWithImpl<$Res, _$GalaxyS8PlusDeviceSizeImpl>
+    implements _$$GalaxyS8PlusDeviceSizeImplCopyWith<$Res> {
+  __$$GalaxyS8PlusDeviceSizeImplCopyWithImpl(
+      _$GalaxyS8PlusDeviceSizeImpl _value,
+      $Res Function(_$GalaxyS8PlusDeviceSizeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$GalaxyS8PlusDeviceSize extends GalaxyS8PlusDeviceSize {
-  const _$GalaxyS8PlusDeviceSize() : super._();
+class _$GalaxyS8PlusDeviceSizeImpl extends GalaxyS8PlusDeviceSize {
+  const _$GalaxyS8PlusDeviceSizeImpl() : super._();
 
   @override
   String toString() {
@@ -1084,9 +1088,10 @@ class _$GalaxyS8PlusDeviceSize extends GalaxyS8PlusDeviceSize {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$GalaxyS8PlusDeviceSize);
+        (other.runtimeType == runtimeType &&
+            other is _$GalaxyS8PlusDeviceSizeImpl);
   }
 
   @override
@@ -1234,30 +1239,32 @@ class _$GalaxyS8PlusDeviceSize extends GalaxyS8PlusDeviceSize {
 }
 
 abstract class GalaxyS8PlusDeviceSize extends DeviceSize {
-  const factory GalaxyS8PlusDeviceSize() = _$GalaxyS8PlusDeviceSize;
+  const factory GalaxyS8PlusDeviceSize() = _$GalaxyS8PlusDeviceSizeImpl;
   const GalaxyS8PlusDeviceSize._() : super._();
 }
 
 /// @nodoc
-abstract class _$$GalaxyS20UltraDeviceSizeCopyWith<$Res> {
-  factory _$$GalaxyS20UltraDeviceSizeCopyWith(_$GalaxyS20UltraDeviceSize value,
-          $Res Function(_$GalaxyS20UltraDeviceSize) then) =
-      __$$GalaxyS20UltraDeviceSizeCopyWithImpl<$Res>;
+abstract class _$$GalaxyS20UltraDeviceSizeImplCopyWith<$Res> {
+  factory _$$GalaxyS20UltraDeviceSizeImplCopyWith(
+          _$GalaxyS20UltraDeviceSizeImpl value,
+          $Res Function(_$GalaxyS20UltraDeviceSizeImpl) then) =
+      __$$GalaxyS20UltraDeviceSizeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$GalaxyS20UltraDeviceSizeCopyWithImpl<$Res>
-    extends _$DeviceSizeCopyWithImpl<$Res, _$GalaxyS20UltraDeviceSize>
-    implements _$$GalaxyS20UltraDeviceSizeCopyWith<$Res> {
-  __$$GalaxyS20UltraDeviceSizeCopyWithImpl(_$GalaxyS20UltraDeviceSize _value,
-      $Res Function(_$GalaxyS20UltraDeviceSize) _then)
+class __$$GalaxyS20UltraDeviceSizeImplCopyWithImpl<$Res>
+    extends _$DeviceSizeCopyWithImpl<$Res, _$GalaxyS20UltraDeviceSizeImpl>
+    implements _$$GalaxyS20UltraDeviceSizeImplCopyWith<$Res> {
+  __$$GalaxyS20UltraDeviceSizeImplCopyWithImpl(
+      _$GalaxyS20UltraDeviceSizeImpl _value,
+      $Res Function(_$GalaxyS20UltraDeviceSizeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$GalaxyS20UltraDeviceSize extends GalaxyS20UltraDeviceSize {
-  const _$GalaxyS20UltraDeviceSize() : super._();
+class _$GalaxyS20UltraDeviceSizeImpl extends GalaxyS20UltraDeviceSize {
+  const _$GalaxyS20UltraDeviceSizeImpl() : super._();
 
   @override
   String toString() {
@@ -1265,10 +1272,10 @@ class _$GalaxyS20UltraDeviceSize extends GalaxyS20UltraDeviceSize {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GalaxyS20UltraDeviceSize);
+            other is _$GalaxyS20UltraDeviceSizeImpl);
   }
 
   @override
@@ -1416,30 +1423,30 @@ class _$GalaxyS20UltraDeviceSize extends GalaxyS20UltraDeviceSize {
 }
 
 abstract class GalaxyS20UltraDeviceSize extends DeviceSize {
-  const factory GalaxyS20UltraDeviceSize() = _$GalaxyS20UltraDeviceSize;
+  const factory GalaxyS20UltraDeviceSize() = _$GalaxyS20UltraDeviceSizeImpl;
   const GalaxyS20UltraDeviceSize._() : super._();
 }
 
 /// @nodoc
-abstract class _$$iPadAirDeviceSizeCopyWith<$Res> {
-  factory _$$iPadAirDeviceSizeCopyWith(
-          _$iPadAirDeviceSize value, $Res Function(_$iPadAirDeviceSize) then) =
-      __$$iPadAirDeviceSizeCopyWithImpl<$Res>;
+abstract class _$$iPadAirDeviceSizeImplCopyWith<$Res> {
+  factory _$$iPadAirDeviceSizeImplCopyWith(_$iPadAirDeviceSizeImpl value,
+          $Res Function(_$iPadAirDeviceSizeImpl) then) =
+      __$$iPadAirDeviceSizeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$iPadAirDeviceSizeCopyWithImpl<$Res>
-    extends _$DeviceSizeCopyWithImpl<$Res, _$iPadAirDeviceSize>
-    implements _$$iPadAirDeviceSizeCopyWith<$Res> {
-  __$$iPadAirDeviceSizeCopyWithImpl(
-      _$iPadAirDeviceSize _value, $Res Function(_$iPadAirDeviceSize) _then)
+class __$$iPadAirDeviceSizeImplCopyWithImpl<$Res>
+    extends _$DeviceSizeCopyWithImpl<$Res, _$iPadAirDeviceSizeImpl>
+    implements _$$iPadAirDeviceSizeImplCopyWith<$Res> {
+  __$$iPadAirDeviceSizeImplCopyWithImpl(_$iPadAirDeviceSizeImpl _value,
+      $Res Function(_$iPadAirDeviceSizeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$iPadAirDeviceSize extends iPadAirDeviceSize {
-  const _$iPadAirDeviceSize() : super._();
+class _$iPadAirDeviceSizeImpl extends iPadAirDeviceSize {
+  const _$iPadAirDeviceSizeImpl() : super._();
 
   @override
   String toString() {
@@ -1447,9 +1454,9 @@ class _$iPadAirDeviceSize extends iPadAirDeviceSize {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$iPadAirDeviceSize);
+        (other.runtimeType == runtimeType && other is _$iPadAirDeviceSizeImpl);
   }
 
   @override
@@ -1597,30 +1604,30 @@ class _$iPadAirDeviceSize extends iPadAirDeviceSize {
 }
 
 abstract class iPadAirDeviceSize extends DeviceSize {
-  const factory iPadAirDeviceSize() = _$iPadAirDeviceSize;
+  const factory iPadAirDeviceSize() = _$iPadAirDeviceSizeImpl;
   const iPadAirDeviceSize._() : super._();
 }
 
 /// @nodoc
-abstract class _$$iPadMiniDeviceSizeCopyWith<$Res> {
-  factory _$$iPadMiniDeviceSizeCopyWith(_$iPadMiniDeviceSize value,
-          $Res Function(_$iPadMiniDeviceSize) then) =
-      __$$iPadMiniDeviceSizeCopyWithImpl<$Res>;
+abstract class _$$iPadMiniDeviceSizeImplCopyWith<$Res> {
+  factory _$$iPadMiniDeviceSizeImplCopyWith(_$iPadMiniDeviceSizeImpl value,
+          $Res Function(_$iPadMiniDeviceSizeImpl) then) =
+      __$$iPadMiniDeviceSizeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$iPadMiniDeviceSizeCopyWithImpl<$Res>
-    extends _$DeviceSizeCopyWithImpl<$Res, _$iPadMiniDeviceSize>
-    implements _$$iPadMiniDeviceSizeCopyWith<$Res> {
-  __$$iPadMiniDeviceSizeCopyWithImpl(
-      _$iPadMiniDeviceSize _value, $Res Function(_$iPadMiniDeviceSize) _then)
+class __$$iPadMiniDeviceSizeImplCopyWithImpl<$Res>
+    extends _$DeviceSizeCopyWithImpl<$Res, _$iPadMiniDeviceSizeImpl>
+    implements _$$iPadMiniDeviceSizeImplCopyWith<$Res> {
+  __$$iPadMiniDeviceSizeImplCopyWithImpl(_$iPadMiniDeviceSizeImpl _value,
+      $Res Function(_$iPadMiniDeviceSizeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$iPadMiniDeviceSize extends iPadMiniDeviceSize {
-  const _$iPadMiniDeviceSize() : super._();
+class _$iPadMiniDeviceSizeImpl extends iPadMiniDeviceSize {
+  const _$iPadMiniDeviceSizeImpl() : super._();
 
   @override
   String toString() {
@@ -1628,9 +1635,9 @@ class _$iPadMiniDeviceSize extends iPadMiniDeviceSize {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$iPadMiniDeviceSize);
+        (other.runtimeType == runtimeType && other is _$iPadMiniDeviceSizeImpl);
   }
 
   @override
@@ -1778,30 +1785,31 @@ class _$iPadMiniDeviceSize extends iPadMiniDeviceSize {
 }
 
 abstract class iPadMiniDeviceSize extends DeviceSize {
-  const factory iPadMiniDeviceSize() = _$iPadMiniDeviceSize;
+  const factory iPadMiniDeviceSize() = _$iPadMiniDeviceSizeImpl;
   const iPadMiniDeviceSize._() : super._();
 }
 
 /// @nodoc
-abstract class _$$SurfacePro7DeviceSizeCopyWith<$Res> {
-  factory _$$SurfacePro7DeviceSizeCopyWith(_$SurfacePro7DeviceSize value,
-          $Res Function(_$SurfacePro7DeviceSize) then) =
-      __$$SurfacePro7DeviceSizeCopyWithImpl<$Res>;
+abstract class _$$SurfacePro7DeviceSizeImplCopyWith<$Res> {
+  factory _$$SurfacePro7DeviceSizeImplCopyWith(
+          _$SurfacePro7DeviceSizeImpl value,
+          $Res Function(_$SurfacePro7DeviceSizeImpl) then) =
+      __$$SurfacePro7DeviceSizeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SurfacePro7DeviceSizeCopyWithImpl<$Res>
-    extends _$DeviceSizeCopyWithImpl<$Res, _$SurfacePro7DeviceSize>
-    implements _$$SurfacePro7DeviceSizeCopyWith<$Res> {
-  __$$SurfacePro7DeviceSizeCopyWithImpl(_$SurfacePro7DeviceSize _value,
-      $Res Function(_$SurfacePro7DeviceSize) _then)
+class __$$SurfacePro7DeviceSizeImplCopyWithImpl<$Res>
+    extends _$DeviceSizeCopyWithImpl<$Res, _$SurfacePro7DeviceSizeImpl>
+    implements _$$SurfacePro7DeviceSizeImplCopyWith<$Res> {
+  __$$SurfacePro7DeviceSizeImplCopyWithImpl(_$SurfacePro7DeviceSizeImpl _value,
+      $Res Function(_$SurfacePro7DeviceSizeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$SurfacePro7DeviceSize extends SurfacePro7DeviceSize {
-  const _$SurfacePro7DeviceSize() : super._();
+class _$SurfacePro7DeviceSizeImpl extends SurfacePro7DeviceSize {
+  const _$SurfacePro7DeviceSizeImpl() : super._();
 
   @override
   String toString() {
@@ -1809,9 +1817,10 @@ class _$SurfacePro7DeviceSize extends SurfacePro7DeviceSize {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SurfacePro7DeviceSize);
+        (other.runtimeType == runtimeType &&
+            other is _$SurfacePro7DeviceSizeImpl);
   }
 
   @override
@@ -1959,30 +1968,30 @@ class _$SurfacePro7DeviceSize extends SurfacePro7DeviceSize {
 }
 
 abstract class SurfacePro7DeviceSize extends DeviceSize {
-  const factory SurfacePro7DeviceSize() = _$SurfacePro7DeviceSize;
+  const factory SurfacePro7DeviceSize() = _$SurfacePro7DeviceSizeImpl;
   const SurfacePro7DeviceSize._() : super._();
 }
 
 /// @nodoc
-abstract class _$$SurfaceDuoDeviceSizeCopyWith<$Res> {
-  factory _$$SurfaceDuoDeviceSizeCopyWith(_$SurfaceDuoDeviceSize value,
-          $Res Function(_$SurfaceDuoDeviceSize) then) =
-      __$$SurfaceDuoDeviceSizeCopyWithImpl<$Res>;
+abstract class _$$SurfaceDuoDeviceSizeImplCopyWith<$Res> {
+  factory _$$SurfaceDuoDeviceSizeImplCopyWith(_$SurfaceDuoDeviceSizeImpl value,
+          $Res Function(_$SurfaceDuoDeviceSizeImpl) then) =
+      __$$SurfaceDuoDeviceSizeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SurfaceDuoDeviceSizeCopyWithImpl<$Res>
-    extends _$DeviceSizeCopyWithImpl<$Res, _$SurfaceDuoDeviceSize>
-    implements _$$SurfaceDuoDeviceSizeCopyWith<$Res> {
-  __$$SurfaceDuoDeviceSizeCopyWithImpl(_$SurfaceDuoDeviceSize _value,
-      $Res Function(_$SurfaceDuoDeviceSize) _then)
+class __$$SurfaceDuoDeviceSizeImplCopyWithImpl<$Res>
+    extends _$DeviceSizeCopyWithImpl<$Res, _$SurfaceDuoDeviceSizeImpl>
+    implements _$$SurfaceDuoDeviceSizeImplCopyWith<$Res> {
+  __$$SurfaceDuoDeviceSizeImplCopyWithImpl(_$SurfaceDuoDeviceSizeImpl _value,
+      $Res Function(_$SurfaceDuoDeviceSizeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$SurfaceDuoDeviceSize extends SurfaceDuoDeviceSize {
-  const _$SurfaceDuoDeviceSize() : super._();
+class _$SurfaceDuoDeviceSizeImpl extends SurfaceDuoDeviceSize {
+  const _$SurfaceDuoDeviceSizeImpl() : super._();
 
   @override
   String toString() {
@@ -1990,9 +1999,10 @@ class _$SurfaceDuoDeviceSize extends SurfaceDuoDeviceSize {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SurfaceDuoDeviceSize);
+        (other.runtimeType == runtimeType &&
+            other is _$SurfaceDuoDeviceSizeImpl);
   }
 
   @override
@@ -2140,30 +2150,30 @@ class _$SurfaceDuoDeviceSize extends SurfaceDuoDeviceSize {
 }
 
 abstract class SurfaceDuoDeviceSize extends DeviceSize {
-  const factory SurfaceDuoDeviceSize() = _$SurfaceDuoDeviceSize;
+  const factory SurfaceDuoDeviceSize() = _$SurfaceDuoDeviceSizeImpl;
   const SurfaceDuoDeviceSize._() : super._();
 }
 
 /// @nodoc
-abstract class _$$GalaxyFoldDeviceSizeCopyWith<$Res> {
-  factory _$$GalaxyFoldDeviceSizeCopyWith(_$GalaxyFoldDeviceSize value,
-          $Res Function(_$GalaxyFoldDeviceSize) then) =
-      __$$GalaxyFoldDeviceSizeCopyWithImpl<$Res>;
+abstract class _$$GalaxyFoldDeviceSizeImplCopyWith<$Res> {
+  factory _$$GalaxyFoldDeviceSizeImplCopyWith(_$GalaxyFoldDeviceSizeImpl value,
+          $Res Function(_$GalaxyFoldDeviceSizeImpl) then) =
+      __$$GalaxyFoldDeviceSizeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$GalaxyFoldDeviceSizeCopyWithImpl<$Res>
-    extends _$DeviceSizeCopyWithImpl<$Res, _$GalaxyFoldDeviceSize>
-    implements _$$GalaxyFoldDeviceSizeCopyWith<$Res> {
-  __$$GalaxyFoldDeviceSizeCopyWithImpl(_$GalaxyFoldDeviceSize _value,
-      $Res Function(_$GalaxyFoldDeviceSize) _then)
+class __$$GalaxyFoldDeviceSizeImplCopyWithImpl<$Res>
+    extends _$DeviceSizeCopyWithImpl<$Res, _$GalaxyFoldDeviceSizeImpl>
+    implements _$$GalaxyFoldDeviceSizeImplCopyWith<$Res> {
+  __$$GalaxyFoldDeviceSizeImplCopyWithImpl(_$GalaxyFoldDeviceSizeImpl _value,
+      $Res Function(_$GalaxyFoldDeviceSizeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$GalaxyFoldDeviceSize extends GalaxyFoldDeviceSize {
-  const _$GalaxyFoldDeviceSize() : super._();
+class _$GalaxyFoldDeviceSizeImpl extends GalaxyFoldDeviceSize {
+  const _$GalaxyFoldDeviceSizeImpl() : super._();
 
   @override
   String toString() {
@@ -2171,9 +2181,10 @@ class _$GalaxyFoldDeviceSize extends GalaxyFoldDeviceSize {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$GalaxyFoldDeviceSize);
+        (other.runtimeType == runtimeType &&
+            other is _$GalaxyFoldDeviceSizeImpl);
   }
 
   @override
@@ -2321,30 +2332,30 @@ class _$GalaxyFoldDeviceSize extends GalaxyFoldDeviceSize {
 }
 
 abstract class GalaxyFoldDeviceSize extends DeviceSize {
-  const factory GalaxyFoldDeviceSize() = _$GalaxyFoldDeviceSize;
+  const factory GalaxyFoldDeviceSize() = _$GalaxyFoldDeviceSizeImpl;
   const GalaxyFoldDeviceSize._() : super._();
 }
 
 /// @nodoc
-abstract class _$$GalaxyA51DeviceSizeCopyWith<$Res> {
-  factory _$$GalaxyA51DeviceSizeCopyWith(_$GalaxyA51DeviceSize value,
-          $Res Function(_$GalaxyA51DeviceSize) then) =
-      __$$GalaxyA51DeviceSizeCopyWithImpl<$Res>;
+abstract class _$$GalaxyA51DeviceSizeImplCopyWith<$Res> {
+  factory _$$GalaxyA51DeviceSizeImplCopyWith(_$GalaxyA51DeviceSizeImpl value,
+          $Res Function(_$GalaxyA51DeviceSizeImpl) then) =
+      __$$GalaxyA51DeviceSizeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$GalaxyA51DeviceSizeCopyWithImpl<$Res>
-    extends _$DeviceSizeCopyWithImpl<$Res, _$GalaxyA51DeviceSize>
-    implements _$$GalaxyA51DeviceSizeCopyWith<$Res> {
-  __$$GalaxyA51DeviceSizeCopyWithImpl(
-      _$GalaxyA51DeviceSize _value, $Res Function(_$GalaxyA51DeviceSize) _then)
+class __$$GalaxyA51DeviceSizeImplCopyWithImpl<$Res>
+    extends _$DeviceSizeCopyWithImpl<$Res, _$GalaxyA51DeviceSizeImpl>
+    implements _$$GalaxyA51DeviceSizeImplCopyWith<$Res> {
+  __$$GalaxyA51DeviceSizeImplCopyWithImpl(_$GalaxyA51DeviceSizeImpl _value,
+      $Res Function(_$GalaxyA51DeviceSizeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$GalaxyA51DeviceSize extends GalaxyA51DeviceSize {
-  const _$GalaxyA51DeviceSize() : super._();
+class _$GalaxyA51DeviceSizeImpl extends GalaxyA51DeviceSize {
+  const _$GalaxyA51DeviceSizeImpl() : super._();
 
   @override
   String toString() {
@@ -2352,9 +2363,10 @@ class _$GalaxyA51DeviceSize extends GalaxyA51DeviceSize {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$GalaxyA51DeviceSize);
+        (other.runtimeType == runtimeType &&
+            other is _$GalaxyA51DeviceSizeImpl);
   }
 
   @override
@@ -2502,30 +2514,30 @@ class _$GalaxyA51DeviceSize extends GalaxyA51DeviceSize {
 }
 
 abstract class GalaxyA51DeviceSize extends DeviceSize {
-  const factory GalaxyA51DeviceSize() = _$GalaxyA51DeviceSize;
+  const factory GalaxyA51DeviceSize() = _$GalaxyA51DeviceSizeImpl;
   const GalaxyA51DeviceSize._() : super._();
 }
 
 /// @nodoc
-abstract class _$$NestHubDeviceSizeCopyWith<$Res> {
-  factory _$$NestHubDeviceSizeCopyWith(
-          _$NestHubDeviceSize value, $Res Function(_$NestHubDeviceSize) then) =
-      __$$NestHubDeviceSizeCopyWithImpl<$Res>;
+abstract class _$$NestHubDeviceSizeImplCopyWith<$Res> {
+  factory _$$NestHubDeviceSizeImplCopyWith(_$NestHubDeviceSizeImpl value,
+          $Res Function(_$NestHubDeviceSizeImpl) then) =
+      __$$NestHubDeviceSizeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$NestHubDeviceSizeCopyWithImpl<$Res>
-    extends _$DeviceSizeCopyWithImpl<$Res, _$NestHubDeviceSize>
-    implements _$$NestHubDeviceSizeCopyWith<$Res> {
-  __$$NestHubDeviceSizeCopyWithImpl(
-      _$NestHubDeviceSize _value, $Res Function(_$NestHubDeviceSize) _then)
+class __$$NestHubDeviceSizeImplCopyWithImpl<$Res>
+    extends _$DeviceSizeCopyWithImpl<$Res, _$NestHubDeviceSizeImpl>
+    implements _$$NestHubDeviceSizeImplCopyWith<$Res> {
+  __$$NestHubDeviceSizeImplCopyWithImpl(_$NestHubDeviceSizeImpl _value,
+      $Res Function(_$NestHubDeviceSizeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$NestHubDeviceSize extends NestHubDeviceSize {
-  const _$NestHubDeviceSize() : super._();
+class _$NestHubDeviceSizeImpl extends NestHubDeviceSize {
+  const _$NestHubDeviceSizeImpl() : super._();
 
   @override
   String toString() {
@@ -2533,9 +2545,9 @@ class _$NestHubDeviceSize extends NestHubDeviceSize {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$NestHubDeviceSize);
+        (other.runtimeType == runtimeType && other is _$NestHubDeviceSizeImpl);
   }
 
   @override
@@ -2683,30 +2695,30 @@ class _$NestHubDeviceSize extends NestHubDeviceSize {
 }
 
 abstract class NestHubDeviceSize extends DeviceSize {
-  const factory NestHubDeviceSize() = _$NestHubDeviceSize;
+  const factory NestHubDeviceSize() = _$NestHubDeviceSizeImpl;
   const NestHubDeviceSize._() : super._();
 }
 
 /// @nodoc
-abstract class _$$NestHubMaxDeviceSizeCopyWith<$Res> {
-  factory _$$NestHubMaxDeviceSizeCopyWith(_$NestHubMaxDeviceSize value,
-          $Res Function(_$NestHubMaxDeviceSize) then) =
-      __$$NestHubMaxDeviceSizeCopyWithImpl<$Res>;
+abstract class _$$NestHubMaxDeviceSizeImplCopyWith<$Res> {
+  factory _$$NestHubMaxDeviceSizeImplCopyWith(_$NestHubMaxDeviceSizeImpl value,
+          $Res Function(_$NestHubMaxDeviceSizeImpl) then) =
+      __$$NestHubMaxDeviceSizeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$NestHubMaxDeviceSizeCopyWithImpl<$Res>
-    extends _$DeviceSizeCopyWithImpl<$Res, _$NestHubMaxDeviceSize>
-    implements _$$NestHubMaxDeviceSizeCopyWith<$Res> {
-  __$$NestHubMaxDeviceSizeCopyWithImpl(_$NestHubMaxDeviceSize _value,
-      $Res Function(_$NestHubMaxDeviceSize) _then)
+class __$$NestHubMaxDeviceSizeImplCopyWithImpl<$Res>
+    extends _$DeviceSizeCopyWithImpl<$Res, _$NestHubMaxDeviceSizeImpl>
+    implements _$$NestHubMaxDeviceSizeImplCopyWith<$Res> {
+  __$$NestHubMaxDeviceSizeImplCopyWithImpl(_$NestHubMaxDeviceSizeImpl _value,
+      $Res Function(_$NestHubMaxDeviceSizeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$NestHubMaxDeviceSize extends NestHubMaxDeviceSize {
-  const _$NestHubMaxDeviceSize() : super._();
+class _$NestHubMaxDeviceSizeImpl extends NestHubMaxDeviceSize {
+  const _$NestHubMaxDeviceSizeImpl() : super._();
 
   @override
   String toString() {
@@ -2714,9 +2726,10 @@ class _$NestHubMaxDeviceSize extends NestHubMaxDeviceSize {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$NestHubMaxDeviceSize);
+        (other.runtimeType == runtimeType &&
+            other is _$NestHubMaxDeviceSizeImpl);
   }
 
   @override
@@ -2864,6 +2877,6 @@ class _$NestHubMaxDeviceSize extends NestHubMaxDeviceSize {
 }
 
 abstract class NestHubMaxDeviceSize extends DeviceSize {
-  const factory NestHubMaxDeviceSize() = _$NestHubMaxDeviceSize;
+  const factory NestHubMaxDeviceSize() = _$NestHubMaxDeviceSizeImpl;
   const NestHubMaxDeviceSize._() : super._();
 }

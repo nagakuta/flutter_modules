@@ -12,7 +12,7 @@ part of 'types.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$Breakpoint {
@@ -82,11 +82,11 @@ class _$BreakpointCopyWithImpl<$Res, $Val extends Breakpoint>
 }
 
 /// @nodoc
-abstract class _$$_BreakpointCopyWith<$Res>
+abstract class _$$BreakpointImplCopyWith<$Res>
     implements $BreakpointCopyWith<$Res> {
-  factory _$$_BreakpointCopyWith(
-          _$_Breakpoint value, $Res Function(_$_Breakpoint) then) =
-      __$$_BreakpointCopyWithImpl<$Res>;
+  factory _$$BreakpointImplCopyWith(
+          _$BreakpointImpl value, $Res Function(_$BreakpointImpl) then) =
+      __$$BreakpointImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({LayoutType layoutType, WindowType windowType});
@@ -98,11 +98,11 @@ abstract class _$$_BreakpointCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_BreakpointCopyWithImpl<$Res>
-    extends _$BreakpointCopyWithImpl<$Res, _$_Breakpoint>
-    implements _$$_BreakpointCopyWith<$Res> {
-  __$$_BreakpointCopyWithImpl(
-      _$_Breakpoint _value, $Res Function(_$_Breakpoint) _then)
+class __$$BreakpointImplCopyWithImpl<$Res>
+    extends _$BreakpointCopyWithImpl<$Res, _$BreakpointImpl>
+    implements _$$BreakpointImplCopyWith<$Res> {
+  __$$BreakpointImplCopyWithImpl(
+      _$BreakpointImpl _value, $Res Function(_$BreakpointImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -111,7 +111,7 @@ class __$$_BreakpointCopyWithImpl<$Res>
     Object? layoutType = null,
     Object? windowType = null,
   }) {
-    return _then(_$_Breakpoint(
+    return _then(_$BreakpointImpl(
       layoutType: null == layoutType
           ? _value.layoutType
           : layoutType // ignore: cast_nullable_to_non_nullable
@@ -126,8 +126,8 @@ class __$$_BreakpointCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Breakpoint extends _Breakpoint {
-  const _$_Breakpoint({required this.layoutType, required this.windowType})
+class _$BreakpointImpl extends _Breakpoint {
+  const _$BreakpointImpl({required this.layoutType, required this.windowType})
       : super._();
 
   @override
@@ -141,10 +141,10 @@ class _$_Breakpoint extends _Breakpoint {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Breakpoint &&
+            other is _$BreakpointImpl &&
             (identical(other.layoutType, layoutType) ||
                 other.layoutType == layoutType) &&
             (identical(other.windowType, windowType) ||
@@ -157,14 +157,14 @@ class _$_Breakpoint extends _Breakpoint {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_BreakpointCopyWith<_$_Breakpoint> get copyWith =>
-      __$$_BreakpointCopyWithImpl<_$_Breakpoint>(this, _$identity);
+  _$$BreakpointImplCopyWith<_$BreakpointImpl> get copyWith =>
+      __$$BreakpointImplCopyWithImpl<_$BreakpointImpl>(this, _$identity);
 }
 
 abstract class _Breakpoint extends Breakpoint {
   const factory _Breakpoint(
       {required final LayoutType layoutType,
-      required final WindowType windowType}) = _$_Breakpoint;
+      required final WindowType windowType}) = _$BreakpointImpl;
   const _Breakpoint._() : super._();
 
   @override
@@ -173,7 +173,7 @@ abstract class _Breakpoint extends Breakpoint {
   WindowType get windowType;
   @override
   @JsonKey(ignore: true)
-  _$$_BreakpointCopyWith<_$_Breakpoint> get copyWith =>
+  _$$BreakpointImplCopyWith<_$BreakpointImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -262,25 +262,27 @@ class _$LayoutTypeCopyWithImpl<$Res, $Val extends LayoutType>
 }
 
 /// @nodoc
-abstract class _$$SmallHandsetLayoutTypeCopyWith<$Res> {
-  factory _$$SmallHandsetLayoutTypeCopyWith(_$SmallHandsetLayoutType value,
-          $Res Function(_$SmallHandsetLayoutType) then) =
-      __$$SmallHandsetLayoutTypeCopyWithImpl<$Res>;
+abstract class _$$SmallHandsetLayoutTypeImplCopyWith<$Res> {
+  factory _$$SmallHandsetLayoutTypeImplCopyWith(
+          _$SmallHandsetLayoutTypeImpl value,
+          $Res Function(_$SmallHandsetLayoutTypeImpl) then) =
+      __$$SmallHandsetLayoutTypeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SmallHandsetLayoutTypeCopyWithImpl<$Res>
-    extends _$LayoutTypeCopyWithImpl<$Res, _$SmallHandsetLayoutType>
-    implements _$$SmallHandsetLayoutTypeCopyWith<$Res> {
-  __$$SmallHandsetLayoutTypeCopyWithImpl(_$SmallHandsetLayoutType _value,
-      $Res Function(_$SmallHandsetLayoutType) _then)
+class __$$SmallHandsetLayoutTypeImplCopyWithImpl<$Res>
+    extends _$LayoutTypeCopyWithImpl<$Res, _$SmallHandsetLayoutTypeImpl>
+    implements _$$SmallHandsetLayoutTypeImplCopyWith<$Res> {
+  __$$SmallHandsetLayoutTypeImplCopyWithImpl(
+      _$SmallHandsetLayoutTypeImpl _value,
+      $Res Function(_$SmallHandsetLayoutTypeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$SmallHandsetLayoutType extends SmallHandsetLayoutType {
-  const _$SmallHandsetLayoutType() : super._();
+class _$SmallHandsetLayoutTypeImpl extends SmallHandsetLayoutType {
+  const _$SmallHandsetLayoutTypeImpl() : super._();
 
   @override
   String toString() {
@@ -288,9 +290,10 @@ class _$SmallHandsetLayoutType extends SmallHandsetLayoutType {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SmallHandsetLayoutType);
+        (other.runtimeType == runtimeType &&
+            other is _$SmallHandsetLayoutTypeImpl);
   }
 
   @override
@@ -384,30 +387,32 @@ class _$SmallHandsetLayoutType extends SmallHandsetLayoutType {
 }
 
 abstract class SmallHandsetLayoutType extends LayoutType {
-  const factory SmallHandsetLayoutType() = _$SmallHandsetLayoutType;
+  const factory SmallHandsetLayoutType() = _$SmallHandsetLayoutTypeImpl;
   const SmallHandsetLayoutType._() : super._();
 }
 
 /// @nodoc
-abstract class _$$MediumHandsetLayoutTypeCopyWith<$Res> {
-  factory _$$MediumHandsetLayoutTypeCopyWith(_$MediumHandsetLayoutType value,
-          $Res Function(_$MediumHandsetLayoutType) then) =
-      __$$MediumHandsetLayoutTypeCopyWithImpl<$Res>;
+abstract class _$$MediumHandsetLayoutTypeImplCopyWith<$Res> {
+  factory _$$MediumHandsetLayoutTypeImplCopyWith(
+          _$MediumHandsetLayoutTypeImpl value,
+          $Res Function(_$MediumHandsetLayoutTypeImpl) then) =
+      __$$MediumHandsetLayoutTypeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$MediumHandsetLayoutTypeCopyWithImpl<$Res>
-    extends _$LayoutTypeCopyWithImpl<$Res, _$MediumHandsetLayoutType>
-    implements _$$MediumHandsetLayoutTypeCopyWith<$Res> {
-  __$$MediumHandsetLayoutTypeCopyWithImpl(_$MediumHandsetLayoutType _value,
-      $Res Function(_$MediumHandsetLayoutType) _then)
+class __$$MediumHandsetLayoutTypeImplCopyWithImpl<$Res>
+    extends _$LayoutTypeCopyWithImpl<$Res, _$MediumHandsetLayoutTypeImpl>
+    implements _$$MediumHandsetLayoutTypeImplCopyWith<$Res> {
+  __$$MediumHandsetLayoutTypeImplCopyWithImpl(
+      _$MediumHandsetLayoutTypeImpl _value,
+      $Res Function(_$MediumHandsetLayoutTypeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$MediumHandsetLayoutType extends MediumHandsetLayoutType {
-  const _$MediumHandsetLayoutType() : super._();
+class _$MediumHandsetLayoutTypeImpl extends MediumHandsetLayoutType {
+  const _$MediumHandsetLayoutTypeImpl() : super._();
 
   @override
   String toString() {
@@ -415,10 +420,10 @@ class _$MediumHandsetLayoutType extends MediumHandsetLayoutType {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$MediumHandsetLayoutType);
+            other is _$MediumHandsetLayoutTypeImpl);
   }
 
   @override
@@ -512,30 +517,32 @@ class _$MediumHandsetLayoutType extends MediumHandsetLayoutType {
 }
 
 abstract class MediumHandsetLayoutType extends LayoutType {
-  const factory MediumHandsetLayoutType() = _$MediumHandsetLayoutType;
+  const factory MediumHandsetLayoutType() = _$MediumHandsetLayoutTypeImpl;
   const MediumHandsetLayoutType._() : super._();
 }
 
 /// @nodoc
-abstract class _$$LargeHandsetLayoutTypeCopyWith<$Res> {
-  factory _$$LargeHandsetLayoutTypeCopyWith(_$LargeHandsetLayoutType value,
-          $Res Function(_$LargeHandsetLayoutType) then) =
-      __$$LargeHandsetLayoutTypeCopyWithImpl<$Res>;
+abstract class _$$LargeHandsetLayoutTypeImplCopyWith<$Res> {
+  factory _$$LargeHandsetLayoutTypeImplCopyWith(
+          _$LargeHandsetLayoutTypeImpl value,
+          $Res Function(_$LargeHandsetLayoutTypeImpl) then) =
+      __$$LargeHandsetLayoutTypeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LargeHandsetLayoutTypeCopyWithImpl<$Res>
-    extends _$LayoutTypeCopyWithImpl<$Res, _$LargeHandsetLayoutType>
-    implements _$$LargeHandsetLayoutTypeCopyWith<$Res> {
-  __$$LargeHandsetLayoutTypeCopyWithImpl(_$LargeHandsetLayoutType _value,
-      $Res Function(_$LargeHandsetLayoutType) _then)
+class __$$LargeHandsetLayoutTypeImplCopyWithImpl<$Res>
+    extends _$LayoutTypeCopyWithImpl<$Res, _$LargeHandsetLayoutTypeImpl>
+    implements _$$LargeHandsetLayoutTypeImplCopyWith<$Res> {
+  __$$LargeHandsetLayoutTypeImplCopyWithImpl(
+      _$LargeHandsetLayoutTypeImpl _value,
+      $Res Function(_$LargeHandsetLayoutTypeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$LargeHandsetLayoutType extends LargeHandsetLayoutType {
-  const _$LargeHandsetLayoutType() : super._();
+class _$LargeHandsetLayoutTypeImpl extends LargeHandsetLayoutType {
+  const _$LargeHandsetLayoutTypeImpl() : super._();
 
   @override
   String toString() {
@@ -543,9 +550,10 @@ class _$LargeHandsetLayoutType extends LargeHandsetLayoutType {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LargeHandsetLayoutType);
+        (other.runtimeType == runtimeType &&
+            other is _$LargeHandsetLayoutTypeImpl);
   }
 
   @override
@@ -639,30 +647,31 @@ class _$LargeHandsetLayoutType extends LargeHandsetLayoutType {
 }
 
 abstract class LargeHandsetLayoutType extends LayoutType {
-  const factory LargeHandsetLayoutType() = _$LargeHandsetLayoutType;
+  const factory LargeHandsetLayoutType() = _$LargeHandsetLayoutTypeImpl;
   const LargeHandsetLayoutType._() : super._();
 }
 
 /// @nodoc
-abstract class _$$SmallTabletLayoutTypeCopyWith<$Res> {
-  factory _$$SmallTabletLayoutTypeCopyWith(_$SmallTabletLayoutType value,
-          $Res Function(_$SmallTabletLayoutType) then) =
-      __$$SmallTabletLayoutTypeCopyWithImpl<$Res>;
+abstract class _$$SmallTabletLayoutTypeImplCopyWith<$Res> {
+  factory _$$SmallTabletLayoutTypeImplCopyWith(
+          _$SmallTabletLayoutTypeImpl value,
+          $Res Function(_$SmallTabletLayoutTypeImpl) then) =
+      __$$SmallTabletLayoutTypeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SmallTabletLayoutTypeCopyWithImpl<$Res>
-    extends _$LayoutTypeCopyWithImpl<$Res, _$SmallTabletLayoutType>
-    implements _$$SmallTabletLayoutTypeCopyWith<$Res> {
-  __$$SmallTabletLayoutTypeCopyWithImpl(_$SmallTabletLayoutType _value,
-      $Res Function(_$SmallTabletLayoutType) _then)
+class __$$SmallTabletLayoutTypeImplCopyWithImpl<$Res>
+    extends _$LayoutTypeCopyWithImpl<$Res, _$SmallTabletLayoutTypeImpl>
+    implements _$$SmallTabletLayoutTypeImplCopyWith<$Res> {
+  __$$SmallTabletLayoutTypeImplCopyWithImpl(_$SmallTabletLayoutTypeImpl _value,
+      $Res Function(_$SmallTabletLayoutTypeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$SmallTabletLayoutType extends SmallTabletLayoutType {
-  const _$SmallTabletLayoutType() : super._();
+class _$SmallTabletLayoutTypeImpl extends SmallTabletLayoutType {
+  const _$SmallTabletLayoutTypeImpl() : super._();
 
   @override
   String toString() {
@@ -670,9 +679,10 @@ class _$SmallTabletLayoutType extends SmallTabletLayoutType {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SmallTabletLayoutType);
+        (other.runtimeType == runtimeType &&
+            other is _$SmallTabletLayoutTypeImpl);
   }
 
   @override
@@ -766,30 +776,31 @@ class _$SmallTabletLayoutType extends SmallTabletLayoutType {
 }
 
 abstract class SmallTabletLayoutType extends LayoutType {
-  const factory SmallTabletLayoutType() = _$SmallTabletLayoutType;
+  const factory SmallTabletLayoutType() = _$SmallTabletLayoutTypeImpl;
   const SmallTabletLayoutType._() : super._();
 }
 
 /// @nodoc
-abstract class _$$LargeTabletLayoutTypeCopyWith<$Res> {
-  factory _$$LargeTabletLayoutTypeCopyWith(_$LargeTabletLayoutType value,
-          $Res Function(_$LargeTabletLayoutType) then) =
-      __$$LargeTabletLayoutTypeCopyWithImpl<$Res>;
+abstract class _$$LargeTabletLayoutTypeImplCopyWith<$Res> {
+  factory _$$LargeTabletLayoutTypeImplCopyWith(
+          _$LargeTabletLayoutTypeImpl value,
+          $Res Function(_$LargeTabletLayoutTypeImpl) then) =
+      __$$LargeTabletLayoutTypeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LargeTabletLayoutTypeCopyWithImpl<$Res>
-    extends _$LayoutTypeCopyWithImpl<$Res, _$LargeTabletLayoutType>
-    implements _$$LargeTabletLayoutTypeCopyWith<$Res> {
-  __$$LargeTabletLayoutTypeCopyWithImpl(_$LargeTabletLayoutType _value,
-      $Res Function(_$LargeTabletLayoutType) _then)
+class __$$LargeTabletLayoutTypeImplCopyWithImpl<$Res>
+    extends _$LayoutTypeCopyWithImpl<$Res, _$LargeTabletLayoutTypeImpl>
+    implements _$$LargeTabletLayoutTypeImplCopyWith<$Res> {
+  __$$LargeTabletLayoutTypeImplCopyWithImpl(_$LargeTabletLayoutTypeImpl _value,
+      $Res Function(_$LargeTabletLayoutTypeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$LargeTabletLayoutType extends LargeTabletLayoutType {
-  const _$LargeTabletLayoutType() : super._();
+class _$LargeTabletLayoutTypeImpl extends LargeTabletLayoutType {
+  const _$LargeTabletLayoutTypeImpl() : super._();
 
   @override
   String toString() {
@@ -797,9 +808,10 @@ class _$LargeTabletLayoutType extends LargeTabletLayoutType {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LargeTabletLayoutType);
+        (other.runtimeType == runtimeType &&
+            other is _$LargeTabletLayoutTypeImpl);
   }
 
   @override
@@ -893,30 +905,30 @@ class _$LargeTabletLayoutType extends LargeTabletLayoutType {
 }
 
 abstract class LargeTabletLayoutType extends LayoutType {
-  const factory LargeTabletLayoutType() = _$LargeTabletLayoutType;
+  const factory LargeTabletLayoutType() = _$LargeTabletLayoutTypeImpl;
   const LargeTabletLayoutType._() : super._();
 }
 
 /// @nodoc
-abstract class _$$DesktopLayoutTypeCopyWith<$Res> {
-  factory _$$DesktopLayoutTypeCopyWith(
-          _$DesktopLayoutType value, $Res Function(_$DesktopLayoutType) then) =
-      __$$DesktopLayoutTypeCopyWithImpl<$Res>;
+abstract class _$$DesktopLayoutTypeImplCopyWith<$Res> {
+  factory _$$DesktopLayoutTypeImplCopyWith(_$DesktopLayoutTypeImpl value,
+          $Res Function(_$DesktopLayoutTypeImpl) then) =
+      __$$DesktopLayoutTypeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$DesktopLayoutTypeCopyWithImpl<$Res>
-    extends _$LayoutTypeCopyWithImpl<$Res, _$DesktopLayoutType>
-    implements _$$DesktopLayoutTypeCopyWith<$Res> {
-  __$$DesktopLayoutTypeCopyWithImpl(
-      _$DesktopLayoutType _value, $Res Function(_$DesktopLayoutType) _then)
+class __$$DesktopLayoutTypeImplCopyWithImpl<$Res>
+    extends _$LayoutTypeCopyWithImpl<$Res, _$DesktopLayoutTypeImpl>
+    implements _$$DesktopLayoutTypeImplCopyWith<$Res> {
+  __$$DesktopLayoutTypeImplCopyWithImpl(_$DesktopLayoutTypeImpl _value,
+      $Res Function(_$DesktopLayoutTypeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$DesktopLayoutType extends DesktopLayoutType {
-  const _$DesktopLayoutType() : super._();
+class _$DesktopLayoutTypeImpl extends DesktopLayoutType {
+  const _$DesktopLayoutTypeImpl() : super._();
 
   @override
   String toString() {
@@ -924,9 +936,9 @@ class _$DesktopLayoutType extends DesktopLayoutType {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$DesktopLayoutType);
+        (other.runtimeType == runtimeType && other is _$DesktopLayoutTypeImpl);
   }
 
   @override
@@ -1020,7 +1032,7 @@ class _$DesktopLayoutType extends DesktopLayoutType {
 }
 
 abstract class DesktopLayoutType extends LayoutType {
-  const factory DesktopLayoutType() = _$DesktopLayoutType;
+  const factory DesktopLayoutType() = _$DesktopLayoutTypeImpl;
   const DesktopLayoutType._() : super._();
 }
 
@@ -1103,25 +1115,25 @@ class _$WindowTypeCopyWithImpl<$Res, $Val extends WindowType>
 }
 
 /// @nodoc
-abstract class _$$XSmallWindowTypeCopyWith<$Res> {
-  factory _$$XSmallWindowTypeCopyWith(
-          _$XSmallWindowType value, $Res Function(_$XSmallWindowType) then) =
-      __$$XSmallWindowTypeCopyWithImpl<$Res>;
+abstract class _$$XSmallWindowTypeImplCopyWith<$Res> {
+  factory _$$XSmallWindowTypeImplCopyWith(_$XSmallWindowTypeImpl value,
+          $Res Function(_$XSmallWindowTypeImpl) then) =
+      __$$XSmallWindowTypeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$XSmallWindowTypeCopyWithImpl<$Res>
-    extends _$WindowTypeCopyWithImpl<$Res, _$XSmallWindowType>
-    implements _$$XSmallWindowTypeCopyWith<$Res> {
-  __$$XSmallWindowTypeCopyWithImpl(
-      _$XSmallWindowType _value, $Res Function(_$XSmallWindowType) _then)
+class __$$XSmallWindowTypeImplCopyWithImpl<$Res>
+    extends _$WindowTypeCopyWithImpl<$Res, _$XSmallWindowTypeImpl>
+    implements _$$XSmallWindowTypeImplCopyWith<$Res> {
+  __$$XSmallWindowTypeImplCopyWithImpl(_$XSmallWindowTypeImpl _value,
+      $Res Function(_$XSmallWindowTypeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$XSmallWindowType extends XSmallWindowType {
-  const _$XSmallWindowType() : super._();
+class _$XSmallWindowTypeImpl extends XSmallWindowType {
+  const _$XSmallWindowTypeImpl() : super._();
 
   @override
   String toString() {
@@ -1129,9 +1141,9 @@ class _$XSmallWindowType extends XSmallWindowType {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$XSmallWindowType);
+        (other.runtimeType == runtimeType && other is _$XSmallWindowTypeImpl);
   }
 
   @override
@@ -1219,30 +1231,30 @@ class _$XSmallWindowType extends XSmallWindowType {
 }
 
 abstract class XSmallWindowType extends WindowType {
-  const factory XSmallWindowType() = _$XSmallWindowType;
+  const factory XSmallWindowType() = _$XSmallWindowTypeImpl;
   const XSmallWindowType._() : super._();
 }
 
 /// @nodoc
-abstract class _$$SmallWindowTypeCopyWith<$Res> {
-  factory _$$SmallWindowTypeCopyWith(
-          _$SmallWindowType value, $Res Function(_$SmallWindowType) then) =
-      __$$SmallWindowTypeCopyWithImpl<$Res>;
+abstract class _$$SmallWindowTypeImplCopyWith<$Res> {
+  factory _$$SmallWindowTypeImplCopyWith(_$SmallWindowTypeImpl value,
+          $Res Function(_$SmallWindowTypeImpl) then) =
+      __$$SmallWindowTypeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SmallWindowTypeCopyWithImpl<$Res>
-    extends _$WindowTypeCopyWithImpl<$Res, _$SmallWindowType>
-    implements _$$SmallWindowTypeCopyWith<$Res> {
-  __$$SmallWindowTypeCopyWithImpl(
-      _$SmallWindowType _value, $Res Function(_$SmallWindowType) _then)
+class __$$SmallWindowTypeImplCopyWithImpl<$Res>
+    extends _$WindowTypeCopyWithImpl<$Res, _$SmallWindowTypeImpl>
+    implements _$$SmallWindowTypeImplCopyWith<$Res> {
+  __$$SmallWindowTypeImplCopyWithImpl(
+      _$SmallWindowTypeImpl _value, $Res Function(_$SmallWindowTypeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$SmallWindowType extends SmallWindowType {
-  const _$SmallWindowType() : super._();
+class _$SmallWindowTypeImpl extends SmallWindowType {
+  const _$SmallWindowTypeImpl() : super._();
 
   @override
   String toString() {
@@ -1250,9 +1262,9 @@ class _$SmallWindowType extends SmallWindowType {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SmallWindowType);
+        (other.runtimeType == runtimeType && other is _$SmallWindowTypeImpl);
   }
 
   @override
@@ -1340,30 +1352,30 @@ class _$SmallWindowType extends SmallWindowType {
 }
 
 abstract class SmallWindowType extends WindowType {
-  const factory SmallWindowType() = _$SmallWindowType;
+  const factory SmallWindowType() = _$SmallWindowTypeImpl;
   const SmallWindowType._() : super._();
 }
 
 /// @nodoc
-abstract class _$$MediumWindowTypeCopyWith<$Res> {
-  factory _$$MediumWindowTypeCopyWith(
-          _$MediumWindowType value, $Res Function(_$MediumWindowType) then) =
-      __$$MediumWindowTypeCopyWithImpl<$Res>;
+abstract class _$$MediumWindowTypeImplCopyWith<$Res> {
+  factory _$$MediumWindowTypeImplCopyWith(_$MediumWindowTypeImpl value,
+          $Res Function(_$MediumWindowTypeImpl) then) =
+      __$$MediumWindowTypeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$MediumWindowTypeCopyWithImpl<$Res>
-    extends _$WindowTypeCopyWithImpl<$Res, _$MediumWindowType>
-    implements _$$MediumWindowTypeCopyWith<$Res> {
-  __$$MediumWindowTypeCopyWithImpl(
-      _$MediumWindowType _value, $Res Function(_$MediumWindowType) _then)
+class __$$MediumWindowTypeImplCopyWithImpl<$Res>
+    extends _$WindowTypeCopyWithImpl<$Res, _$MediumWindowTypeImpl>
+    implements _$$MediumWindowTypeImplCopyWith<$Res> {
+  __$$MediumWindowTypeImplCopyWithImpl(_$MediumWindowTypeImpl _value,
+      $Res Function(_$MediumWindowTypeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$MediumWindowType extends MediumWindowType {
-  const _$MediumWindowType() : super._();
+class _$MediumWindowTypeImpl extends MediumWindowType {
+  const _$MediumWindowTypeImpl() : super._();
 
   @override
   String toString() {
@@ -1371,9 +1383,9 @@ class _$MediumWindowType extends MediumWindowType {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$MediumWindowType);
+        (other.runtimeType == runtimeType && other is _$MediumWindowTypeImpl);
   }
 
   @override
@@ -1461,30 +1473,30 @@ class _$MediumWindowType extends MediumWindowType {
 }
 
 abstract class MediumWindowType extends WindowType {
-  const factory MediumWindowType() = _$MediumWindowType;
+  const factory MediumWindowType() = _$MediumWindowTypeImpl;
   const MediumWindowType._() : super._();
 }
 
 /// @nodoc
-abstract class _$$LargeWindowTypeCopyWith<$Res> {
-  factory _$$LargeWindowTypeCopyWith(
-          _$LargeWindowType value, $Res Function(_$LargeWindowType) then) =
-      __$$LargeWindowTypeCopyWithImpl<$Res>;
+abstract class _$$LargeWindowTypeImplCopyWith<$Res> {
+  factory _$$LargeWindowTypeImplCopyWith(_$LargeWindowTypeImpl value,
+          $Res Function(_$LargeWindowTypeImpl) then) =
+      __$$LargeWindowTypeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LargeWindowTypeCopyWithImpl<$Res>
-    extends _$WindowTypeCopyWithImpl<$Res, _$LargeWindowType>
-    implements _$$LargeWindowTypeCopyWith<$Res> {
-  __$$LargeWindowTypeCopyWithImpl(
-      _$LargeWindowType _value, $Res Function(_$LargeWindowType) _then)
+class __$$LargeWindowTypeImplCopyWithImpl<$Res>
+    extends _$WindowTypeCopyWithImpl<$Res, _$LargeWindowTypeImpl>
+    implements _$$LargeWindowTypeImplCopyWith<$Res> {
+  __$$LargeWindowTypeImplCopyWithImpl(
+      _$LargeWindowTypeImpl _value, $Res Function(_$LargeWindowTypeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$LargeWindowType extends LargeWindowType {
-  const _$LargeWindowType() : super._();
+class _$LargeWindowTypeImpl extends LargeWindowType {
+  const _$LargeWindowTypeImpl() : super._();
 
   @override
   String toString() {
@@ -1492,9 +1504,9 @@ class _$LargeWindowType extends LargeWindowType {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LargeWindowType);
+        (other.runtimeType == runtimeType && other is _$LargeWindowTypeImpl);
   }
 
   @override
@@ -1582,30 +1594,30 @@ class _$LargeWindowType extends LargeWindowType {
 }
 
 abstract class LargeWindowType extends WindowType {
-  const factory LargeWindowType() = _$LargeWindowType;
+  const factory LargeWindowType() = _$LargeWindowTypeImpl;
   const LargeWindowType._() : super._();
 }
 
 /// @nodoc
-abstract class _$$XLargeWindowTypeCopyWith<$Res> {
-  factory _$$XLargeWindowTypeCopyWith(
-          _$XLargeWindowType value, $Res Function(_$XLargeWindowType) then) =
-      __$$XLargeWindowTypeCopyWithImpl<$Res>;
+abstract class _$$XLargeWindowTypeImplCopyWith<$Res> {
+  factory _$$XLargeWindowTypeImplCopyWith(_$XLargeWindowTypeImpl value,
+          $Res Function(_$XLargeWindowTypeImpl) then) =
+      __$$XLargeWindowTypeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$XLargeWindowTypeCopyWithImpl<$Res>
-    extends _$WindowTypeCopyWithImpl<$Res, _$XLargeWindowType>
-    implements _$$XLargeWindowTypeCopyWith<$Res> {
-  __$$XLargeWindowTypeCopyWithImpl(
-      _$XLargeWindowType _value, $Res Function(_$XLargeWindowType) _then)
+class __$$XLargeWindowTypeImplCopyWithImpl<$Res>
+    extends _$WindowTypeCopyWithImpl<$Res, _$XLargeWindowTypeImpl>
+    implements _$$XLargeWindowTypeImplCopyWith<$Res> {
+  __$$XLargeWindowTypeImplCopyWithImpl(_$XLargeWindowTypeImpl _value,
+      $Res Function(_$XLargeWindowTypeImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$XLargeWindowType extends XLargeWindowType {
-  const _$XLargeWindowType() : super._();
+class _$XLargeWindowTypeImpl extends XLargeWindowType {
+  const _$XLargeWindowTypeImpl() : super._();
 
   @override
   String toString() {
@@ -1613,9 +1625,9 @@ class _$XLargeWindowType extends XLargeWindowType {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$XLargeWindowType);
+        (other.runtimeType == runtimeType && other is _$XLargeWindowTypeImpl);
   }
 
   @override
@@ -1703,6 +1715,6 @@ class _$XLargeWindowType extends XLargeWindowType {
 }
 
 abstract class XLargeWindowType extends WindowType {
-  const factory XLargeWindowType() = _$XLargeWindowType;
+  const factory XLargeWindowType() = _$XLargeWindowTypeImpl;
   const XLargeWindowType._() : super._();
 }

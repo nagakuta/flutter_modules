@@ -12,7 +12,7 @@ part of 'exception.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$AtomicWidgetException {
@@ -73,35 +73,35 @@ class _$AtomicWidgetExceptionCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$ShouldUseTemplateWidgetExceptionCopyWith<$Res> {
-  factory _$$ShouldUseTemplateWidgetExceptionCopyWith(
-          _$ShouldUseTemplateWidgetException value,
-          $Res Function(_$ShouldUseTemplateWidgetException) then) =
-      __$$ShouldUseTemplateWidgetExceptionCopyWithImpl<$Res>;
+abstract class _$$ShouldUseTemplateWidgetExceptionImplCopyWith<$Res> {
+  factory _$$ShouldUseTemplateWidgetExceptionImplCopyWith(
+          _$ShouldUseTemplateWidgetExceptionImpl value,
+          $Res Function(_$ShouldUseTemplateWidgetExceptionImpl) then) =
+      __$$ShouldUseTemplateWidgetExceptionImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$ShouldUseTemplateWidgetExceptionCopyWithImpl<$Res>
+class __$$ShouldUseTemplateWidgetExceptionImplCopyWithImpl<$Res>
     extends _$AtomicWidgetExceptionCopyWithImpl<$Res,
-        _$ShouldUseTemplateWidgetException>
-    implements _$$ShouldUseTemplateWidgetExceptionCopyWith<$Res> {
-  __$$ShouldUseTemplateWidgetExceptionCopyWithImpl(
-      _$ShouldUseTemplateWidgetException _value,
-      $Res Function(_$ShouldUseTemplateWidgetException) _then)
+        _$ShouldUseTemplateWidgetExceptionImpl>
+    implements _$$ShouldUseTemplateWidgetExceptionImplCopyWith<$Res> {
+  __$$ShouldUseTemplateWidgetExceptionImplCopyWithImpl(
+      _$ShouldUseTemplateWidgetExceptionImpl _value,
+      $Res Function(_$ShouldUseTemplateWidgetExceptionImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$ShouldUseTemplateWidgetException
+class _$ShouldUseTemplateWidgetExceptionImpl
     extends ShouldUseTemplateWidgetException {
-  const _$ShouldUseTemplateWidgetException() : super._();
+  const _$ShouldUseTemplateWidgetExceptionImpl() : super._();
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ShouldUseTemplateWidgetException);
+            other is _$ShouldUseTemplateWidgetExceptionImpl);
   }
 
   @override
@@ -169,6 +169,6 @@ class _$ShouldUseTemplateWidgetException
 
 abstract class ShouldUseTemplateWidgetException extends AtomicWidgetException {
   const factory ShouldUseTemplateWidgetException() =
-      _$ShouldUseTemplateWidgetException;
+      _$ShouldUseTemplateWidgetExceptionImpl;
   const ShouldUseTemplateWidgetException._() : super._();
 }
