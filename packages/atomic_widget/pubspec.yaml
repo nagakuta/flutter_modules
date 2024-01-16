@@ -6,7 +6,7 @@ publish_to: https://dart.cloudsmith.io/nagakuta_flutter/modules/
 
 environment:
   sdk: ^3.0.0
-  flutter: ^3.3.0
+  flutter: ">=3.3.0"
 
 dependencies:
   flutter:
