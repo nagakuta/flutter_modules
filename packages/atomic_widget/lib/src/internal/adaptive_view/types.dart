@@ -3,11 +3,15 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'types.freezed.dart';
 
-// ignore: constant_identifier_names
-const double _MINIMUM_WIDTH = 359;
+@visibleForTesting
+// ignore: constant_identifier_names, public_member_api_docs
+const double MINIMUM_WIDTH = 359;
 
 /// Breakpoint
 @Freezed(
+  copyWith: false,
+  fromJson: false,
+  toJson: false,
   map: FreezedMapOptions.none,
   when: FreezedWhenOptions.none,
 )
@@ -44,32 +48,18 @@ class Breakpoint with _$Breakpoint {
 }
 
 /// Layout Type
-@freezed
-class LayoutType with _$LayoutType {
-  // ignore: public_member_api_docs
-  const factory LayoutType.smallHandset() = SmallHandsetLayoutType;
-
-  // ignore: public_member_api_docs
-  const factory LayoutType.mediumHandset() = MediumHandsetLayoutType;
-
-  // ignore: public_member_api_docs
-  const factory LayoutType.largeHandset() = LargeHandsetLayoutType;
-
-  // ignore: public_member_api_docs
-  const factory LayoutType.smallTablet() = SmallTabletLayoutType;
-
-  // ignore: public_member_api_docs
-  const factory LayoutType.largeTablet() = LargeTabletLayoutType;
-
-  // ignore: public_member_api_docs
-  const factory LayoutType.desktop() = DesktopLayoutType;
-
-  const LayoutType._();
+enum LayoutType {
+  smallHandset,
+  mediumHandset,
+  largeHandset,
+  smallTablet,
+  largeTablet,
+  desktop;
 
   // ignore: public_member_api_docs
   factory LayoutType.fromConstraints(final BoxConstraints constraints) {
     final bool isConstraintsValid = constraints.debugAssertIsValid();
-    final double maxWidth = isConstraintsValid ? constraints.normalize().maxWidth : _MINIMUM_WIDTH;
+    final double maxWidth = isConstraintsValid ? constraints.normalize().maxWidth : MINIMUM_WIDTH;
     final bool isLandscape = isConstraintsValid && constraints.maxWidth > constraints.maxHeight;
 
     return LayoutType._calculate(isLandscape ? maxWidth + 120 : maxWidth);
@@ -84,44 +74,28 @@ class LayoutType with _$LayoutType {
     return LayoutType._calculate(isLandscape ? width + 120 : width);
   }
 
-  // ignore: public_member_api_docs
-  factory LayoutType._calculate(final double width) => width >= 1024
-      ? const LayoutType.desktop()
-      : width >= 720
-          ? const LayoutType.largeTablet()
-          : width >= 600
-              ? const LayoutType.smallTablet()
-              : width >= 400
-                  ? const LayoutType.largeHandset()
-                  : width >= 360
-                      ? const LayoutType.mediumHandset()
-                      : const LayoutType.smallHandset();
+  factory LayoutType._calculate(final double width) => switch (width) {
+        >= 1024 => LayoutType.desktop,
+        >= 720 => LayoutType.largeTablet,
+        >= 600 => LayoutType.smallTablet,
+        >= 400 => LayoutType.largeHandset,
+        >= 360 => LayoutType.mediumHandset,
+        _ => LayoutType.smallHandset,
+      };
 }
 
 /// Window Type
-@freezed
-class WindowType with _$WindowType {
-  // ignore: public_member_api_docs
-  const factory WindowType.xsmall() = XSmallWindowType;
-
-  // ignore: public_member_api_docs
-  const factory WindowType.small() = SmallWindowType;
-
-  // ignore: public_member_api_docs
-  const factory WindowType.medium() = MediumWindowType;
-
-  // ignore: public_member_api_docs
-  const factory WindowType.large() = LargeWindowType;
-
-  // ignore: public_member_api_docs
-  const factory WindowType.xlarge() = XLargeWindowType;
-
-  const WindowType._();
+enum WindowType {
+  xsmall,
+  small,
+  medium,
+  large,
+  xlarge;
 
   // ignore: public_member_api_docs
   factory WindowType.fromConstraints(final BoxConstraints constraints) {
     final bool isConstraintsValid = constraints.debugAssertIsValid();
-    final double maxWidth = isConstraintsValid ? constraints.normalize().maxWidth : _MINIMUM_WIDTH;
+    final double maxWidth = isConstraintsValid ? constraints.normalize().maxWidth : MINIMUM_WIDTH;
     final bool isLandscape = isConstraintsValid && constraints.maxWidth > constraints.maxHeight;
 
     return WindowType._calculate(isLandscape ? maxWidth + 120 : maxWidth);
@@ -136,14 +110,11 @@ class WindowType with _$WindowType {
     return WindowType._calculate(isLandscape ? width + 120 : width);
   }
 
-  // ignore: public_member_api_docs
-  factory WindowType._calculate(final double width) => width >= 1920
-      ? const WindowType.xlarge()
-      : width >= 1440
-          ? const WindowType.large()
-          : width >= 1024
-              ? const WindowType.medium()
-              : width >= 600
-                  ? const WindowType.small()
-                  : const WindowType.xsmall();
+  factory WindowType._calculate(final double width) => switch (width) {
+        >= 1920 => WindowType.xlarge,
+        >= 1440 => WindowType.large,
+        >= 1024 => WindowType.medium,
+        >= 600 => WindowType.small,
+        _ => WindowType.xsmall,
+      };
 }

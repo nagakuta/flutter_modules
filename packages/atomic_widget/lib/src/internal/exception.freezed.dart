@@ -15,81 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$AtomicWidgetException {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() shouldUseTemplateWidget,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? shouldUseTemplateWidget,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? shouldUseTemplateWidget,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(ShouldUseTemplateWidgetException value)
-        shouldUseTemplateWidget,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(ShouldUseTemplateWidgetException value)?
-        shouldUseTemplateWidget,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(ShouldUseTemplateWidgetException value)?
-        shouldUseTemplateWidget,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $AtomicWidgetExceptionCopyWith<$Res> {
-  factory $AtomicWidgetExceptionCopyWith(AtomicWidgetException value,
-          $Res Function(AtomicWidgetException) then) =
-      _$AtomicWidgetExceptionCopyWithImpl<$Res, AtomicWidgetException>;
-}
-
-/// @nodoc
-class _$AtomicWidgetExceptionCopyWithImpl<$Res,
-        $Val extends AtomicWidgetException>
-    implements $AtomicWidgetExceptionCopyWith<$Res> {
-  _$AtomicWidgetExceptionCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
-
-/// @nodoc
-abstract class _$$ShouldUseTemplateWidgetExceptionImplCopyWith<$Res> {
-  factory _$$ShouldUseTemplateWidgetExceptionImplCopyWith(
-          _$ShouldUseTemplateWidgetExceptionImpl value,
-          $Res Function(_$ShouldUseTemplateWidgetExceptionImpl) then) =
-      __$$ShouldUseTemplateWidgetExceptionImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$ShouldUseTemplateWidgetExceptionImplCopyWithImpl<$Res>
-    extends _$AtomicWidgetExceptionCopyWithImpl<$Res,
-        _$ShouldUseTemplateWidgetExceptionImpl>
-    implements _$$ShouldUseTemplateWidgetExceptionImplCopyWith<$Res> {
-  __$$ShouldUseTemplateWidgetExceptionImplCopyWithImpl(
-      _$ShouldUseTemplateWidgetExceptionImpl _value,
-      $Res Function(_$ShouldUseTemplateWidgetExceptionImpl) _then)
-      : super(_value, _then);
-}
+mixin _$AtomicWidgetException {}
 
 /// @nodoc
 
@@ -106,65 +32,6 @@ class _$ShouldUseTemplateWidgetExceptionImpl
 
   @override
   int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() shouldUseTemplateWidget,
-  }) {
-    return shouldUseTemplateWidget();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? shouldUseTemplateWidget,
-  }) {
-    return shouldUseTemplateWidget?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? shouldUseTemplateWidget,
-    required TResult orElse(),
-  }) {
-    if (shouldUseTemplateWidget != null) {
-      return shouldUseTemplateWidget();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(ShouldUseTemplateWidgetException value)
-        shouldUseTemplateWidget,
-  }) {
-    return shouldUseTemplateWidget(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(ShouldUseTemplateWidgetException value)?
-        shouldUseTemplateWidget,
-  }) {
-    return shouldUseTemplateWidget?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(ShouldUseTemplateWidgetException value)?
-        shouldUseTemplateWidget,
-    required TResult orElse(),
-  }) {
-    if (shouldUseTemplateWidget != null) {
-      return shouldUseTemplateWidget(this);
-    }
-    return orElse();
-  }
 }
 
 abstract class ShouldUseTemplateWidgetException extends AtomicWidgetException {
