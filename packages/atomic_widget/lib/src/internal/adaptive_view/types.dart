@@ -1,10 +1,12 @@
+// ignore_for_file: public_member_api_docs
+
 import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'types.freezed.dart';
 
 @visibleForTesting
-// ignore: constant_identifier_names, public_member_api_docs
+// ignore: constant_identifier_names
 const double MINIMUM_WIDTH = 359;
 
 /// Breakpoint
@@ -16,7 +18,6 @@ const double MINIMUM_WIDTH = 359;
   when: FreezedWhenOptions.none,
 )
 class Breakpoint with _$Breakpoint {
-  // ignore: public_member_api_docs
   const factory Breakpoint({
     required final LayoutType layoutType,
     required final WindowType windowType,
@@ -24,7 +25,6 @@ class Breakpoint with _$Breakpoint {
 
   const Breakpoint._();
 
-  // ignore: public_member_api_docs
   factory Breakpoint.fromConstraints(final BoxConstraints constraints) {
     final LayoutType layoutType = LayoutType.fromConstraints(constraints);
     final WindowType windowType = WindowType.fromConstraints(constraints);
@@ -35,7 +35,6 @@ class Breakpoint with _$Breakpoint {
     );
   }
 
-  // ignore: public_member_api_docs
   factory Breakpoint.fromMediaQuery(final BuildContext context) {
     final LayoutType layoutType = LayoutType.fromMediaQuery(context);
     final WindowType windowType = WindowType.fromMediaQuery(context);
@@ -56,7 +55,6 @@ enum LayoutType {
   largeTablet,
   desktop;
 
-  // ignore: public_member_api_docs
   factory LayoutType.fromConstraints(final BoxConstraints constraints) {
     final bool isConstraintsValid = constraints.debugAssertIsValid();
     final double maxWidth = isConstraintsValid ? constraints.normalize().maxWidth : MINIMUM_WIDTH;
@@ -65,7 +63,6 @@ enum LayoutType {
     return LayoutType._calculate(isLandscape ? maxWidth + 120 : maxWidth);
   }
 
-  // ignore: public_member_api_docs
   factory LayoutType.fromMediaQuery(final BuildContext context) {
     final double width = MediaQuery.sizeOf(context).width;
     final Orientation orientation = MediaQuery.orientationOf(context);
@@ -92,7 +89,6 @@ enum WindowType {
   large,
   xlarge;
 
-  // ignore: public_member_api_docs
   factory WindowType.fromConstraints(final BoxConstraints constraints) {
     final bool isConstraintsValid = constraints.debugAssertIsValid();
     final double maxWidth = isConstraintsValid ? constraints.normalize().maxWidth : MINIMUM_WIDTH;
@@ -101,7 +97,6 @@ enum WindowType {
     return WindowType._calculate(isLandscape ? maxWidth + 120 : maxWidth);
   }
 
-  // ignore: public_member_api_docs
   factory WindowType.fromMediaQuery(final BuildContext context) {
     final double width = MediaQuery.sizeOf(context).width;
     final Orientation orientation = MediaQuery.orientationOf(context);
