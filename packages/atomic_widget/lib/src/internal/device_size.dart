@@ -20,88 +20,147 @@ enum DeviceSize {
   galaxyFold,
   galaxyA51,
   nestHub,
-  nestHubMax;
+  nestHubMax,
+  webBrowser,
+  fullScreenWebBrowser;
 
   Device get config => switch (this) {
-        DeviceSize.iPhoneSE => const Device(
-            size: Size(375, 667),
+        DeviceSize.iPhoneSE => Device(
+            size: const Size(375, 667),
             devicePixelRatio: 2,
-            name: "iPhone SE",
+            name: name,
           ),
-        DeviceSize.iPhoneXR => const Device(
-            size: Size(414, 896),
+        DeviceSize.iPhoneXR => Device(
+            size: const Size(414, 896),
             devicePixelRatio: 2,
-            name: "iPhone XR",
+            name: name,
           ),
-        DeviceSize.iPhone12Pro => const Device(
-            size: Size(390, 844),
+        DeviceSize.iPhone12Pro => Device(
+            size: const Size(390, 844),
             devicePixelRatio: 3,
-            name: "iPhone 12 Pro",
+            name: name,
           ),
-        DeviceSize.iPhone14ProMax => const Device(
-            size: Size(430, 932),
+        DeviceSize.iPhone14ProMax => Device(
+            size: const Size(430, 932),
             devicePixelRatio: 3,
-            name: "iPhone 14 Pro Max",
+            name: name,
           ),
-        DeviceSize.pixel7 => const Device(
-            size: Size(412, 915),
+        DeviceSize.pixel7 => Device(
+            size: const Size(412, 915),
             devicePixelRatio: 2.6,
-            name: "Pixel 5",
+            name: name,
           ),
-        DeviceSize.galaxyS8Plus => const Device(
-            size: Size(360, 740),
+        DeviceSize.galaxyS8Plus => Device(
+            size: const Size(360, 740),
             devicePixelRatio: 4,
-            name: "Galaxy S8+",
+            name: name,
           ),
-        DeviceSize.galaxyS20Ultra => const Device(
-            size: Size(412, 915),
+        DeviceSize.galaxyS20Ultra => Device(
+            size: const Size(412, 915),
             devicePixelRatio: 3.5,
-            name: "Galaxy S20 Ultra",
+            name: name,
           ),
-        DeviceSize.iPadAir => const Device(
-            size: Size(820, 1180),
+        DeviceSize.iPadAir => Device(
+            size: const Size(820, 1180),
             devicePixelRatio: 2,
-            name: "iPad Air",
+            name: name,
           ),
-        DeviceSize.iPadMini => const Device(
-            size: Size(768, 1024),
+        DeviceSize.iPadMini => Device(
+            size: const Size(768, 1024),
             devicePixelRatio: 2,
-            name: "iPad Mini",
+            name: name,
           ),
-        DeviceSize.iPadPro => const Device(
-            size: Size(1024, 1366),
+        DeviceSize.iPadPro => Device(
+            size: const Size(1024, 1366),
             devicePixelRatio: 2,
-            name: "iPad Pro",
+            name: name,
           ),
-        DeviceSize.surfacePro7 => const Device(
-            size: Size(912, 1368),
+        DeviceSize.surfacePro7 => Device(
+            size: const Size(912, 1368),
             devicePixelRatio: 2,
-            name: "Surface Pro 7",
+            name: name,
           ),
-        DeviceSize.surfaceDuo => const Device(
-            size: Size(540, 720),
+        DeviceSize.surfaceDuo => Device(
+            size: const Size(540, 720),
             devicePixelRatio: 2.5,
-            name: "Surface Duo",
+            name: name,
           ),
-        DeviceSize.galaxyFold => const Device(
-            size: Size(280, 653),
+        DeviceSize.galaxyFold => Device(
+            size: const Size(280, 653),
             devicePixelRatio: 3,
-            name: "Galaxy Fold",
+            name: name,
           ),
-        DeviceSize.galaxyA51 => const Device(
-            size: Size(412, 914),
+        DeviceSize.galaxyA51 => Device(
+            size: const Size(412, 914),
             devicePixelRatio: 2.6,
-            name: "Galaxy A51",
+            name: name,
           ),
-        DeviceSize.nestHub => const Device(
-            size: Size(1024, 600),
+        DeviceSize.nestHub => Device(
+            size: const Size(1024, 600),
             devicePixelRatio: 2,
-            name: "Nest Hub",
+            name: name,
           ),
-        DeviceSize.nestHubMax => const Device(
-            size: Size(1280, 800),
+        DeviceSize.nestHubMax => Device(
+            size: const Size(1280, 800),
             devicePixelRatio: 2,
-            name: "Nest Hub Max",
+            name: name,
+          ),
+        DeviceSize.webBrowser => Device(
+            size: const Size(1600, 900),
+            name: name,
+          ),
+        DeviceSize.fullScreenWebBrowser => Device(
+            size: const Size(1920, 1080),
+            name: name,
           ),
       };
+
+  static List<DeviceSize> get android => <DeviceSize>[
+        DeviceSize.galaxyA51,
+        DeviceSize.galaxyFold,
+        DeviceSize.galaxyS20Ultra,
+        DeviceSize.galaxyS8Plus,
+        DeviceSize.nestHub,
+        DeviceSize.nestHubMax,
+        DeviceSize.pixel7,
+        DeviceSize.surfaceDuo,
+        DeviceSize.surfacePro7,
+      ];
+
+  static List<DeviceSize> get iOS => <DeviceSize>[
+        DeviceSize.iPadAir,
+        DeviceSize.iPadMini,
+        DeviceSize.iPadPro,
+        DeviceSize.iPhone12Pro,
+        DeviceSize.iPhone14ProMax,
+        DeviceSize.iPhoneSE,
+        DeviceSize.iPhoneXR,
+      ];
+
+  static List<DeviceSize> get web => <DeviceSize>[
+        DeviceSize.webBrowser,
+        DeviceSize.fullScreenWebBrowser,
+      ];
+
+  static List<DeviceSize> get smallHandsets =>
+      DeviceSize.values.where((final DeviceSize device) => device.config.size.width < 360).toList(growable: false);
+
+  static List<DeviceSize> get mediumHandsets => DeviceSize.values
+      .where((final DeviceSize device) => device.config.size.width >= 360 && device.config.size.width < 400)
+      .toList(growable: false);
+
+  static List<DeviceSize> get largeHandsets => DeviceSize.values
+      .where((final DeviceSize device) => device.config.size.width >= 400 && device.config.size.width < 600)
+      .toList(growable: false);
+
+  static List<DeviceSize> get smallTablets => DeviceSize.values
+      .where((final DeviceSize device) => device.config.size.width >= 600 && device.config.size.width < 720)
+      .toList(growable: false);
+
+  static List<DeviceSize> get largeTablets => DeviceSize.values
+      .where((final DeviceSize device) => device.config.size.width >= 720 && device.config.size.width < 1024)
+      .toList(growable: false);
+
+  static List<DeviceSize> get desktops =>
+      DeviceSize.values.where((final DeviceSize device) => device.config.size.width >= 1024).toList(growable: false);
 }
