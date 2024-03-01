@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 import '/src/internal/wrapper/widget.dart';
 
@@ -22,9 +22,12 @@ abstract base class AtomWidget extends StatelessWrapper {
     final Widget? cupertinoWidget = buildCupertino(context);
     final Widget materialWidget = buildMaterial(context);
 
-    final Widget child =
-        CupertinoUserInterfaceLevel.maybeOf(context) != null ? cupertinoWidget ?? materialWidget : materialWidget;
+    final TargetPlatform platform = Theme.of(context).platform;
+    final Widget? child = switch (platform) {
+      TargetPlatform.iOS || TargetPlatform.macOS => cupertinoWidget,
+      _ => materialWidget,
+    };
 
-    return buildWrapper(context, child);
+    return buildWrapper(context, child ?? materialWidget);
   }
 }

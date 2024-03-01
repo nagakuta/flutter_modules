@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## 2024-02-27
+## 2024-03-01
 
 ### Changes
 
@@ -15,7 +15,7 @@ Packages with breaking changes:
 
 Packages with other changes:
 
- - [`atomic_widget` - `v0.1.2`](#atomic_widget---v012)
+ - [`atomic_widget` - `v0.1.3`](#atomic_widget---v013)
  - [`atomic_widget_example` - `v0.0.0+1`](#atomic_widget_example---v0001)
 
 Packages with dependency updates only:
@@ -26,5 +26,5 @@ Packages with dependency updates only:
 
 ---
 
-#### `atomic_widget` - `v0.1.2`
+#### `atomic_widget` - `v0.1.3`
 

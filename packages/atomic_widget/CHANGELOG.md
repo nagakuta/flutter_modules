@@ -1,3 +1,6 @@
+## 0.1.3
+- chore: Change showing `Cupertino` widget logic.
+
 ## 0.1.2
 - feat: Add `DeviceSize.webBrowser` and `DeviceSize.fullScreenWebBrowser`.
 - feat: Add iOS, Android, and Web platform lists.
