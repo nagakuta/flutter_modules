@@ -51,13 +51,17 @@ abstract class PageState<T extends StatefulPageWidget> extends State<T> {
   }
 
   /// Build a app bar.
-  PreferredSizeWidget? buildMaterialAppBar(final BuildContext context) => AppBar();
+  PreferredSizeWidget? buildMaterialAppBar(final BuildContext context) =>
+      Theme.of(context).platform == TargetPlatform.android && !kIsWeb ? AppBar() : null;
 
   /// Build a cupertino navigation bar.
-  ObstructingPreferredSizeWidget? buildCupertinoNavigationBar(
-    final BuildContext context,
-  ) =>
-      const CupertinoNavigationBar();
+  ObstructingPreferredSizeWidget? buildCupertinoNavigationBar(final BuildContext context) {
+    final TargetPlatform platform = Theme.of(context).platform;
+    return switch (platform) {
+      (TargetPlatform.iOS || TargetPlatform.macOS) when !kIsWeb => const CupertinoNavigationBar(),
+      _ => null,
+    };
+  }
 
   /// Build a floating action button.
   Widget? buildMaterialFloatingActionButton(final BuildContext context) => null;
@@ -77,8 +81,12 @@ abstract class PageState<T extends StatefulPageWidget> extends State<T> {
       floatingActionButton: buildMaterialFloatingActionButton(context),
     );
 
-    return CupertinoUserInterfaceLevel.maybeOf(context) != null
-        ? cupertinoPageScaffold ?? materialScaffold
-        : materialScaffold;
+    final TargetPlatform platform = Theme.of(context).platform;
+    final Widget? scaffold = switch (platform) {
+      TargetPlatform.iOS || TargetPlatform.macOS => cupertinoPageScaffold,
+      _ => materialScaffold,
+    };
+
+    return scaffold ?? materialScaffold;
   }
 }
