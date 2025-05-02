@@ -1,0 +1,75 @@
+name: modules
+sdkPath: .fvm/flutter_sdk
+
+# Packages
+packages:
+  - packages/**
+
+# Command
+command:
+  bootstrap:
+    hooks:
+      pre: fvm dart run melos clean
+  version:
+    fetchTags: false
+
+# Scripts
+scripts:
+  # Analyze
+  analyze:
+    run: fvm dart run melos exec fvm dart analyze . --fatal-infos
+
+  # Build
+  build:
+    run: fvm dart run melos exec --order-dependents fvm dart run build_runner build --delete-conflicting-outputs
+    packageFilters:
+      fileExists: "build.yaml"
+  clean_build:
+    run: |
+      fvm dart run melos run __clean_build_runner && \
+      fvm dart run melos run build
+    packageFilters:
+      fileExists: "build.yaml"
+
+  # Upgrade
+  upgrade:
+    run: |
+      fvm dart run melos exec --order-dependents --concurrency 1 --no-flutter fvm dart pub upgrade && \
+      fvm dart run melos exec --order-dependents --concurrency 1 --flutter fvm flutter pub upgrade
+  deep_upgrade:
+    run: |
+      fvm dart run melos exec --order-dependents --concurrency 1 --no-flutter fvm dart pub upgrade --major-versions && \
+      fvm dart run melos exec --order-dependents --concurrency 1 --flutter fvm flutter pub upgrade --major-versions
+  upgrade_with_build:
+    run: |
+      fvm dart run melos run deep_upgrade && \
+      fvm dart run melos run clean_build
+
+  # Test
+  test:
+    run: |
+      fvm dart run melos exec --fail-fast --no-flutter fvm dart test && \
+      fvm dart run melos exec --fail-fast --flutter fvm flutter test
+    packageFilters:
+      dirExists: "test"
+
+  # Update Goldens
+  update_goldens:
+    run: fvm dart run melos exec --fail-fast --concurrency 1 fvm flutter test --update-goldens --tags golden
+    packageFilters:
+      flutter: true
+      dirExists: "test"
+      dependsOn: "golden_toolkit"
+      scope: "*_example"
+
+  # Clean Up
+  _cleanup:
+    run: |
+      fvm dart run melos clean && \
+      fvm dart run melos run __clean_platform_builds && \
+      fvm dart run melos run __clean_build_runner && \
+      git clean -dx --exclude "**.env**" --force
+  __clean_platform_builds:
+    run: fvm dart run melos exec --order-dependents --flutter fvm flutter clean
+  __clean_build_runner:
+    run: fvm dart run melos exec --order-dependents fvm dart run build_runner clean

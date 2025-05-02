@@ -4,6 +4,9 @@
 # FVM
 .fvm/
 
+# Melos
+.dart_tool/
+
 # Miscellaneous
 *.class
 # *.lock
