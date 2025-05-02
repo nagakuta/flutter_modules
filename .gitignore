@@ -7,6 +7,10 @@
 # Melos
 .dart_tool/
 
+# Mason
+.mason/
+mason-lock.json
+
 # Miscellaneous
 *.class
 # *.lock

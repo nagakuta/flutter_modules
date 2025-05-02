@@ -6,4 +6,5 @@ environment:
   sdk: ^3.0.0
 
 dev_dependencies:
+  mason_cli: ^0.1.0-dev.55
   melos: ^6.0.0

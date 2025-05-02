@@ -12,6 +12,8 @@ services:
       - ../all_lint_rules.yaml:/workspace/all_lint_rules.yaml:cached
       - ../pubspec.lock:/workspace/pubspec.lock:cached
       - ../pubspec.yaml:/workspace/pubspec.yaml:cached
+      # Mason files
+      - ../mason.yaml:/workspace/mason.yaml:cached
       # Melos files
       - ../melos.yaml:/workspace/melos.yaml:cached
       # VSCode
