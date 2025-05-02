@@ -1,0 +1,11 @@
+* text=auto
+
+*.png binary
+
+# Dart / Flutter
+*.lock          linguist-generated=true
+*.freezed.dart  linguist-generated=true
+*.g.dart        linguist-generated=true
+
+# Mason
+mason-lock.json linguist-generated=true
