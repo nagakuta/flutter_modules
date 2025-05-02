@@ -1,0 +1,45 @@
+name: Publish Dart Package
+on:
+  push:
+    tags:
+      - '*-v[0-9]+.[0-9]+.[0-9]+'
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    container:
+      image: dart:3.3-sdk
+    env:
+      TAG: ${{ github.ref_name }}
+      PUB_TOKEN: ${{ secrets.PUB_TOKEN }}
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Setup application
+        uses: ./.github/actions/setup/flutter
+      - name: Add pub token
+        shell: bash
+        run: fvm dart pub token add https://dart.cloudsmith.io/nagakuta_flutter/modules/ --env-var PUB_TOKEN
+      - name: Extract package name
+        shell: bash
+        run: |
+          PACKAGE_NAME="${TAG%-v*}"
+          echo "package_name=$PACKAGE_NAME" >> $GITHUB_ENV
+      - name: Check validation
+        shell: bash
+        working-directory: ./packages/${{ env.package_name }}
+        run: fvm flutter pub publish --dry-run
+      - name: Publish to cloudsmith.io
+        shell: bash
+        working-directory: ./packages/${{ env.package_name }}
+        run: fvm flutter pub publish --skip-validation --force

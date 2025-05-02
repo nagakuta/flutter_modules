@@ -1,0 +1,50 @@
+name: Check Application Code
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+    branches:
+      - feature/**/*
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  check-application-code:
+    runs-on: ubuntu-latest
+    container:
+      image: dart:3.3-sdk
+    env:
+      BRANCH_NAME: ${{ github.head_ref }}
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Setup application
+        uses: ./.github/actions/setup/flutter
+      - name: Extract package name
+        shell: bash
+        run: |
+          BASE_BRANCH="${BRANCH_NAME%/*}"
+          PACKAGE_NAME="${BASE_BRANCH#*/}"
+          echo "package_name=$PACKAGE_NAME" >> $GITHUB_ENV
+      - name: Get dependencies
+        shell: bash
+        working-directory: ./packages/${{ env.package_name }}
+        run: fvm flutter pub get --enforce-lockfile
+      - name: Analyze
+        shell: bash
+        working-directory: ./packages/${{ env.package_name }}
+        run: fvm flutter analyze . --fatal-infos
+      - name: Test
+        shell: bash
+        working-directory: ./packages/${{ env.package_name }}
+        run: fvm flutter test
