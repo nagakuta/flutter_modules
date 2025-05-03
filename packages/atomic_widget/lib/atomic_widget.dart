@@ -6,5 +6,5 @@ export 'src/_utils/wrapper/_widget.dart';
 export 'src/widgets/atom/widget.dart';
 export 'src/widgets/molecule/widget.dart';
 export 'src/widgets/organism/_widget.dart';
-export 'src/widgets/page/_widget.dart';
+export 'src/widgets/page/widget.dart';
 export 'src/widgets/template/_widget.dart';
