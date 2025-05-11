@@ -1,3 +1,3 @@
-## 0.0.1
-
-- Initial version.
+## 0.1.0
+- feat: Define `CrossPlatformType`.
+- feat: Implement `CrossPlatform` class.
