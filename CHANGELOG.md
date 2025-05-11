@@ -15,6 +15,25 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`atomic_widget` - `v0.1.1`](#atomic_widget---v011)
+
+---
+
+#### `atomic_widget` - `v0.1.1`
+
+
+## 2025-05-11
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`cross_platform` - `v0.1.0`](#cross_platform---v010)
 
 ---

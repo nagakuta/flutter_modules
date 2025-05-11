@@ -1,3 +1,6 @@
+## 0.1.1
+- chore: Replace `TargetPlatform` with `CrossPlarform` .
+
 ## 0.1.0
 - feat: Implement `Adaptive` mixin.
 - feat: Implement `Wrapper` mixin.
