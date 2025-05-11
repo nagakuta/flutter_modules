@@ -1,3 +1,4 @@
+import 'package:cross_platform/cross_platform.dart';
 import 'package:flutter/material.dart';
 
 /// Page Widget
@@ -20,13 +21,5 @@ base mixin AdaptiveScaffold on StatelessWidget {
 
   @override
   @protected
-  Widget build(final BuildContext context) {
-    final ThemeData(:TargetPlatform platform) = Theme.of(context);
-    final Widget? scaffold = switch (platform) {
-      TargetPlatform.iOS || TargetPlatform.macOS => cupertino,
-      _ => material,
-    };
-
-    return scaffold ?? material;
-  }
+  Widget build(final BuildContext context) => CrossPlatform.of(context).isCupertino ? cupertino ?? material : material;
 }

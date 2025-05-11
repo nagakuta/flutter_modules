@@ -1,3 +1,4 @@
+import 'package:cross_platform/cross_platform.dart';
 import 'package:flutter/material.dart';
 
 import '/src/_utils/wrapper/_widget.dart';
@@ -30,14 +31,9 @@ abstract base class AtomWidget extends StatelessWidget with StatelessWrapper {
   @override
   @protected
   Widget buildChild(final BuildContext context) {
-    final ThemeData(:TargetPlatform platform) = Theme.of(context);
-
     final Widget? cupertinoWidget = buildCupertino(context);
     final Widget materialWidget = buildMaterial(context);
 
-    return switch (platform) {
-      TargetPlatform.iOS || TargetPlatform.macOS => cupertinoWidget ?? materialWidget,
-      _ => materialWidget,
-    };
+    return CrossPlatform.of(context).isCupertino ? cupertinoWidget ?? materialWidget : materialWidget;
   }
 }

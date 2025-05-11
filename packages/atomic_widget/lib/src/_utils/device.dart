@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs
 
+import 'package:cross_platform/cross_platform.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -129,23 +130,14 @@ sealed class GoldenDevice with _$GoldenDevice {
         FullScreenWebBrowser(),
       ];
 
-  static List<GoldenDevice> get android => all
-      .where(
-        (final GoldenDevice device) => switch (device.platform) {
-          TargetPlatform.android => true,
-          _ => false,
-        },
-      )
-      .toList(growable: false);
+  static List<GoldenDevice> get android =>
+      all.where((final GoldenDevice device) => device.platform.isMaterial).toList(growable: false);
 
-  static List<GoldenDevice> get iOS => all
-      .where(
-        (final GoldenDevice device) => switch (device.platform) {
-          TargetPlatform.iOS || TargetPlatform.macOS => true,
-          _ => false,
-        },
-      )
-      .toList(growable: false);
+  static List<GoldenDevice> get iOS =>
+      all.where((final GoldenDevice device) => device.platform.isCupertino).toList(growable: false);
+
+  static List<GoldenDevice> get web =>
+      all.where((final GoldenDevice device) => device.platform.isWeb).toList(growable: false);
 
   static List<GoldenDevice> get smallHandsets => all
       .where((final GoldenDevice device) => device.breakpoint.layoutType == LayoutType.smallHandset)
@@ -235,7 +227,7 @@ sealed class GoldenDevice with _$GoldenDevice {
         FullScreenWebBrowser() => "FullScreenWebBrowser",
       };
 
-  TargetPlatform get platform => switch (this) {
+  CrossPlatformType get platform => switch (this) {
         IPhoneSE() ||
         IPhoneXR() ||
         IPhone12Pro() ||
@@ -243,7 +235,7 @@ sealed class GoldenDevice with _$GoldenDevice {
         IPadAir() ||
         IPadMini() ||
         IPadPro() =>
-          TargetPlatform.iOS,
+          CrossPlatformType.iOS,
         Pixel7() ||
         GalaxyS8Plus() ||
         GalaxyS20Ultra() ||
@@ -253,8 +245,8 @@ sealed class GoldenDevice with _$GoldenDevice {
         GalaxyA51() ||
         NestHub() ||
         NestHubMax() =>
-          TargetPlatform.android,
-        _ => throw UnsupportedError("$name not supported."),
+          CrossPlatformType.android,
+        WebBrowser() || FullScreenWebBrowser() => CrossPlatformType.web,
       };
 
   double get pixelRatio => switch (this) {
