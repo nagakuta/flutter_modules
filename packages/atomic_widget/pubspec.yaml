@@ -9,6 +9,11 @@ environment:
   flutter: ">=3.3.0"
 
 dependencies:
+  # Cross Platform
+  cross_platform:
+    hosted: https://dart.cloudsmith.io/nagakuta_flutter/modules/
+    version: ^0.1.0
+
   flutter:
     sdk: flutter
 
@@ -34,6 +39,14 @@ dev_dependencies:
 
   # Freezed
   freezed: ^2.0.0
+
+dependency_overrides:
+  # Cross Platform
+  cross_platform:
+    git:
+      url: https://github.com/nagakuta/flutter_modules.git
+      ref: cross_platform-v0.1.0
+      path: packages/cross_platform
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
