@@ -153,6 +153,15 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.1.1"
+  cross_platform:
+    dependency: "direct main"
+    description:
+      path: "packages/cross_platform"
+      ref: "cross_platform-v0.1.0"
+      resolved-ref: b605240a6b9226c947e1b728b6428d1bb1e289a8
+      url: "https://github.com/nagakuta/flutter_modules.git"
+    source: git
+    version: "0.1.0"
   crypto:
     dependency: transitive
     description:
@@ -537,10 +546,10 @@ packages:
     dependency: transitive
     description:
       name: watcher
-      sha256: "69da27e49efa56a15f8afe8f4438c4ec02eff0a117df1b22ea4aad194fe1c104"
+      sha256: "0b7fd4a0bbc4b92641dbf20adfd7e3fd1398fe17102d94b674234563e110088a"
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.1"
+    version: "1.1.2"
   web:
     dependency: transitive
     description:

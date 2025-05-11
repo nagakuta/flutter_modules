@@ -40,6 +40,14 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+dependency_overrides:
+  # Cross Platform
+  cross_platform:
+    git:
+      url: https://github.com/nagakuta/flutter_modules.git
+      ref: cross_platform-v0.1.0
+      path: packages/cross_platform
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
