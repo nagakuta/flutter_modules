@@ -31,7 +31,7 @@ abstract base class WindowTemplateWidget extends SafeArea with AdaptiveWithWindo
           final BuildContext context,
           final BoxConstraints constraints,
         ) =>
-            switch (WindowType.fromConstraints(constraints)) {
+            switch (constraints.windowType) {
           WindowType.extraLarge => buildExtraLarge(context) ??
               buildLarge(context) ??
               buildExpanded(context) ??
