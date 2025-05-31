@@ -9,4 +9,5 @@ targets:
         enabled: true
         generate_for:
           include:
-            - lib/src/_utils/exception.dart
+            - lib/src/_utils/device.dart
+            - lib/src/_utils/types.dart
