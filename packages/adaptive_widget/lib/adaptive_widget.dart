@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 
+import '/src/_extensions/box_constraints.dart';
 import '/src/_utils/types.dart';
 
 export 'src/_extensions/box_constraints.dart';
@@ -39,7 +40,7 @@ base mixin AdaptiveWithLayoutType on StatelessWidget {
           final BuildContext context,
           final BoxConstraints constraints,
         ) =>
-            switch (LayoutType.fromConstraints(constraints)) {
+            switch (constraints.layoutType) {
           LayoutType.desktop => buildDesktop(context) ??
               buildLargeTablet(context) ??
               buildSmallTablet(context) ??
@@ -98,7 +99,7 @@ base mixin AdaptiveWithWindowType on StatelessWidget {
           final BuildContext context,
           final BoxConstraints constraints,
         ) =>
-            switch (WindowType.fromConstraints(constraints)) {
+            switch (constraints.windowType) {
           WindowType.extraLarge => buildExtraLarge(context) ??
               buildLarge(context) ??
               buildExpanded(context) ??

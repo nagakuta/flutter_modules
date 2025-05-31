@@ -90,22 +90,6 @@ void main() {
       ],
     ).expand((final List<LAYOUT_TYPE_FROM_CONSTRAINTS_TEST_CASE> element) => element).toList(growable: false);
 
-    group("from constraints", () {
-      test("landscape", () {
-        for (final (Size size, LayoutType expected) in landscapeTestCases) {
-          final LayoutType type = LayoutType.fromConstraints(BoxConstraints.loose(size));
-          expect(type, equals(expected));
-        }
-      });
-
-      test("portrait", () {
-        for (final (Size size, LayoutType expected) in portraitTestCases) {
-          final LayoutType type = LayoutType.fromConstraints(BoxConstraints.loose(size));
-          expect(type, equals(expected));
-        }
-      });
-    });
-
     group("from size", () {
       test("landscape", () {
         for (final (Size size, LayoutType expected) in landscapeTestCases) {
@@ -324,13 +308,6 @@ void main() {
         (Size(CWW + Random().nextInt((MWW - CWW).round()), Random().nextDouble() * CWW), WindowType.compact),
       ],
     ).expand((final List<WINDOW_TYPE_FROM_CONSTRAINTS_TEST_CASE> element) => element).toList(growable: false);
-
-    test("from constraints", () {
-      for (final (Size size, WindowType expected) in testCases) {
-        final WindowType type = WindowType.fromConstraints(BoxConstraints.loose(size));
-        expect(type, equals(expected));
-      }
-    });
 
     test("from size", () {
       for (final (Size size, WindowType expected) in testCases) {

@@ -23,18 +23,6 @@ abstract class Breakpoint with _$Breakpoint {
 
   const Breakpoint._();
 
-  /// Breakpoint from constraints.
-  factory Breakpoint.fromConstraints(final BoxConstraints constraints) => Breakpoint(
-        layoutType: LayoutType.fromConstraints(constraints),
-        windowType: WindowType.fromConstraints(constraints),
-      );
-
-  /// Breakpoint from media query.
-  factory Breakpoint.fromMediaQuery(final BuildContext context) => Breakpoint(
-        layoutType: LayoutType.fromMediaQuery(context),
-        windowType: WindowType.fromMediaQuery(context),
-      );
-
   /// Breakpoint from size.
   factory Breakpoint.fromSize(final Size size) => Breakpoint(
         layoutType: LayoutType.fromSize(size),
@@ -51,21 +39,6 @@ enum LayoutType {
   smallTablet,
   largeTablet,
   desktop;
-
-  /// Layout type from constraints.
-  factory LayoutType.fromConstraints(final BoxConstraints constraints) {
-    final BoxConstraints(:Size biggest) = constraints.debugAssertIsValid() ? constraints : constraints.normalize();
-    return LayoutType.fromSize(biggest);
-  }
-
-  /// Layout type from media query.
-  factory LayoutType.fromMediaQuery(final BuildContext context) {
-    final Size(:double width) = MediaQuery.sizeOf(context);
-    final Orientation orientation = MediaQuery.orientationOf(context);
-    final bool isLandscape = orientation == Orientation.landscape;
-
-    return LayoutType._fromWidth(width, isLandscape: isLandscape);
-  }
 
   /// Layout type from size.
   factory LayoutType.fromSize(final Size size) {
@@ -114,18 +87,6 @@ enum WindowType {
   expanded,
   large,
   extraLarge;
-
-  /// Window type from constraints.
-  factory WindowType.fromConstraints(final BoxConstraints constraints) {
-    final BoxConstraints(:Size biggest) = constraints.debugAssertIsValid() ? constraints : constraints.normalize();
-    return WindowType.fromSize(biggest);
-  }
-
-  /// Window type from media query.
-  factory WindowType.fromMediaQuery(final BuildContext context) {
-    final Size size = MediaQuery.sizeOf(context);
-    return WindowType.fromSize(size);
-  }
 
   /// Window type from size.
   factory WindowType.fromSize(final Size size) => WindowType._fromWidth(size.width);
