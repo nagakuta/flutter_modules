@@ -2,6 +2,7 @@ import 'package:flutter/widgets.dart';
 
 import '/src/_utils/types.dart';
 
+export 'src/_extensions/box_constraints.dart';
 export 'src/_utils/device.dart';
 export 'src/_utils/types.dart';
 

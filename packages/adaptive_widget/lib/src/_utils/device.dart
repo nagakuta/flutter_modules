@@ -204,6 +204,10 @@ sealed class GoldenDevice with _$GoldenDevice {
         FullScreenWebBrowser() => const Size(1920, 1080),
       };
 
+  Size get portrait => Size(size.shortestSide, size.longestSide);
+
+  Size get landscape => Size(size.longestSide, size.shortestSide);
+
   Breakpoint get breakpoint => Breakpoint.fromSize(size);
 
   String get name => switch (this) {
