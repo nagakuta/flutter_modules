@@ -1,3 +1,6 @@
+## 0.1.2
+- chore: Append `adaptive_widget` to dependency.
+
 ## 0.1.1
 - chore: Replace `TargetPlatform` with `CrossPlarform` .
 

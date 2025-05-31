@@ -1,6 +1,6 @@
 name: atomic_widget
 description: A new Flutter plugin project.
-version: 0.1.1
+version: 0.1.2
 homepage: https://github.com/nagakuta/flutter_modules/atomic_widget/
 publish_to: https://dart.cloudsmith.io/nagakuta_flutter/modules/
 
