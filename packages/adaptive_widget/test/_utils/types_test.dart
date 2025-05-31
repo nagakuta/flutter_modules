@@ -2,8 +2,8 @@
 
 import 'dart:math';
 
-import 'package:atomic_widget/src/_utils/adaptive/_const.dart';
-import 'package:atomic_widget/src/_utils/adaptive/types.dart';
+import 'package:adaptive_widget/src/_utils/_const.dart';
+import 'package:adaptive_widget/src/_utils/types.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 

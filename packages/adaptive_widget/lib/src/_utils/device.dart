@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '/src/_utils/adaptive/types.dart';
+import '/src/_utils/types.dart';
 
 part 'device.freezed.dart';
 

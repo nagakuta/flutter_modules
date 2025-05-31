@@ -3,7 +3,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '/src/_utils/adaptive/_const.dart';
+import '/src/_utils/_const.dart';
 
 part 'types.freezed.dart';
 
