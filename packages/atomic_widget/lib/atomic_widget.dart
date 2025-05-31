@@ -1,6 +1,3 @@
-export 'src/_utils/adaptive/types.dart';
-export 'src/_utils/adaptive/widget.dart';
-export 'src/_utils/device.dart';
 export 'src/_utils/exception.dart';
 export 'src/_utils/wrapper/_widget.dart';
 export 'src/widgets/atom/widget.dart';

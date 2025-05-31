@@ -31,7 +31,7 @@ abstract base class LayoutTemplateWidget extends SafeArea with AdaptiveWithLayou
           final BuildContext context,
           final BoxConstraints constraints,
         ) =>
-            switch (LayoutType.fromConstraints(constraints)) {
+            switch (constraints.layoutType) {
           LayoutType.desktop => buildDesktop(context) ??
               buildLargeTablet(context) ??
               buildSmallTablet(context) ??

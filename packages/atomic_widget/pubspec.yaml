@@ -9,6 +9,11 @@ environment:
   flutter: ">=3.3.0"
 
 dependencies:
+  # Adaptive Widget
+  adaptive_widget:
+    hosted: https://dart.cloudsmith.io/nagakuta_flutter/modules/
+    version: ^0.1.0
+
   # Cross Platform
   cross_platform:
     hosted: https://dart.cloudsmith.io/nagakuta_flutter/modules/
@@ -41,6 +46,13 @@ dev_dependencies:
   freezed: ^2.0.0
 
 dependency_overrides:
+  # Adaptive Widget
+  adaptive_widget:
+    git:
+      url: https://github.com/nagakuta/flutter_modules.git
+      ref: adaptive_widget-v0.1.0
+      path: packages/adaptive_widget
+
   # Cross Platform
   cross_platform:
     git:
