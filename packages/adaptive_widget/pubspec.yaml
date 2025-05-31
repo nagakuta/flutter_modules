@@ -1,6 +1,6 @@
 name: adaptive_widget
 description: A new Flutter plugin project.
-version: 0.0.1
+version: 0.1.0
 homepage: https://github.com/nagakuta/flutter_modules/adaptive_widget/
 publish_to: https://dart.cloudsmith.io/nagakuta_flutter/modules/
 
