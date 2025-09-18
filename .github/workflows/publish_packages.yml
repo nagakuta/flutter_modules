@@ -15,7 +15,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     container:
-      image: dart:3.3-sdk
+      image: dart:3.8-sdk
     env:
       TAG: ${{ github.ref_name }}
       PUB_TOKEN: ${{ secrets.PUB_TOKEN }}

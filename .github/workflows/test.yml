@@ -19,7 +19,7 @@ jobs:
   check-application-code:
     runs-on: ubuntu-latest
     container:
-      image: dart:3.3-sdk
+      image: dart:3.8-sdk
     env:
       BRANCH_NAME: ${{ github.head_ref }}
     timeout-minutes: 5

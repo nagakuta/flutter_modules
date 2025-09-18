@@ -20,9 +20,8 @@ linter:
     no_leading_underscores_for_library_prefixes: false
     no_leading_underscores_for_local_identifiers: false
     omit_local_variable_types: false
+    omit_obvious_property_types: false
     one_member_abstracts: false
     prefer_double_quotes: false
     prefer_single_quotes: false
     secure_pubspec_urls: false
-    unnecessary_constructor_name: false
-    unnecessary_final: false
