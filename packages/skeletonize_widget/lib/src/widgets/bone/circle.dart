@@ -3,11 +3,9 @@ part of '_widget.dart';
 /// Circle Bone
 final class CircleBone extends Bone {
   // ignore: public_member_api_docs
-  const CircleBone({
-    required final double radius,
-    super.key,
-  })  : _radius = radius,
-        super(width: null, height: null, contextPadding: EdgeInsets.zero, shape: null);
+  const CircleBone({required final double radius, super.key})
+    : _radius = radius,
+      super(width: null, height: null, contextPadding: EdgeInsets.zero, shape: null);
 
   final double _radius;
 

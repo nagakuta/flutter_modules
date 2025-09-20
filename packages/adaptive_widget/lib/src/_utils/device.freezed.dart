@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -11,101 +11,83 @@ part of 'device.dart';
 
 T _$identity<T>(T value) => value;
 
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
 /// @nodoc
 mixin _$GoldenDevice {
-  double get textScale => throw _privateConstructorUsedError;
-  Brightness get brightness => throw _privateConstructorUsedError;
+  double get textScale;
+  Brightness get brightness;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
   $GoldenDeviceCopyWith<GoldenDevice> get copyWith =>
-      throw _privateConstructorUsedError;
+      _$GoldenDeviceCopyWithImpl<GoldenDevice>(
+        this as GoldenDevice,
+        _$identity,
+      );
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is GoldenDevice &&
+            (identical(other.textScale, textScale) ||
+                other.textScale == textScale) &&
+            (identical(other.brightness, brightness) ||
+                other.brightness == brightness));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, textScale, brightness);
+
+  @override
+  String toString() {
+    return 'GoldenDevice(textScale: $textScale, brightness: $brightness)';
+  }
 }
 
 /// @nodoc
-abstract class $GoldenDeviceCopyWith<$Res> {
+abstract mixin class $GoldenDeviceCopyWith<$Res> {
   factory $GoldenDeviceCopyWith(
-          GoldenDevice value, $Res Function(GoldenDevice) then) =
-      _$GoldenDeviceCopyWithImpl<$Res, GoldenDevice>;
+    GoldenDevice value,
+    $Res Function(GoldenDevice) _then,
+  ) = _$GoldenDeviceCopyWithImpl;
   @useResult
   $Res call({double textScale, Brightness brightness});
 }
 
 /// @nodoc
-class _$GoldenDeviceCopyWithImpl<$Res, $Val extends GoldenDevice>
-    implements $GoldenDeviceCopyWith<$Res> {
-  _$GoldenDeviceCopyWithImpl(this._value, this._then);
+class _$GoldenDeviceCopyWithImpl<$Res> implements $GoldenDeviceCopyWith<$Res> {
+  _$GoldenDeviceCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final GoldenDevice _self;
+  final $Res Function(GoldenDevice) _then;
 
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? textScale = null,
-    Object? brightness = null,
-  }) {
-    return _then(_value.copyWith(
-      textScale: null == textScale
-          ? _value.textScale
-          : textScale // ignore: cast_nullable_to_non_nullable
-              as double,
-      brightness: null == brightness
-          ? _value.brightness
-          : brightness // ignore: cast_nullable_to_non_nullable
-              as Brightness,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$IPhoneSEImplCopyWith<$Res>
-    implements $GoldenDeviceCopyWith<$Res> {
-  factory _$$IPhoneSEImplCopyWith(
-          _$IPhoneSEImpl value, $Res Function(_$IPhoneSEImpl) then) =
-      __$$IPhoneSEImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({double textScale, Brightness brightness});
-}
-
-/// @nodoc
-class __$$IPhoneSEImplCopyWithImpl<$Res>
-    extends _$GoldenDeviceCopyWithImpl<$Res, _$IPhoneSEImpl>
-    implements _$$IPhoneSEImplCopyWith<$Res> {
-  __$$IPhoneSEImplCopyWithImpl(
-      _$IPhoneSEImpl _value, $Res Function(_$IPhoneSEImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? textScale = null,
-    Object? brightness = null,
-  }) {
-    return _then(_$IPhoneSEImpl(
-      textScale: null == textScale
-          ? _value.textScale
-          : textScale // ignore: cast_nullable_to_non_nullable
-              as double,
-      brightness: null == brightness
-          ? _value.brightness
-          : brightness // ignore: cast_nullable_to_non_nullable
-              as Brightness,
-    ));
+  $Res call({Object? textScale = null, Object? brightness = null}) {
+    return _then(
+      _self.copyWith(
+        textScale: null == textScale
+            ? _self.textScale
+            : textScale // ignore: cast_nullable_to_non_nullable
+                  as double,
+        brightness: null == brightness
+            ? _self.brightness
+            : brightness // ignore: cast_nullable_to_non_nullable
+                  as Brightness,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
-class _$IPhoneSEImpl extends IPhoneSE {
-  const _$IPhoneSEImpl(
-      {this.textScale = 1.0, this.brightness = Brightness.light})
-      : super._();
+class IPhoneSE extends GoldenDevice {
+  const IPhoneSE({this.textScale = 1.0, this.brightness = Brightness.light})
+    : super._();
 
   @override
   @JsonKey()
@@ -113,17 +95,98 @@ class _$IPhoneSEImpl extends IPhoneSE {
   @override
   @JsonKey()
   final Brightness brightness;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $IPhoneSECopyWith<IPhoneSE> get copyWith =>
+      _$IPhoneSECopyWithImpl<IPhoneSE>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is IPhoneSE &&
+            (identical(other.textScale, textScale) ||
+                other.textScale == textScale) &&
+            (identical(other.brightness, brightness) ||
+                other.brightness == brightness));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, textScale, brightness);
 
   @override
   String toString() {
     return 'GoldenDevice.iPhoneSE(textScale: $textScale, brightness: $brightness)';
   }
+}
+
+/// @nodoc
+abstract mixin class $IPhoneSECopyWith<$Res>
+    implements $GoldenDeviceCopyWith<$Res> {
+  factory $IPhoneSECopyWith(IPhoneSE value, $Res Function(IPhoneSE) _then) =
+      _$IPhoneSECopyWithImpl;
+  @override
+  @useResult
+  $Res call({double textScale, Brightness brightness});
+}
+
+/// @nodoc
+class _$IPhoneSECopyWithImpl<$Res> implements $IPhoneSECopyWith<$Res> {
+  _$IPhoneSECopyWithImpl(this._self, this._then);
+
+  final IPhoneSE _self;
+  final $Res Function(IPhoneSE) _then;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({Object? textScale = null, Object? brightness = null}) {
+    return _then(
+      IPhoneSE(
+        textScale: null == textScale
+            ? _self.textScale
+            : textScale // ignore: cast_nullable_to_non_nullable
+                  as double,
+        brightness: null == brightness
+            ? _self.brightness
+            : brightness // ignore: cast_nullable_to_non_nullable
+                  as Brightness,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+class IPhoneXR extends GoldenDevice {
+  const IPhoneXR({this.textScale = 1.0, this.brightness = Brightness.light})
+    : super._();
+
+  @override
+  @JsonKey()
+  final double textScale;
+  @override
+  @JsonKey()
+  final Brightness brightness;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $IPhoneXRCopyWith<IPhoneXR> get copyWith =>
+      _$IPhoneXRCopyWithImpl<IPhoneXR>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$IPhoneSEImpl &&
+            other is IPhoneXR &&
             (identical(other.textScale, textScale) ||
                 other.textScale == textScale) &&
             (identical(other.brightness, brightness) ||
@@ -132,91 +195,76 @@ class _$IPhoneSEImpl extends IPhoneSE {
 
   @override
   int get hashCode => Object.hash(runtimeType, textScale, brightness);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$IPhoneSEImplCopyWith<_$IPhoneSEImpl> get copyWith =>
-      __$$IPhoneSEImplCopyWithImpl<_$IPhoneSEImpl>(this, _$identity);
-}
-
-abstract class IPhoneSE extends GoldenDevice {
-  const factory IPhoneSE(
-      {final double textScale, final Brightness brightness}) = _$IPhoneSEImpl;
-  const IPhoneSE._() : super._();
-
-  @override
-  double get textScale;
-  @override
-  Brightness get brightness;
-  @override
-  @JsonKey(ignore: true)
-  _$$IPhoneSEImplCopyWith<_$IPhoneSEImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$IPhoneXRImplCopyWith<$Res>
-    implements $GoldenDeviceCopyWith<$Res> {
-  factory _$$IPhoneXRImplCopyWith(
-          _$IPhoneXRImpl value, $Res Function(_$IPhoneXRImpl) then) =
-      __$$IPhoneXRImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({double textScale, Brightness brightness});
-}
-
-/// @nodoc
-class __$$IPhoneXRImplCopyWithImpl<$Res>
-    extends _$GoldenDeviceCopyWithImpl<$Res, _$IPhoneXRImpl>
-    implements _$$IPhoneXRImplCopyWith<$Res> {
-  __$$IPhoneXRImplCopyWithImpl(
-      _$IPhoneXRImpl _value, $Res Function(_$IPhoneXRImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? textScale = null,
-    Object? brightness = null,
-  }) {
-    return _then(_$IPhoneXRImpl(
-      textScale: null == textScale
-          ? _value.textScale
-          : textScale // ignore: cast_nullable_to_non_nullable
-              as double,
-      brightness: null == brightness
-          ? _value.brightness
-          : brightness // ignore: cast_nullable_to_non_nullable
-              as Brightness,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$IPhoneXRImpl extends IPhoneXR {
-  const _$IPhoneXRImpl(
-      {this.textScale = 1.0, this.brightness = Brightness.light})
-      : super._();
-
-  @override
-  @JsonKey()
-  final double textScale;
-  @override
-  @JsonKey()
-  final Brightness brightness;
 
   @override
   String toString() {
     return 'GoldenDevice.iPhoneXR(textScale: $textScale, brightness: $brightness)';
   }
+}
+
+/// @nodoc
+abstract mixin class $IPhoneXRCopyWith<$Res>
+    implements $GoldenDeviceCopyWith<$Res> {
+  factory $IPhoneXRCopyWith(IPhoneXR value, $Res Function(IPhoneXR) _then) =
+      _$IPhoneXRCopyWithImpl;
+  @override
+  @useResult
+  $Res call({double textScale, Brightness brightness});
+}
+
+/// @nodoc
+class _$IPhoneXRCopyWithImpl<$Res> implements $IPhoneXRCopyWith<$Res> {
+  _$IPhoneXRCopyWithImpl(this._self, this._then);
+
+  final IPhoneXR _self;
+  final $Res Function(IPhoneXR) _then;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({Object? textScale = null, Object? brightness = null}) {
+    return _then(
+      IPhoneXR(
+        textScale: null == textScale
+            ? _self.textScale
+            : textScale // ignore: cast_nullable_to_non_nullable
+                  as double,
+        brightness: null == brightness
+            ? _self.brightness
+            : brightness // ignore: cast_nullable_to_non_nullable
+                  as Brightness,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+class IPhone12Pro extends GoldenDevice {
+  const IPhone12Pro({this.textScale = 1.0, this.brightness = Brightness.light})
+    : super._();
+
+  @override
+  @JsonKey()
+  final double textScale;
+  @override
+  @JsonKey()
+  final Brightness brightness;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $IPhone12ProCopyWith<IPhone12Pro> get copyWith =>
+      _$IPhone12ProCopyWithImpl<IPhone12Pro>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$IPhoneXRImpl &&
+            other is IPhone12Pro &&
             (identical(other.textScale, textScale) ||
                 other.textScale == textScale) &&
             (identical(other.brightness, brightness) ||
@@ -225,91 +273,80 @@ class _$IPhoneXRImpl extends IPhoneXR {
 
   @override
   int get hashCode => Object.hash(runtimeType, textScale, brightness);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$IPhoneXRImplCopyWith<_$IPhoneXRImpl> get copyWith =>
-      __$$IPhoneXRImplCopyWithImpl<_$IPhoneXRImpl>(this, _$identity);
-}
-
-abstract class IPhoneXR extends GoldenDevice {
-  const factory IPhoneXR(
-      {final double textScale, final Brightness brightness}) = _$IPhoneXRImpl;
-  const IPhoneXR._() : super._();
-
-  @override
-  double get textScale;
-  @override
-  Brightness get brightness;
-  @override
-  @JsonKey(ignore: true)
-  _$$IPhoneXRImplCopyWith<_$IPhoneXRImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$IPhone12ProImplCopyWith<$Res>
-    implements $GoldenDeviceCopyWith<$Res> {
-  factory _$$IPhone12ProImplCopyWith(
-          _$IPhone12ProImpl value, $Res Function(_$IPhone12ProImpl) then) =
-      __$$IPhone12ProImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({double textScale, Brightness brightness});
-}
-
-/// @nodoc
-class __$$IPhone12ProImplCopyWithImpl<$Res>
-    extends _$GoldenDeviceCopyWithImpl<$Res, _$IPhone12ProImpl>
-    implements _$$IPhone12ProImplCopyWith<$Res> {
-  __$$IPhone12ProImplCopyWithImpl(
-      _$IPhone12ProImpl _value, $Res Function(_$IPhone12ProImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? textScale = null,
-    Object? brightness = null,
-  }) {
-    return _then(_$IPhone12ProImpl(
-      textScale: null == textScale
-          ? _value.textScale
-          : textScale // ignore: cast_nullable_to_non_nullable
-              as double,
-      brightness: null == brightness
-          ? _value.brightness
-          : brightness // ignore: cast_nullable_to_non_nullable
-              as Brightness,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$IPhone12ProImpl extends IPhone12Pro {
-  const _$IPhone12ProImpl(
-      {this.textScale = 1.0, this.brightness = Brightness.light})
-      : super._();
-
-  @override
-  @JsonKey()
-  final double textScale;
-  @override
-  @JsonKey()
-  final Brightness brightness;
 
   @override
   String toString() {
     return 'GoldenDevice.iPhone12Pro(textScale: $textScale, brightness: $brightness)';
   }
+}
+
+/// @nodoc
+abstract mixin class $IPhone12ProCopyWith<$Res>
+    implements $GoldenDeviceCopyWith<$Res> {
+  factory $IPhone12ProCopyWith(
+    IPhone12Pro value,
+    $Res Function(IPhone12Pro) _then,
+  ) = _$IPhone12ProCopyWithImpl;
+  @override
+  @useResult
+  $Res call({double textScale, Brightness brightness});
+}
+
+/// @nodoc
+class _$IPhone12ProCopyWithImpl<$Res> implements $IPhone12ProCopyWith<$Res> {
+  _$IPhone12ProCopyWithImpl(this._self, this._then);
+
+  final IPhone12Pro _self;
+  final $Res Function(IPhone12Pro) _then;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({Object? textScale = null, Object? brightness = null}) {
+    return _then(
+      IPhone12Pro(
+        textScale: null == textScale
+            ? _self.textScale
+            : textScale // ignore: cast_nullable_to_non_nullable
+                  as double,
+        brightness: null == brightness
+            ? _self.brightness
+            : brightness // ignore: cast_nullable_to_non_nullable
+                  as Brightness,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+class IPhone14ProMax extends GoldenDevice {
+  const IPhone14ProMax({
+    this.textScale = 1.0,
+    this.brightness = Brightness.light,
+  }) : super._();
+
+  @override
+  @JsonKey()
+  final double textScale;
+  @override
+  @JsonKey()
+  final Brightness brightness;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $IPhone14ProMaxCopyWith<IPhone14ProMax> get copyWith =>
+      _$IPhone14ProMaxCopyWithImpl<IPhone14ProMax>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$IPhone12ProImpl &&
+            other is IPhone14ProMax &&
             (identical(other.textScale, textScale) ||
                 other.textScale == textScale) &&
             (identical(other.brightness, brightness) ||
@@ -318,92 +355,79 @@ class _$IPhone12ProImpl extends IPhone12Pro {
 
   @override
   int get hashCode => Object.hash(runtimeType, textScale, brightness);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$IPhone12ProImplCopyWith<_$IPhone12ProImpl> get copyWith =>
-      __$$IPhone12ProImplCopyWithImpl<_$IPhone12ProImpl>(this, _$identity);
-}
-
-abstract class IPhone12Pro extends GoldenDevice {
-  const factory IPhone12Pro(
-      {final double textScale,
-      final Brightness brightness}) = _$IPhone12ProImpl;
-  const IPhone12Pro._() : super._();
-
-  @override
-  double get textScale;
-  @override
-  Brightness get brightness;
-  @override
-  @JsonKey(ignore: true)
-  _$$IPhone12ProImplCopyWith<_$IPhone12ProImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$IPhone14ProMaxImplCopyWith<$Res>
-    implements $GoldenDeviceCopyWith<$Res> {
-  factory _$$IPhone14ProMaxImplCopyWith(_$IPhone14ProMaxImpl value,
-          $Res Function(_$IPhone14ProMaxImpl) then) =
-      __$$IPhone14ProMaxImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({double textScale, Brightness brightness});
-}
-
-/// @nodoc
-class __$$IPhone14ProMaxImplCopyWithImpl<$Res>
-    extends _$GoldenDeviceCopyWithImpl<$Res, _$IPhone14ProMaxImpl>
-    implements _$$IPhone14ProMaxImplCopyWith<$Res> {
-  __$$IPhone14ProMaxImplCopyWithImpl(
-      _$IPhone14ProMaxImpl _value, $Res Function(_$IPhone14ProMaxImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? textScale = null,
-    Object? brightness = null,
-  }) {
-    return _then(_$IPhone14ProMaxImpl(
-      textScale: null == textScale
-          ? _value.textScale
-          : textScale // ignore: cast_nullable_to_non_nullable
-              as double,
-      brightness: null == brightness
-          ? _value.brightness
-          : brightness // ignore: cast_nullable_to_non_nullable
-              as Brightness,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$IPhone14ProMaxImpl extends IPhone14ProMax {
-  const _$IPhone14ProMaxImpl(
-      {this.textScale = 1.0, this.brightness = Brightness.light})
-      : super._();
-
-  @override
-  @JsonKey()
-  final double textScale;
-  @override
-  @JsonKey()
-  final Brightness brightness;
 
   @override
   String toString() {
     return 'GoldenDevice.iPhone14ProMax(textScale: $textScale, brightness: $brightness)';
   }
+}
+
+/// @nodoc
+abstract mixin class $IPhone14ProMaxCopyWith<$Res>
+    implements $GoldenDeviceCopyWith<$Res> {
+  factory $IPhone14ProMaxCopyWith(
+    IPhone14ProMax value,
+    $Res Function(IPhone14ProMax) _then,
+  ) = _$IPhone14ProMaxCopyWithImpl;
+  @override
+  @useResult
+  $Res call({double textScale, Brightness brightness});
+}
+
+/// @nodoc
+class _$IPhone14ProMaxCopyWithImpl<$Res>
+    implements $IPhone14ProMaxCopyWith<$Res> {
+  _$IPhone14ProMaxCopyWithImpl(this._self, this._then);
+
+  final IPhone14ProMax _self;
+  final $Res Function(IPhone14ProMax) _then;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({Object? textScale = null, Object? brightness = null}) {
+    return _then(
+      IPhone14ProMax(
+        textScale: null == textScale
+            ? _self.textScale
+            : textScale // ignore: cast_nullable_to_non_nullable
+                  as double,
+        brightness: null == brightness
+            ? _self.brightness
+            : brightness // ignore: cast_nullable_to_non_nullable
+                  as Brightness,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+class Pixel7 extends GoldenDevice {
+  const Pixel7({this.textScale = 1.0, this.brightness = Brightness.light})
+    : super._();
+
+  @override
+  @JsonKey()
+  final double textScale;
+  @override
+  @JsonKey()
+  final Brightness brightness;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $Pixel7CopyWith<Pixel7> get copyWith =>
+      _$Pixel7CopyWithImpl<Pixel7>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$IPhone14ProMaxImpl &&
+            other is Pixel7 &&
             (identical(other.textScale, textScale) ||
                 other.textScale == textScale) &&
             (identical(other.brightness, brightness) ||
@@ -412,92 +436,76 @@ class _$IPhone14ProMaxImpl extends IPhone14ProMax {
 
   @override
   int get hashCode => Object.hash(runtimeType, textScale, brightness);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$IPhone14ProMaxImplCopyWith<_$IPhone14ProMaxImpl> get copyWith =>
-      __$$IPhone14ProMaxImplCopyWithImpl<_$IPhone14ProMaxImpl>(
-          this, _$identity);
-}
-
-abstract class IPhone14ProMax extends GoldenDevice {
-  const factory IPhone14ProMax(
-      {final double textScale,
-      final Brightness brightness}) = _$IPhone14ProMaxImpl;
-  const IPhone14ProMax._() : super._();
-
-  @override
-  double get textScale;
-  @override
-  Brightness get brightness;
-  @override
-  @JsonKey(ignore: true)
-  _$$IPhone14ProMaxImplCopyWith<_$IPhone14ProMaxImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$Pixel7ImplCopyWith<$Res>
-    implements $GoldenDeviceCopyWith<$Res> {
-  factory _$$Pixel7ImplCopyWith(
-          _$Pixel7Impl value, $Res Function(_$Pixel7Impl) then) =
-      __$$Pixel7ImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({double textScale, Brightness brightness});
-}
-
-/// @nodoc
-class __$$Pixel7ImplCopyWithImpl<$Res>
-    extends _$GoldenDeviceCopyWithImpl<$Res, _$Pixel7Impl>
-    implements _$$Pixel7ImplCopyWith<$Res> {
-  __$$Pixel7ImplCopyWithImpl(
-      _$Pixel7Impl _value, $Res Function(_$Pixel7Impl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? textScale = null,
-    Object? brightness = null,
-  }) {
-    return _then(_$Pixel7Impl(
-      textScale: null == textScale
-          ? _value.textScale
-          : textScale // ignore: cast_nullable_to_non_nullable
-              as double,
-      brightness: null == brightness
-          ? _value.brightness
-          : brightness // ignore: cast_nullable_to_non_nullable
-              as Brightness,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$Pixel7Impl extends Pixel7 {
-  const _$Pixel7Impl({this.textScale = 1.0, this.brightness = Brightness.light})
-      : super._();
-
-  @override
-  @JsonKey()
-  final double textScale;
-  @override
-  @JsonKey()
-  final Brightness brightness;
 
   @override
   String toString() {
     return 'GoldenDevice.pixel7(textScale: $textScale, brightness: $brightness)';
   }
+}
+
+/// @nodoc
+abstract mixin class $Pixel7CopyWith<$Res>
+    implements $GoldenDeviceCopyWith<$Res> {
+  factory $Pixel7CopyWith(Pixel7 value, $Res Function(Pixel7) _then) =
+      _$Pixel7CopyWithImpl;
+  @override
+  @useResult
+  $Res call({double textScale, Brightness brightness});
+}
+
+/// @nodoc
+class _$Pixel7CopyWithImpl<$Res> implements $Pixel7CopyWith<$Res> {
+  _$Pixel7CopyWithImpl(this._self, this._then);
+
+  final Pixel7 _self;
+  final $Res Function(Pixel7) _then;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({Object? textScale = null, Object? brightness = null}) {
+    return _then(
+      Pixel7(
+        textScale: null == textScale
+            ? _self.textScale
+            : textScale // ignore: cast_nullable_to_non_nullable
+                  as double,
+        brightness: null == brightness
+            ? _self.brightness
+            : brightness // ignore: cast_nullable_to_non_nullable
+                  as Brightness,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+class GalaxyS8Plus extends GoldenDevice {
+  const GalaxyS8Plus({this.textScale = 1.0, this.brightness = Brightness.light})
+    : super._();
+
+  @override
+  @JsonKey()
+  final double textScale;
+  @override
+  @JsonKey()
+  final Brightness brightness;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $GalaxyS8PlusCopyWith<GalaxyS8Plus> get copyWith =>
+      _$GalaxyS8PlusCopyWithImpl<GalaxyS8Plus>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$Pixel7Impl &&
+            other is GalaxyS8Plus &&
             (identical(other.textScale, textScale) ||
                 other.textScale == textScale) &&
             (identical(other.brightness, brightness) ||
@@ -506,91 +514,80 @@ class _$Pixel7Impl extends Pixel7 {
 
   @override
   int get hashCode => Object.hash(runtimeType, textScale, brightness);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$Pixel7ImplCopyWith<_$Pixel7Impl> get copyWith =>
-      __$$Pixel7ImplCopyWithImpl<_$Pixel7Impl>(this, _$identity);
-}
-
-abstract class Pixel7 extends GoldenDevice {
-  const factory Pixel7({final double textScale, final Brightness brightness}) =
-      _$Pixel7Impl;
-  const Pixel7._() : super._();
-
-  @override
-  double get textScale;
-  @override
-  Brightness get brightness;
-  @override
-  @JsonKey(ignore: true)
-  _$$Pixel7ImplCopyWith<_$Pixel7Impl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$GalaxyS8PlusImplCopyWith<$Res>
-    implements $GoldenDeviceCopyWith<$Res> {
-  factory _$$GalaxyS8PlusImplCopyWith(
-          _$GalaxyS8PlusImpl value, $Res Function(_$GalaxyS8PlusImpl) then) =
-      __$$GalaxyS8PlusImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({double textScale, Brightness brightness});
-}
-
-/// @nodoc
-class __$$GalaxyS8PlusImplCopyWithImpl<$Res>
-    extends _$GoldenDeviceCopyWithImpl<$Res, _$GalaxyS8PlusImpl>
-    implements _$$GalaxyS8PlusImplCopyWith<$Res> {
-  __$$GalaxyS8PlusImplCopyWithImpl(
-      _$GalaxyS8PlusImpl _value, $Res Function(_$GalaxyS8PlusImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? textScale = null,
-    Object? brightness = null,
-  }) {
-    return _then(_$GalaxyS8PlusImpl(
-      textScale: null == textScale
-          ? _value.textScale
-          : textScale // ignore: cast_nullable_to_non_nullable
-              as double,
-      brightness: null == brightness
-          ? _value.brightness
-          : brightness // ignore: cast_nullable_to_non_nullable
-              as Brightness,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$GalaxyS8PlusImpl extends GalaxyS8Plus {
-  const _$GalaxyS8PlusImpl(
-      {this.textScale = 1.0, this.brightness = Brightness.light})
-      : super._();
-
-  @override
-  @JsonKey()
-  final double textScale;
-  @override
-  @JsonKey()
-  final Brightness brightness;
 
   @override
   String toString() {
     return 'GoldenDevice.galaxyS8Plus(textScale: $textScale, brightness: $brightness)';
   }
+}
+
+/// @nodoc
+abstract mixin class $GalaxyS8PlusCopyWith<$Res>
+    implements $GoldenDeviceCopyWith<$Res> {
+  factory $GalaxyS8PlusCopyWith(
+    GalaxyS8Plus value,
+    $Res Function(GalaxyS8Plus) _then,
+  ) = _$GalaxyS8PlusCopyWithImpl;
+  @override
+  @useResult
+  $Res call({double textScale, Brightness brightness});
+}
+
+/// @nodoc
+class _$GalaxyS8PlusCopyWithImpl<$Res> implements $GalaxyS8PlusCopyWith<$Res> {
+  _$GalaxyS8PlusCopyWithImpl(this._self, this._then);
+
+  final GalaxyS8Plus _self;
+  final $Res Function(GalaxyS8Plus) _then;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({Object? textScale = null, Object? brightness = null}) {
+    return _then(
+      GalaxyS8Plus(
+        textScale: null == textScale
+            ? _self.textScale
+            : textScale // ignore: cast_nullable_to_non_nullable
+                  as double,
+        brightness: null == brightness
+            ? _self.brightness
+            : brightness // ignore: cast_nullable_to_non_nullable
+                  as Brightness,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+class GalaxyS20Ultra extends GoldenDevice {
+  const GalaxyS20Ultra({
+    this.textScale = 1.0,
+    this.brightness = Brightness.light,
+  }) : super._();
+
+  @override
+  @JsonKey()
+  final double textScale;
+  @override
+  @JsonKey()
+  final Brightness brightness;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $GalaxyS20UltraCopyWith<GalaxyS20Ultra> get copyWith =>
+      _$GalaxyS20UltraCopyWithImpl<GalaxyS20Ultra>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GalaxyS8PlusImpl &&
+            other is GalaxyS20Ultra &&
             (identical(other.textScale, textScale) ||
                 other.textScale == textScale) &&
             (identical(other.brightness, brightness) ||
@@ -599,92 +596,79 @@ class _$GalaxyS8PlusImpl extends GalaxyS8Plus {
 
   @override
   int get hashCode => Object.hash(runtimeType, textScale, brightness);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$GalaxyS8PlusImplCopyWith<_$GalaxyS8PlusImpl> get copyWith =>
-      __$$GalaxyS8PlusImplCopyWithImpl<_$GalaxyS8PlusImpl>(this, _$identity);
-}
-
-abstract class GalaxyS8Plus extends GoldenDevice {
-  const factory GalaxyS8Plus(
-      {final double textScale,
-      final Brightness brightness}) = _$GalaxyS8PlusImpl;
-  const GalaxyS8Plus._() : super._();
-
-  @override
-  double get textScale;
-  @override
-  Brightness get brightness;
-  @override
-  @JsonKey(ignore: true)
-  _$$GalaxyS8PlusImplCopyWith<_$GalaxyS8PlusImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$GalaxyS20UltraImplCopyWith<$Res>
-    implements $GoldenDeviceCopyWith<$Res> {
-  factory _$$GalaxyS20UltraImplCopyWith(_$GalaxyS20UltraImpl value,
-          $Res Function(_$GalaxyS20UltraImpl) then) =
-      __$$GalaxyS20UltraImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({double textScale, Brightness brightness});
-}
-
-/// @nodoc
-class __$$GalaxyS20UltraImplCopyWithImpl<$Res>
-    extends _$GoldenDeviceCopyWithImpl<$Res, _$GalaxyS20UltraImpl>
-    implements _$$GalaxyS20UltraImplCopyWith<$Res> {
-  __$$GalaxyS20UltraImplCopyWithImpl(
-      _$GalaxyS20UltraImpl _value, $Res Function(_$GalaxyS20UltraImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? textScale = null,
-    Object? brightness = null,
-  }) {
-    return _then(_$GalaxyS20UltraImpl(
-      textScale: null == textScale
-          ? _value.textScale
-          : textScale // ignore: cast_nullable_to_non_nullable
-              as double,
-      brightness: null == brightness
-          ? _value.brightness
-          : brightness // ignore: cast_nullable_to_non_nullable
-              as Brightness,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$GalaxyS20UltraImpl extends GalaxyS20Ultra {
-  const _$GalaxyS20UltraImpl(
-      {this.textScale = 1.0, this.brightness = Brightness.light})
-      : super._();
-
-  @override
-  @JsonKey()
-  final double textScale;
-  @override
-  @JsonKey()
-  final Brightness brightness;
 
   @override
   String toString() {
     return 'GoldenDevice.galaxyS20Ultra(textScale: $textScale, brightness: $brightness)';
   }
+}
+
+/// @nodoc
+abstract mixin class $GalaxyS20UltraCopyWith<$Res>
+    implements $GoldenDeviceCopyWith<$Res> {
+  factory $GalaxyS20UltraCopyWith(
+    GalaxyS20Ultra value,
+    $Res Function(GalaxyS20Ultra) _then,
+  ) = _$GalaxyS20UltraCopyWithImpl;
+  @override
+  @useResult
+  $Res call({double textScale, Brightness brightness});
+}
+
+/// @nodoc
+class _$GalaxyS20UltraCopyWithImpl<$Res>
+    implements $GalaxyS20UltraCopyWith<$Res> {
+  _$GalaxyS20UltraCopyWithImpl(this._self, this._then);
+
+  final GalaxyS20Ultra _self;
+  final $Res Function(GalaxyS20Ultra) _then;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({Object? textScale = null, Object? brightness = null}) {
+    return _then(
+      GalaxyS20Ultra(
+        textScale: null == textScale
+            ? _self.textScale
+            : textScale // ignore: cast_nullable_to_non_nullable
+                  as double,
+        brightness: null == brightness
+            ? _self.brightness
+            : brightness // ignore: cast_nullable_to_non_nullable
+                  as Brightness,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+class IPadAir extends GoldenDevice {
+  const IPadAir({this.textScale = 1.0, this.brightness = Brightness.light})
+    : super._();
+
+  @override
+  @JsonKey()
+  final double textScale;
+  @override
+  @JsonKey()
+  final Brightness brightness;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $IPadAirCopyWith<IPadAir> get copyWith =>
+      _$IPadAirCopyWithImpl<IPadAir>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GalaxyS20UltraImpl &&
+            other is IPadAir &&
             (identical(other.textScale, textScale) ||
                 other.textScale == textScale) &&
             (identical(other.brightness, brightness) ||
@@ -693,93 +677,76 @@ class _$GalaxyS20UltraImpl extends GalaxyS20Ultra {
 
   @override
   int get hashCode => Object.hash(runtimeType, textScale, brightness);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$GalaxyS20UltraImplCopyWith<_$GalaxyS20UltraImpl> get copyWith =>
-      __$$GalaxyS20UltraImplCopyWithImpl<_$GalaxyS20UltraImpl>(
-          this, _$identity);
-}
-
-abstract class GalaxyS20Ultra extends GoldenDevice {
-  const factory GalaxyS20Ultra(
-      {final double textScale,
-      final Brightness brightness}) = _$GalaxyS20UltraImpl;
-  const GalaxyS20Ultra._() : super._();
-
-  @override
-  double get textScale;
-  @override
-  Brightness get brightness;
-  @override
-  @JsonKey(ignore: true)
-  _$$GalaxyS20UltraImplCopyWith<_$GalaxyS20UltraImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$IPadAirImplCopyWith<$Res>
-    implements $GoldenDeviceCopyWith<$Res> {
-  factory _$$IPadAirImplCopyWith(
-          _$IPadAirImpl value, $Res Function(_$IPadAirImpl) then) =
-      __$$IPadAirImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({double textScale, Brightness brightness});
-}
-
-/// @nodoc
-class __$$IPadAirImplCopyWithImpl<$Res>
-    extends _$GoldenDeviceCopyWithImpl<$Res, _$IPadAirImpl>
-    implements _$$IPadAirImplCopyWith<$Res> {
-  __$$IPadAirImplCopyWithImpl(
-      _$IPadAirImpl _value, $Res Function(_$IPadAirImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? textScale = null,
-    Object? brightness = null,
-  }) {
-    return _then(_$IPadAirImpl(
-      textScale: null == textScale
-          ? _value.textScale
-          : textScale // ignore: cast_nullable_to_non_nullable
-              as double,
-      brightness: null == brightness
-          ? _value.brightness
-          : brightness // ignore: cast_nullable_to_non_nullable
-              as Brightness,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$IPadAirImpl extends IPadAir {
-  const _$IPadAirImpl(
-      {this.textScale = 1.0, this.brightness = Brightness.light})
-      : super._();
-
-  @override
-  @JsonKey()
-  final double textScale;
-  @override
-  @JsonKey()
-  final Brightness brightness;
 
   @override
   String toString() {
     return 'GoldenDevice.iPadAir(textScale: $textScale, brightness: $brightness)';
   }
+}
+
+/// @nodoc
+abstract mixin class $IPadAirCopyWith<$Res>
+    implements $GoldenDeviceCopyWith<$Res> {
+  factory $IPadAirCopyWith(IPadAir value, $Res Function(IPadAir) _then) =
+      _$IPadAirCopyWithImpl;
+  @override
+  @useResult
+  $Res call({double textScale, Brightness brightness});
+}
+
+/// @nodoc
+class _$IPadAirCopyWithImpl<$Res> implements $IPadAirCopyWith<$Res> {
+  _$IPadAirCopyWithImpl(this._self, this._then);
+
+  final IPadAir _self;
+  final $Res Function(IPadAir) _then;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({Object? textScale = null, Object? brightness = null}) {
+    return _then(
+      IPadAir(
+        textScale: null == textScale
+            ? _self.textScale
+            : textScale // ignore: cast_nullable_to_non_nullable
+                  as double,
+        brightness: null == brightness
+            ? _self.brightness
+            : brightness // ignore: cast_nullable_to_non_nullable
+                  as Brightness,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+class IPadMini extends GoldenDevice {
+  const IPadMini({this.textScale = 1.0, this.brightness = Brightness.light})
+    : super._();
+
+  @override
+  @JsonKey()
+  final double textScale;
+  @override
+  @JsonKey()
+  final Brightness brightness;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $IPadMiniCopyWith<IPadMini> get copyWith =>
+      _$IPadMiniCopyWithImpl<IPadMini>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$IPadAirImpl &&
+            other is IPadMini &&
             (identical(other.textScale, textScale) ||
                 other.textScale == textScale) &&
             (identical(other.brightness, brightness) ||
@@ -788,91 +755,76 @@ class _$IPadAirImpl extends IPadAir {
 
   @override
   int get hashCode => Object.hash(runtimeType, textScale, brightness);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$IPadAirImplCopyWith<_$IPadAirImpl> get copyWith =>
-      __$$IPadAirImplCopyWithImpl<_$IPadAirImpl>(this, _$identity);
-}
-
-abstract class IPadAir extends GoldenDevice {
-  const factory IPadAir({final double textScale, final Brightness brightness}) =
-      _$IPadAirImpl;
-  const IPadAir._() : super._();
-
-  @override
-  double get textScale;
-  @override
-  Brightness get brightness;
-  @override
-  @JsonKey(ignore: true)
-  _$$IPadAirImplCopyWith<_$IPadAirImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$IPadMiniImplCopyWith<$Res>
-    implements $GoldenDeviceCopyWith<$Res> {
-  factory _$$IPadMiniImplCopyWith(
-          _$IPadMiniImpl value, $Res Function(_$IPadMiniImpl) then) =
-      __$$IPadMiniImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({double textScale, Brightness brightness});
-}
-
-/// @nodoc
-class __$$IPadMiniImplCopyWithImpl<$Res>
-    extends _$GoldenDeviceCopyWithImpl<$Res, _$IPadMiniImpl>
-    implements _$$IPadMiniImplCopyWith<$Res> {
-  __$$IPadMiniImplCopyWithImpl(
-      _$IPadMiniImpl _value, $Res Function(_$IPadMiniImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? textScale = null,
-    Object? brightness = null,
-  }) {
-    return _then(_$IPadMiniImpl(
-      textScale: null == textScale
-          ? _value.textScale
-          : textScale // ignore: cast_nullable_to_non_nullable
-              as double,
-      brightness: null == brightness
-          ? _value.brightness
-          : brightness // ignore: cast_nullable_to_non_nullable
-              as Brightness,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$IPadMiniImpl extends IPadMini {
-  const _$IPadMiniImpl(
-      {this.textScale = 1.0, this.brightness = Brightness.light})
-      : super._();
-
-  @override
-  @JsonKey()
-  final double textScale;
-  @override
-  @JsonKey()
-  final Brightness brightness;
 
   @override
   String toString() {
     return 'GoldenDevice.iPadMini(textScale: $textScale, brightness: $brightness)';
   }
+}
+
+/// @nodoc
+abstract mixin class $IPadMiniCopyWith<$Res>
+    implements $GoldenDeviceCopyWith<$Res> {
+  factory $IPadMiniCopyWith(IPadMini value, $Res Function(IPadMini) _then) =
+      _$IPadMiniCopyWithImpl;
+  @override
+  @useResult
+  $Res call({double textScale, Brightness brightness});
+}
+
+/// @nodoc
+class _$IPadMiniCopyWithImpl<$Res> implements $IPadMiniCopyWith<$Res> {
+  _$IPadMiniCopyWithImpl(this._self, this._then);
+
+  final IPadMini _self;
+  final $Res Function(IPadMini) _then;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({Object? textScale = null, Object? brightness = null}) {
+    return _then(
+      IPadMini(
+        textScale: null == textScale
+            ? _self.textScale
+            : textScale // ignore: cast_nullable_to_non_nullable
+                  as double,
+        brightness: null == brightness
+            ? _self.brightness
+            : brightness // ignore: cast_nullable_to_non_nullable
+                  as Brightness,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+class IPadPro extends GoldenDevice {
+  const IPadPro({this.textScale = 1.0, this.brightness = Brightness.light})
+    : super._();
+
+  @override
+  @JsonKey()
+  final double textScale;
+  @override
+  @JsonKey()
+  final Brightness brightness;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $IPadProCopyWith<IPadPro> get copyWith =>
+      _$IPadProCopyWithImpl<IPadPro>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$IPadMiniImpl &&
+            other is IPadPro &&
             (identical(other.textScale, textScale) ||
                 other.textScale == textScale) &&
             (identical(other.brightness, brightness) ||
@@ -881,91 +833,76 @@ class _$IPadMiniImpl extends IPadMini {
 
   @override
   int get hashCode => Object.hash(runtimeType, textScale, brightness);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$IPadMiniImplCopyWith<_$IPadMiniImpl> get copyWith =>
-      __$$IPadMiniImplCopyWithImpl<_$IPadMiniImpl>(this, _$identity);
-}
-
-abstract class IPadMini extends GoldenDevice {
-  const factory IPadMini(
-      {final double textScale, final Brightness brightness}) = _$IPadMiniImpl;
-  const IPadMini._() : super._();
-
-  @override
-  double get textScale;
-  @override
-  Brightness get brightness;
-  @override
-  @JsonKey(ignore: true)
-  _$$IPadMiniImplCopyWith<_$IPadMiniImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$IPadProImplCopyWith<$Res>
-    implements $GoldenDeviceCopyWith<$Res> {
-  factory _$$IPadProImplCopyWith(
-          _$IPadProImpl value, $Res Function(_$IPadProImpl) then) =
-      __$$IPadProImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({double textScale, Brightness brightness});
-}
-
-/// @nodoc
-class __$$IPadProImplCopyWithImpl<$Res>
-    extends _$GoldenDeviceCopyWithImpl<$Res, _$IPadProImpl>
-    implements _$$IPadProImplCopyWith<$Res> {
-  __$$IPadProImplCopyWithImpl(
-      _$IPadProImpl _value, $Res Function(_$IPadProImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? textScale = null,
-    Object? brightness = null,
-  }) {
-    return _then(_$IPadProImpl(
-      textScale: null == textScale
-          ? _value.textScale
-          : textScale // ignore: cast_nullable_to_non_nullable
-              as double,
-      brightness: null == brightness
-          ? _value.brightness
-          : brightness // ignore: cast_nullable_to_non_nullable
-              as Brightness,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$IPadProImpl extends IPadPro {
-  const _$IPadProImpl(
-      {this.textScale = 1.0, this.brightness = Brightness.light})
-      : super._();
-
-  @override
-  @JsonKey()
-  final double textScale;
-  @override
-  @JsonKey()
-  final Brightness brightness;
 
   @override
   String toString() {
     return 'GoldenDevice.iPadPro(textScale: $textScale, brightness: $brightness)';
   }
+}
+
+/// @nodoc
+abstract mixin class $IPadProCopyWith<$Res>
+    implements $GoldenDeviceCopyWith<$Res> {
+  factory $IPadProCopyWith(IPadPro value, $Res Function(IPadPro) _then) =
+      _$IPadProCopyWithImpl;
+  @override
+  @useResult
+  $Res call({double textScale, Brightness brightness});
+}
+
+/// @nodoc
+class _$IPadProCopyWithImpl<$Res> implements $IPadProCopyWith<$Res> {
+  _$IPadProCopyWithImpl(this._self, this._then);
+
+  final IPadPro _self;
+  final $Res Function(IPadPro) _then;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({Object? textScale = null, Object? brightness = null}) {
+    return _then(
+      IPadPro(
+        textScale: null == textScale
+            ? _self.textScale
+            : textScale // ignore: cast_nullable_to_non_nullable
+                  as double,
+        brightness: null == brightness
+            ? _self.brightness
+            : brightness // ignore: cast_nullable_to_non_nullable
+                  as Brightness,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+class SurfacePro7 extends GoldenDevice {
+  const SurfacePro7({this.textScale = 1.0, this.brightness = Brightness.light})
+    : super._();
+
+  @override
+  @JsonKey()
+  final double textScale;
+  @override
+  @JsonKey()
+  final Brightness brightness;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SurfacePro7CopyWith<SurfacePro7> get copyWith =>
+      _$SurfacePro7CopyWithImpl<SurfacePro7>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$IPadProImpl &&
+            other is SurfacePro7 &&
             (identical(other.textScale, textScale) ||
                 other.textScale == textScale) &&
             (identical(other.brightness, brightness) ||
@@ -974,91 +911,78 @@ class _$IPadProImpl extends IPadPro {
 
   @override
   int get hashCode => Object.hash(runtimeType, textScale, brightness);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$IPadProImplCopyWith<_$IPadProImpl> get copyWith =>
-      __$$IPadProImplCopyWithImpl<_$IPadProImpl>(this, _$identity);
-}
-
-abstract class IPadPro extends GoldenDevice {
-  const factory IPadPro({final double textScale, final Brightness brightness}) =
-      _$IPadProImpl;
-  const IPadPro._() : super._();
-
-  @override
-  double get textScale;
-  @override
-  Brightness get brightness;
-  @override
-  @JsonKey(ignore: true)
-  _$$IPadProImplCopyWith<_$IPadProImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$SurfacePro7ImplCopyWith<$Res>
-    implements $GoldenDeviceCopyWith<$Res> {
-  factory _$$SurfacePro7ImplCopyWith(
-          _$SurfacePro7Impl value, $Res Function(_$SurfacePro7Impl) then) =
-      __$$SurfacePro7ImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({double textScale, Brightness brightness});
-}
-
-/// @nodoc
-class __$$SurfacePro7ImplCopyWithImpl<$Res>
-    extends _$GoldenDeviceCopyWithImpl<$Res, _$SurfacePro7Impl>
-    implements _$$SurfacePro7ImplCopyWith<$Res> {
-  __$$SurfacePro7ImplCopyWithImpl(
-      _$SurfacePro7Impl _value, $Res Function(_$SurfacePro7Impl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? textScale = null,
-    Object? brightness = null,
-  }) {
-    return _then(_$SurfacePro7Impl(
-      textScale: null == textScale
-          ? _value.textScale
-          : textScale // ignore: cast_nullable_to_non_nullable
-              as double,
-      brightness: null == brightness
-          ? _value.brightness
-          : brightness // ignore: cast_nullable_to_non_nullable
-              as Brightness,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$SurfacePro7Impl extends SurfacePro7 {
-  const _$SurfacePro7Impl(
-      {this.textScale = 1.0, this.brightness = Brightness.light})
-      : super._();
-
-  @override
-  @JsonKey()
-  final double textScale;
-  @override
-  @JsonKey()
-  final Brightness brightness;
 
   @override
   String toString() {
     return 'GoldenDevice.surfacePro7(textScale: $textScale, brightness: $brightness)';
   }
+}
+
+/// @nodoc
+abstract mixin class $SurfacePro7CopyWith<$Res>
+    implements $GoldenDeviceCopyWith<$Res> {
+  factory $SurfacePro7CopyWith(
+    SurfacePro7 value,
+    $Res Function(SurfacePro7) _then,
+  ) = _$SurfacePro7CopyWithImpl;
+  @override
+  @useResult
+  $Res call({double textScale, Brightness brightness});
+}
+
+/// @nodoc
+class _$SurfacePro7CopyWithImpl<$Res> implements $SurfacePro7CopyWith<$Res> {
+  _$SurfacePro7CopyWithImpl(this._self, this._then);
+
+  final SurfacePro7 _self;
+  final $Res Function(SurfacePro7) _then;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({Object? textScale = null, Object? brightness = null}) {
+    return _then(
+      SurfacePro7(
+        textScale: null == textScale
+            ? _self.textScale
+            : textScale // ignore: cast_nullable_to_non_nullable
+                  as double,
+        brightness: null == brightness
+            ? _self.brightness
+            : brightness // ignore: cast_nullable_to_non_nullable
+                  as Brightness,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+class SurfaceDuo extends GoldenDevice {
+  const SurfaceDuo({this.textScale = 1.0, this.brightness = Brightness.light})
+    : super._();
+
+  @override
+  @JsonKey()
+  final double textScale;
+  @override
+  @JsonKey()
+  final Brightness brightness;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SurfaceDuoCopyWith<SurfaceDuo> get copyWith =>
+      _$SurfaceDuoCopyWithImpl<SurfaceDuo>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SurfacePro7Impl &&
+            other is SurfaceDuo &&
             (identical(other.textScale, textScale) ||
                 other.textScale == textScale) &&
             (identical(other.brightness, brightness) ||
@@ -1067,92 +991,78 @@ class _$SurfacePro7Impl extends SurfacePro7 {
 
   @override
   int get hashCode => Object.hash(runtimeType, textScale, brightness);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SurfacePro7ImplCopyWith<_$SurfacePro7Impl> get copyWith =>
-      __$$SurfacePro7ImplCopyWithImpl<_$SurfacePro7Impl>(this, _$identity);
-}
-
-abstract class SurfacePro7 extends GoldenDevice {
-  const factory SurfacePro7(
-      {final double textScale,
-      final Brightness brightness}) = _$SurfacePro7Impl;
-  const SurfacePro7._() : super._();
-
-  @override
-  double get textScale;
-  @override
-  Brightness get brightness;
-  @override
-  @JsonKey(ignore: true)
-  _$$SurfacePro7ImplCopyWith<_$SurfacePro7Impl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$SurfaceDuoImplCopyWith<$Res>
-    implements $GoldenDeviceCopyWith<$Res> {
-  factory _$$SurfaceDuoImplCopyWith(
-          _$SurfaceDuoImpl value, $Res Function(_$SurfaceDuoImpl) then) =
-      __$$SurfaceDuoImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({double textScale, Brightness brightness});
-}
-
-/// @nodoc
-class __$$SurfaceDuoImplCopyWithImpl<$Res>
-    extends _$GoldenDeviceCopyWithImpl<$Res, _$SurfaceDuoImpl>
-    implements _$$SurfaceDuoImplCopyWith<$Res> {
-  __$$SurfaceDuoImplCopyWithImpl(
-      _$SurfaceDuoImpl _value, $Res Function(_$SurfaceDuoImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? textScale = null,
-    Object? brightness = null,
-  }) {
-    return _then(_$SurfaceDuoImpl(
-      textScale: null == textScale
-          ? _value.textScale
-          : textScale // ignore: cast_nullable_to_non_nullable
-              as double,
-      brightness: null == brightness
-          ? _value.brightness
-          : brightness // ignore: cast_nullable_to_non_nullable
-              as Brightness,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$SurfaceDuoImpl extends SurfaceDuo {
-  const _$SurfaceDuoImpl(
-      {this.textScale = 1.0, this.brightness = Brightness.light})
-      : super._();
-
-  @override
-  @JsonKey()
-  final double textScale;
-  @override
-  @JsonKey()
-  final Brightness brightness;
 
   @override
   String toString() {
     return 'GoldenDevice.surfaceDuo(textScale: $textScale, brightness: $brightness)';
   }
+}
+
+/// @nodoc
+abstract mixin class $SurfaceDuoCopyWith<$Res>
+    implements $GoldenDeviceCopyWith<$Res> {
+  factory $SurfaceDuoCopyWith(
+    SurfaceDuo value,
+    $Res Function(SurfaceDuo) _then,
+  ) = _$SurfaceDuoCopyWithImpl;
+  @override
+  @useResult
+  $Res call({double textScale, Brightness brightness});
+}
+
+/// @nodoc
+class _$SurfaceDuoCopyWithImpl<$Res> implements $SurfaceDuoCopyWith<$Res> {
+  _$SurfaceDuoCopyWithImpl(this._self, this._then);
+
+  final SurfaceDuo _self;
+  final $Res Function(SurfaceDuo) _then;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({Object? textScale = null, Object? brightness = null}) {
+    return _then(
+      SurfaceDuo(
+        textScale: null == textScale
+            ? _self.textScale
+            : textScale // ignore: cast_nullable_to_non_nullable
+                  as double,
+        brightness: null == brightness
+            ? _self.brightness
+            : brightness // ignore: cast_nullable_to_non_nullable
+                  as Brightness,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+class GalaxyFold extends GoldenDevice {
+  const GalaxyFold({this.textScale = 1.0, this.brightness = Brightness.light})
+    : super._();
+
+  @override
+  @JsonKey()
+  final double textScale;
+  @override
+  @JsonKey()
+  final Brightness brightness;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $GalaxyFoldCopyWith<GalaxyFold> get copyWith =>
+      _$GalaxyFoldCopyWithImpl<GalaxyFold>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SurfaceDuoImpl &&
+            other is GalaxyFold &&
             (identical(other.textScale, textScale) ||
                 other.textScale == textScale) &&
             (identical(other.brightness, brightness) ||
@@ -1161,91 +1071,78 @@ class _$SurfaceDuoImpl extends SurfaceDuo {
 
   @override
   int get hashCode => Object.hash(runtimeType, textScale, brightness);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SurfaceDuoImplCopyWith<_$SurfaceDuoImpl> get copyWith =>
-      __$$SurfaceDuoImplCopyWithImpl<_$SurfaceDuoImpl>(this, _$identity);
-}
-
-abstract class SurfaceDuo extends GoldenDevice {
-  const factory SurfaceDuo(
-      {final double textScale, final Brightness brightness}) = _$SurfaceDuoImpl;
-  const SurfaceDuo._() : super._();
-
-  @override
-  double get textScale;
-  @override
-  Brightness get brightness;
-  @override
-  @JsonKey(ignore: true)
-  _$$SurfaceDuoImplCopyWith<_$SurfaceDuoImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$GalaxyFoldImplCopyWith<$Res>
-    implements $GoldenDeviceCopyWith<$Res> {
-  factory _$$GalaxyFoldImplCopyWith(
-          _$GalaxyFoldImpl value, $Res Function(_$GalaxyFoldImpl) then) =
-      __$$GalaxyFoldImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({double textScale, Brightness brightness});
-}
-
-/// @nodoc
-class __$$GalaxyFoldImplCopyWithImpl<$Res>
-    extends _$GoldenDeviceCopyWithImpl<$Res, _$GalaxyFoldImpl>
-    implements _$$GalaxyFoldImplCopyWith<$Res> {
-  __$$GalaxyFoldImplCopyWithImpl(
-      _$GalaxyFoldImpl _value, $Res Function(_$GalaxyFoldImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? textScale = null,
-    Object? brightness = null,
-  }) {
-    return _then(_$GalaxyFoldImpl(
-      textScale: null == textScale
-          ? _value.textScale
-          : textScale // ignore: cast_nullable_to_non_nullable
-              as double,
-      brightness: null == brightness
-          ? _value.brightness
-          : brightness // ignore: cast_nullable_to_non_nullable
-              as Brightness,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$GalaxyFoldImpl extends GalaxyFold {
-  const _$GalaxyFoldImpl(
-      {this.textScale = 1.0, this.brightness = Brightness.light})
-      : super._();
-
-  @override
-  @JsonKey()
-  final double textScale;
-  @override
-  @JsonKey()
-  final Brightness brightness;
 
   @override
   String toString() {
     return 'GoldenDevice.galaxyFold(textScale: $textScale, brightness: $brightness)';
   }
+}
+
+/// @nodoc
+abstract mixin class $GalaxyFoldCopyWith<$Res>
+    implements $GoldenDeviceCopyWith<$Res> {
+  factory $GalaxyFoldCopyWith(
+    GalaxyFold value,
+    $Res Function(GalaxyFold) _then,
+  ) = _$GalaxyFoldCopyWithImpl;
+  @override
+  @useResult
+  $Res call({double textScale, Brightness brightness});
+}
+
+/// @nodoc
+class _$GalaxyFoldCopyWithImpl<$Res> implements $GalaxyFoldCopyWith<$Res> {
+  _$GalaxyFoldCopyWithImpl(this._self, this._then);
+
+  final GalaxyFold _self;
+  final $Res Function(GalaxyFold) _then;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({Object? textScale = null, Object? brightness = null}) {
+    return _then(
+      GalaxyFold(
+        textScale: null == textScale
+            ? _self.textScale
+            : textScale // ignore: cast_nullable_to_non_nullable
+                  as double,
+        brightness: null == brightness
+            ? _self.brightness
+            : brightness // ignore: cast_nullable_to_non_nullable
+                  as Brightness,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+class GalaxyA51 extends GoldenDevice {
+  const GalaxyA51({this.textScale = 1.0, this.brightness = Brightness.light})
+    : super._();
+
+  @override
+  @JsonKey()
+  final double textScale;
+  @override
+  @JsonKey()
+  final Brightness brightness;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $GalaxyA51CopyWith<GalaxyA51> get copyWith =>
+      _$GalaxyA51CopyWithImpl<GalaxyA51>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GalaxyFoldImpl &&
+            other is GalaxyA51 &&
             (identical(other.textScale, textScale) ||
                 other.textScale == textScale) &&
             (identical(other.brightness, brightness) ||
@@ -1254,91 +1151,76 @@ class _$GalaxyFoldImpl extends GalaxyFold {
 
   @override
   int get hashCode => Object.hash(runtimeType, textScale, brightness);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$GalaxyFoldImplCopyWith<_$GalaxyFoldImpl> get copyWith =>
-      __$$GalaxyFoldImplCopyWithImpl<_$GalaxyFoldImpl>(this, _$identity);
-}
-
-abstract class GalaxyFold extends GoldenDevice {
-  const factory GalaxyFold(
-      {final double textScale, final Brightness brightness}) = _$GalaxyFoldImpl;
-  const GalaxyFold._() : super._();
-
-  @override
-  double get textScale;
-  @override
-  Brightness get brightness;
-  @override
-  @JsonKey(ignore: true)
-  _$$GalaxyFoldImplCopyWith<_$GalaxyFoldImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$GalaxyA51ImplCopyWith<$Res>
-    implements $GoldenDeviceCopyWith<$Res> {
-  factory _$$GalaxyA51ImplCopyWith(
-          _$GalaxyA51Impl value, $Res Function(_$GalaxyA51Impl) then) =
-      __$$GalaxyA51ImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({double textScale, Brightness brightness});
-}
-
-/// @nodoc
-class __$$GalaxyA51ImplCopyWithImpl<$Res>
-    extends _$GoldenDeviceCopyWithImpl<$Res, _$GalaxyA51Impl>
-    implements _$$GalaxyA51ImplCopyWith<$Res> {
-  __$$GalaxyA51ImplCopyWithImpl(
-      _$GalaxyA51Impl _value, $Res Function(_$GalaxyA51Impl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? textScale = null,
-    Object? brightness = null,
-  }) {
-    return _then(_$GalaxyA51Impl(
-      textScale: null == textScale
-          ? _value.textScale
-          : textScale // ignore: cast_nullable_to_non_nullable
-              as double,
-      brightness: null == brightness
-          ? _value.brightness
-          : brightness // ignore: cast_nullable_to_non_nullable
-              as Brightness,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$GalaxyA51Impl extends GalaxyA51 {
-  const _$GalaxyA51Impl(
-      {this.textScale = 1.0, this.brightness = Brightness.light})
-      : super._();
-
-  @override
-  @JsonKey()
-  final double textScale;
-  @override
-  @JsonKey()
-  final Brightness brightness;
 
   @override
   String toString() {
     return 'GoldenDevice.galaxyA51(textScale: $textScale, brightness: $brightness)';
   }
+}
+
+/// @nodoc
+abstract mixin class $GalaxyA51CopyWith<$Res>
+    implements $GoldenDeviceCopyWith<$Res> {
+  factory $GalaxyA51CopyWith(GalaxyA51 value, $Res Function(GalaxyA51) _then) =
+      _$GalaxyA51CopyWithImpl;
+  @override
+  @useResult
+  $Res call({double textScale, Brightness brightness});
+}
+
+/// @nodoc
+class _$GalaxyA51CopyWithImpl<$Res> implements $GalaxyA51CopyWith<$Res> {
+  _$GalaxyA51CopyWithImpl(this._self, this._then);
+
+  final GalaxyA51 _self;
+  final $Res Function(GalaxyA51) _then;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({Object? textScale = null, Object? brightness = null}) {
+    return _then(
+      GalaxyA51(
+        textScale: null == textScale
+            ? _self.textScale
+            : textScale // ignore: cast_nullable_to_non_nullable
+                  as double,
+        brightness: null == brightness
+            ? _self.brightness
+            : brightness // ignore: cast_nullable_to_non_nullable
+                  as Brightness,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+class NestHub extends GoldenDevice {
+  const NestHub({this.textScale = 1.0, this.brightness = Brightness.light})
+    : super._();
+
+  @override
+  @JsonKey()
+  final double textScale;
+  @override
+  @JsonKey()
+  final Brightness brightness;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $NestHubCopyWith<NestHub> get copyWith =>
+      _$NestHubCopyWithImpl<NestHub>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GalaxyA51Impl &&
+            other is NestHub &&
             (identical(other.textScale, textScale) ||
                 other.textScale == textScale) &&
             (identical(other.brightness, brightness) ||
@@ -1347,91 +1229,76 @@ class _$GalaxyA51Impl extends GalaxyA51 {
 
   @override
   int get hashCode => Object.hash(runtimeType, textScale, brightness);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$GalaxyA51ImplCopyWith<_$GalaxyA51Impl> get copyWith =>
-      __$$GalaxyA51ImplCopyWithImpl<_$GalaxyA51Impl>(this, _$identity);
-}
-
-abstract class GalaxyA51 extends GoldenDevice {
-  const factory GalaxyA51(
-      {final double textScale, final Brightness brightness}) = _$GalaxyA51Impl;
-  const GalaxyA51._() : super._();
-
-  @override
-  double get textScale;
-  @override
-  Brightness get brightness;
-  @override
-  @JsonKey(ignore: true)
-  _$$GalaxyA51ImplCopyWith<_$GalaxyA51Impl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$NestHubImplCopyWith<$Res>
-    implements $GoldenDeviceCopyWith<$Res> {
-  factory _$$NestHubImplCopyWith(
-          _$NestHubImpl value, $Res Function(_$NestHubImpl) then) =
-      __$$NestHubImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({double textScale, Brightness brightness});
-}
-
-/// @nodoc
-class __$$NestHubImplCopyWithImpl<$Res>
-    extends _$GoldenDeviceCopyWithImpl<$Res, _$NestHubImpl>
-    implements _$$NestHubImplCopyWith<$Res> {
-  __$$NestHubImplCopyWithImpl(
-      _$NestHubImpl _value, $Res Function(_$NestHubImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? textScale = null,
-    Object? brightness = null,
-  }) {
-    return _then(_$NestHubImpl(
-      textScale: null == textScale
-          ? _value.textScale
-          : textScale // ignore: cast_nullable_to_non_nullable
-              as double,
-      brightness: null == brightness
-          ? _value.brightness
-          : brightness // ignore: cast_nullable_to_non_nullable
-              as Brightness,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$NestHubImpl extends NestHub {
-  const _$NestHubImpl(
-      {this.textScale = 1.0, this.brightness = Brightness.light})
-      : super._();
-
-  @override
-  @JsonKey()
-  final double textScale;
-  @override
-  @JsonKey()
-  final Brightness brightness;
 
   @override
   String toString() {
     return 'GoldenDevice.nestHub(textScale: $textScale, brightness: $brightness)';
   }
+}
+
+/// @nodoc
+abstract mixin class $NestHubCopyWith<$Res>
+    implements $GoldenDeviceCopyWith<$Res> {
+  factory $NestHubCopyWith(NestHub value, $Res Function(NestHub) _then) =
+      _$NestHubCopyWithImpl;
+  @override
+  @useResult
+  $Res call({double textScale, Brightness brightness});
+}
+
+/// @nodoc
+class _$NestHubCopyWithImpl<$Res> implements $NestHubCopyWith<$Res> {
+  _$NestHubCopyWithImpl(this._self, this._then);
+
+  final NestHub _self;
+  final $Res Function(NestHub) _then;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({Object? textScale = null, Object? brightness = null}) {
+    return _then(
+      NestHub(
+        textScale: null == textScale
+            ? _self.textScale
+            : textScale // ignore: cast_nullable_to_non_nullable
+                  as double,
+        brightness: null == brightness
+            ? _self.brightness
+            : brightness // ignore: cast_nullable_to_non_nullable
+                  as Brightness,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+class NestHubMax extends GoldenDevice {
+  const NestHubMax({this.textScale = 1.0, this.brightness = Brightness.light})
+    : super._();
+
+  @override
+  @JsonKey()
+  final double textScale;
+  @override
+  @JsonKey()
+  final Brightness brightness;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $NestHubMaxCopyWith<NestHubMax> get copyWith =>
+      _$NestHubMaxCopyWithImpl<NestHubMax>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$NestHubImpl &&
+            other is NestHubMax &&
             (identical(other.textScale, textScale) ||
                 other.textScale == textScale) &&
             (identical(other.brightness, brightness) ||
@@ -1440,91 +1307,78 @@ class _$NestHubImpl extends NestHub {
 
   @override
   int get hashCode => Object.hash(runtimeType, textScale, brightness);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NestHubImplCopyWith<_$NestHubImpl> get copyWith =>
-      __$$NestHubImplCopyWithImpl<_$NestHubImpl>(this, _$identity);
-}
-
-abstract class NestHub extends GoldenDevice {
-  const factory NestHub({final double textScale, final Brightness brightness}) =
-      _$NestHubImpl;
-  const NestHub._() : super._();
-
-  @override
-  double get textScale;
-  @override
-  Brightness get brightness;
-  @override
-  @JsonKey(ignore: true)
-  _$$NestHubImplCopyWith<_$NestHubImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$NestHubMaxImplCopyWith<$Res>
-    implements $GoldenDeviceCopyWith<$Res> {
-  factory _$$NestHubMaxImplCopyWith(
-          _$NestHubMaxImpl value, $Res Function(_$NestHubMaxImpl) then) =
-      __$$NestHubMaxImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({double textScale, Brightness brightness});
-}
-
-/// @nodoc
-class __$$NestHubMaxImplCopyWithImpl<$Res>
-    extends _$GoldenDeviceCopyWithImpl<$Res, _$NestHubMaxImpl>
-    implements _$$NestHubMaxImplCopyWith<$Res> {
-  __$$NestHubMaxImplCopyWithImpl(
-      _$NestHubMaxImpl _value, $Res Function(_$NestHubMaxImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? textScale = null,
-    Object? brightness = null,
-  }) {
-    return _then(_$NestHubMaxImpl(
-      textScale: null == textScale
-          ? _value.textScale
-          : textScale // ignore: cast_nullable_to_non_nullable
-              as double,
-      brightness: null == brightness
-          ? _value.brightness
-          : brightness // ignore: cast_nullable_to_non_nullable
-              as Brightness,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$NestHubMaxImpl extends NestHubMax {
-  const _$NestHubMaxImpl(
-      {this.textScale = 1.0, this.brightness = Brightness.light})
-      : super._();
-
-  @override
-  @JsonKey()
-  final double textScale;
-  @override
-  @JsonKey()
-  final Brightness brightness;
 
   @override
   String toString() {
     return 'GoldenDevice.nestHubMax(textScale: $textScale, brightness: $brightness)';
   }
+}
+
+/// @nodoc
+abstract mixin class $NestHubMaxCopyWith<$Res>
+    implements $GoldenDeviceCopyWith<$Res> {
+  factory $NestHubMaxCopyWith(
+    NestHubMax value,
+    $Res Function(NestHubMax) _then,
+  ) = _$NestHubMaxCopyWithImpl;
+  @override
+  @useResult
+  $Res call({double textScale, Brightness brightness});
+}
+
+/// @nodoc
+class _$NestHubMaxCopyWithImpl<$Res> implements $NestHubMaxCopyWith<$Res> {
+  _$NestHubMaxCopyWithImpl(this._self, this._then);
+
+  final NestHubMax _self;
+  final $Res Function(NestHubMax) _then;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({Object? textScale = null, Object? brightness = null}) {
+    return _then(
+      NestHubMax(
+        textScale: null == textScale
+            ? _self.textScale
+            : textScale // ignore: cast_nullable_to_non_nullable
+                  as double,
+        brightness: null == brightness
+            ? _self.brightness
+            : brightness // ignore: cast_nullable_to_non_nullable
+                  as Brightness,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+class WebBrowser extends GoldenDevice {
+  const WebBrowser({this.textScale = 1.0, this.brightness = Brightness.light})
+    : super._();
+
+  @override
+  @JsonKey()
+  final double textScale;
+  @override
+  @JsonKey()
+  final Brightness brightness;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $WebBrowserCopyWith<WebBrowser> get copyWith =>
+      _$WebBrowserCopyWithImpl<WebBrowser>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$NestHubMaxImpl &&
+            other is WebBrowser &&
             (identical(other.textScale, textScale) ||
                 other.textScale == textScale) &&
             (identical(other.brightness, brightness) ||
@@ -1533,166 +1387,59 @@ class _$NestHubMaxImpl extends NestHubMax {
 
   @override
   int get hashCode => Object.hash(runtimeType, textScale, brightness);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NestHubMaxImplCopyWith<_$NestHubMaxImpl> get copyWith =>
-      __$$NestHubMaxImplCopyWithImpl<_$NestHubMaxImpl>(this, _$identity);
-}
-
-abstract class NestHubMax extends GoldenDevice {
-  const factory NestHubMax(
-      {final double textScale, final Brightness brightness}) = _$NestHubMaxImpl;
-  const NestHubMax._() : super._();
-
-  @override
-  double get textScale;
-  @override
-  Brightness get brightness;
-  @override
-  @JsonKey(ignore: true)
-  _$$NestHubMaxImplCopyWith<_$NestHubMaxImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$WebBrowserImplCopyWith<$Res>
-    implements $GoldenDeviceCopyWith<$Res> {
-  factory _$$WebBrowserImplCopyWith(
-          _$WebBrowserImpl value, $Res Function(_$WebBrowserImpl) then) =
-      __$$WebBrowserImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({double textScale, Brightness brightness});
-}
-
-/// @nodoc
-class __$$WebBrowserImplCopyWithImpl<$Res>
-    extends _$GoldenDeviceCopyWithImpl<$Res, _$WebBrowserImpl>
-    implements _$$WebBrowserImplCopyWith<$Res> {
-  __$$WebBrowserImplCopyWithImpl(
-      _$WebBrowserImpl _value, $Res Function(_$WebBrowserImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? textScale = null,
-    Object? brightness = null,
-  }) {
-    return _then(_$WebBrowserImpl(
-      textScale: null == textScale
-          ? _value.textScale
-          : textScale // ignore: cast_nullable_to_non_nullable
-              as double,
-      brightness: null == brightness
-          ? _value.brightness
-          : brightness // ignore: cast_nullable_to_non_nullable
-              as Brightness,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$WebBrowserImpl extends WebBrowser {
-  const _$WebBrowserImpl(
-      {this.textScale = 1.0, this.brightness = Brightness.light})
-      : super._();
-
-  @override
-  @JsonKey()
-  final double textScale;
-  @override
-  @JsonKey()
-  final Brightness brightness;
 
   @override
   String toString() {
     return 'GoldenDevice.webBrowser(textScale: $textScale, brightness: $brightness)';
   }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$WebBrowserImpl &&
-            (identical(other.textScale, textScale) ||
-                other.textScale == textScale) &&
-            (identical(other.brightness, brightness) ||
-                other.brightness == brightness));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, textScale, brightness);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$WebBrowserImplCopyWith<_$WebBrowserImpl> get copyWith =>
-      __$$WebBrowserImplCopyWithImpl<_$WebBrowserImpl>(this, _$identity);
-}
-
-abstract class WebBrowser extends GoldenDevice {
-  const factory WebBrowser(
-      {final double textScale, final Brightness brightness}) = _$WebBrowserImpl;
-  const WebBrowser._() : super._();
-
-  @override
-  double get textScale;
-  @override
-  Brightness get brightness;
-  @override
-  @JsonKey(ignore: true)
-  _$$WebBrowserImplCopyWith<_$WebBrowserImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$FullScreenWebBrowserImplCopyWith<$Res>
+abstract mixin class $WebBrowserCopyWith<$Res>
     implements $GoldenDeviceCopyWith<$Res> {
-  factory _$$FullScreenWebBrowserImplCopyWith(_$FullScreenWebBrowserImpl value,
-          $Res Function(_$FullScreenWebBrowserImpl) then) =
-      __$$FullScreenWebBrowserImplCopyWithImpl<$Res>;
+  factory $WebBrowserCopyWith(
+    WebBrowser value,
+    $Res Function(WebBrowser) _then,
+  ) = _$WebBrowserCopyWithImpl;
   @override
   @useResult
   $Res call({double textScale, Brightness brightness});
 }
 
 /// @nodoc
-class __$$FullScreenWebBrowserImplCopyWithImpl<$Res>
-    extends _$GoldenDeviceCopyWithImpl<$Res, _$FullScreenWebBrowserImpl>
-    implements _$$FullScreenWebBrowserImplCopyWith<$Res> {
-  __$$FullScreenWebBrowserImplCopyWithImpl(_$FullScreenWebBrowserImpl _value,
-      $Res Function(_$FullScreenWebBrowserImpl) _then)
-      : super(_value, _then);
+class _$WebBrowserCopyWithImpl<$Res> implements $WebBrowserCopyWith<$Res> {
+  _$WebBrowserCopyWithImpl(this._self, this._then);
 
-  @pragma('vm:prefer-inline')
+  final WebBrowser _self;
+  final $Res Function(WebBrowser) _then;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  $Res call({
-    Object? textScale = null,
-    Object? brightness = null,
-  }) {
-    return _then(_$FullScreenWebBrowserImpl(
-      textScale: null == textScale
-          ? _value.textScale
-          : textScale // ignore: cast_nullable_to_non_nullable
-              as double,
-      brightness: null == brightness
-          ? _value.brightness
-          : brightness // ignore: cast_nullable_to_non_nullable
-              as Brightness,
-    ));
+  @pragma('vm:prefer-inline')
+  $Res call({Object? textScale = null, Object? brightness = null}) {
+    return _then(
+      WebBrowser(
+        textScale: null == textScale
+            ? _self.textScale
+            : textScale // ignore: cast_nullable_to_non_nullable
+                  as double,
+        brightness: null == brightness
+            ? _self.brightness
+            : brightness // ignore: cast_nullable_to_non_nullable
+                  as Brightness,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
-class _$FullScreenWebBrowserImpl extends FullScreenWebBrowser {
-  const _$FullScreenWebBrowserImpl(
-      {this.textScale = 1.0, this.brightness = Brightness.light})
-      : super._();
+class FullScreenWebBrowser extends GoldenDevice {
+  const FullScreenWebBrowser({
+    this.textScale = 1.0,
+    this.brightness = Brightness.light,
+  }) : super._();
 
   @override
   @JsonKey()
@@ -1701,16 +1448,22 @@ class _$FullScreenWebBrowserImpl extends FullScreenWebBrowser {
   @JsonKey()
   final Brightness brightness;
 
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'GoldenDevice.fullScreenWebBrowser(textScale: $textScale, brightness: $brightness)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FullScreenWebBrowserCopyWith<FullScreenWebBrowser> get copyWith =>
+      _$FullScreenWebBrowserCopyWithImpl<FullScreenWebBrowser>(
+        this,
+        _$identity,
+      );
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FullScreenWebBrowserImpl &&
+            other is FullScreenWebBrowser &&
             (identical(other.textScale, textScale) ||
                 other.textScale == textScale) &&
             (identical(other.brightness, brightness) ||
@@ -1720,27 +1473,48 @@ class _$FullScreenWebBrowserImpl extends FullScreenWebBrowser {
   @override
   int get hashCode => Object.hash(runtimeType, textScale, brightness);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$FullScreenWebBrowserImplCopyWith<_$FullScreenWebBrowserImpl>
-      get copyWith =>
-          __$$FullScreenWebBrowserImplCopyWithImpl<_$FullScreenWebBrowserImpl>(
-              this, _$identity);
+  String toString() {
+    return 'GoldenDevice.fullScreenWebBrowser(textScale: $textScale, brightness: $brightness)';
+  }
 }
 
-abstract class FullScreenWebBrowser extends GoldenDevice {
-  const factory FullScreenWebBrowser(
-      {final double textScale,
-      final Brightness brightness}) = _$FullScreenWebBrowserImpl;
-  const FullScreenWebBrowser._() : super._();
+/// @nodoc
+abstract mixin class $FullScreenWebBrowserCopyWith<$Res>
+    implements $GoldenDeviceCopyWith<$Res> {
+  factory $FullScreenWebBrowserCopyWith(
+    FullScreenWebBrowser value,
+    $Res Function(FullScreenWebBrowser) _then,
+  ) = _$FullScreenWebBrowserCopyWithImpl;
+  @override
+  @useResult
+  $Res call({double textScale, Brightness brightness});
+}
 
+/// @nodoc
+class _$FullScreenWebBrowserCopyWithImpl<$Res>
+    implements $FullScreenWebBrowserCopyWith<$Res> {
+  _$FullScreenWebBrowserCopyWithImpl(this._self, this._then);
+
+  final FullScreenWebBrowser _self;
+  final $Res Function(FullScreenWebBrowser) _then;
+
+  /// Create a copy of GoldenDevice
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  double get textScale;
-  @override
-  Brightness get brightness;
-  @override
-  @JsonKey(ignore: true)
-  _$$FullScreenWebBrowserImplCopyWith<_$FullScreenWebBrowserImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  @pragma('vm:prefer-inline')
+  $Res call({Object? textScale = null, Object? brightness = null}) {
+    return _then(
+      FullScreenWebBrowser(
+        textScale: null == textScale
+            ? _self.textScale
+            : textScale // ignore: cast_nullable_to_non_nullable
+                  as double,
+        brightness: null == brightness
+            ? _self.brightness
+            : brightness // ignore: cast_nullable_to_non_nullable
+                  as Brightness,
+      ),
+    );
+  }
 }

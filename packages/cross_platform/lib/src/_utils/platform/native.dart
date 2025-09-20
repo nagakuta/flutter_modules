@@ -27,10 +27,10 @@ CrossPlatformType get currentPlatform {
 @pragma('vm:prefer-inline')
 @pragma('dart2js:prefer-inline')
 CrossPlatformType targetOf(final BuildContext context) => switch (Theme.of(context).platform) {
-      TargetPlatform.android => CrossPlatformType.android,
-      TargetPlatform.fuchsia => CrossPlatformType.fuchsia,
-      TargetPlatform.iOS => CrossPlatformType.iOS,
-      TargetPlatform.linux => CrossPlatformType.linux,
-      TargetPlatform.macOS => CrossPlatformType.macOS,
-      TargetPlatform.windows => CrossPlatformType.windows,
-    };
+  TargetPlatform.android => CrossPlatformType.android,
+  TargetPlatform.fuchsia => CrossPlatformType.fuchsia,
+  TargetPlatform.iOS => CrossPlatformType.iOS,
+  TargetPlatform.linux => CrossPlatformType.linux,
+  TargetPlatform.macOS => CrossPlatformType.macOS,
+  TargetPlatform.windows => CrossPlatformType.windows,
+};

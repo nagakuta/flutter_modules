@@ -5,11 +5,7 @@ import '/src/_utils/wrapper/_widget.dart';
 /// Molecule Widget
 abstract base class MoleculeWidget extends StatelessWidget with StatelessWrapper {
   // ignore: public_member_api_docs
-  const MoleculeWidget({
-    super.key,
-    this.padding = EdgeInsets.zero,
-    this.margin = EdgeInsets.zero,
-  });
+  const MoleculeWidget({super.key, this.padding = EdgeInsets.zero, this.margin = EdgeInsets.zero});
 
   @override
   @protected

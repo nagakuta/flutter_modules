@@ -5,7 +5,7 @@ homepage: https://github.com/nagakuta/flutter_modules/atomic_widget/
 publish_to: https://dart.cloudsmith.io/nagakuta_flutter/modules/
 
 environment:
-  sdk: ^3.3.0
+  sdk: ^3.8.0
   flutter: ">=3.3.0"
 
 dependencies:
@@ -26,7 +26,7 @@ dependencies:
     sdk: flutter
 
   # Freezed Annotation
-  freezed_annotation: ^2.0.0
+  freezed_annotation: ^3.0.0
 
   # Meta
   meta: ^1.0.0
@@ -37,13 +37,13 @@ dev_dependencies:
   # Build Runner
   build_runner: ^2.0.0
 
-  flutter_lints: ^3.0.0
+  flutter_lints: ^6.0.0
 
   flutter_test:
     sdk: flutter
 
   # Freezed
-  freezed: ^2.0.0
+  freezed: ^3.0.0
 
 dependency_overrides:
   # Adaptive Widget
@@ -80,7 +80,7 @@ flutter:
       # This plugin project was generated without specifying any
       # platforms with the `--platform` argument. If you see the `some_platform` map below, remove it and
       # then add platforms following the instruction here:
-      # https://flutter.dev/docs/development/packages-and-plugins/developing-packages#plugin-platforms
+      # https://flutter.dev/to/pubspec-plugin-platforms
       # -------------------
       # some_platform:
       #   pluginClass: somePluginClass
@@ -100,10 +100,10 @@ flutter:
   #   - images/a_dot_ham.jpeg
   #
   # For details regarding assets in packages, see
-  # https://flutter.dev/assets-and-images/#from-packages
+  # https://flutter.dev/to/asset-from-package
   #
   # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/assets-and-images/#resolution-aware
+  # https://flutter.dev/to/resolution-aware-images
 
   # To add custom fonts to your plugin package, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
@@ -123,4 +123,4 @@ flutter:
   #         weight: 700
   #
   # For details regarding fonts in packages, see
-  # https://flutter.dev/custom-fonts/#from-packages
+  # https://flutter.dev/to/font-from-package

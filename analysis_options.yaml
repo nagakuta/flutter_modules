@@ -10,16 +10,21 @@ analyzer:
     - packages/**/*.freezed.dart
     - packages/**/*.g.dart
     - packages/**/*.mocks.dart
+formatter:
+  page_width: 120
 linter:
   rules:
     always_put_control_body_on_new_line: false
     always_use_package_imports: false
     avoid_final_parameters: false
     avoid_types_on_closure_parameters: false
+    document_ignores: false
     lines_longer_than_80_chars: false
     no_leading_underscores_for_library_prefixes: false
     no_leading_underscores_for_local_identifiers: false
     omit_local_variable_types: false
+    omit_obvious_local_variable_types: false
+    omit_obvious_property_types: false
     one_member_abstracts: false
     prefer_double_quotes: false
     prefer_single_quotes: false

@@ -2,7 +2,7 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 import 'cross_platform_method_channel.dart';
 
-// ignore: public_member_api_docs
+// ignore: avoid_classes_with_only_static_members, public_member_api_docs
 abstract class CrossPlatformPlatform extends PlatformInterface {
   /// Constructs a CrossPlatformPlatform.
   CrossPlatformPlatform() : super(token: _token);
