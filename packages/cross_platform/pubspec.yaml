@@ -1,6 +1,6 @@
 name: cross_platform
 description: A new Flutter plugin project.
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/nagakuta/flutter_modules/cross_platform/
 publish_to: https://dart.cloudsmith.io/nagakuta_flutter/modules/
 

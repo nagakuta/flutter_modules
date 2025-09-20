@@ -15,6 +15,27 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`cross_platform` - `v0.1.1`](#cross_platform---v011)
+
+---
+
+#### `cross_platform` - `v0.1.1`
+
+ - Bump "cross_platform" to `0.1.1`.
+
+
+## 2025-09-20
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`skeletonize_widget` - `v0.1.1`](#skeletonize_widget---v011)
 
 ---
