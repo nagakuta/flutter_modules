@@ -6,11 +6,7 @@ import '/src/_utils/wrapper/_widget.dart';
 /// Atom Widget
 abstract base class AtomWidget extends StatelessWidget with StatelessWrapper {
   // ignore: public_member_api_docs
-  const AtomWidget({
-    super.key,
-    this.padding = EdgeInsets.zero,
-    this.margin = EdgeInsets.zero,
-  });
+  const AtomWidget({super.key, this.padding = EdgeInsets.zero, this.margin = EdgeInsets.zero});
 
   @override
   @protected

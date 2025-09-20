@@ -28,10 +28,7 @@ void main() {
       test("landscape", () {
         for (int i = 0; i < 100; i++) {
           final List<(Size, LayoutType)> testCases = <(Size, LayoutType)>[
-            (
-              Size(DLLW + Random().nextInt((1600 - DLLW).round()), Random().nextDouble() * DLLW),
-              LayoutType.desktop,
-            ),
+            (Size(DLLW + Random().nextInt((1600 - DLLW).round()), Random().nextDouble() * DLLW), LayoutType.desktop),
             (
               Size(LTLLW + Random().nextInt((DLLW - LTLLW).round()), Random().nextDouble() * LTLLW),
               LayoutType.largeTablet,

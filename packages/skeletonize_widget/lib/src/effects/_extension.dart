@@ -9,12 +9,11 @@ extension LinearGradientExtension on LinearGradient {
     final AlignmentGeometry? end,
     final List<double>? stops,
     final GradientTransform? transform,
-  }) =>
-      LinearGradient(
-        colors: colors ?? this.colors,
-        begin: begin ?? this.begin,
-        end: end ?? this.end,
-        stops: stops ?? this.stops,
-        transform: transform ?? this.transform,
-      );
+  }) => LinearGradient(
+    colors: colors ?? this.colors,
+    begin: begin ?? this.begin,
+    end: end ?? this.end,
+    stops: stops ?? this.stops,
+    transform: transform ?? this.transform,
+  );
 }

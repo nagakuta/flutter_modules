@@ -18,11 +18,6 @@ base mixin StatelessWrapper on StatelessWidget {
   @protected
   Widget build(final BuildContext context) {
     final Widget child = buildChild(context);
-    return padding.isValid || margin.isValid
-        ? Padding(
-            padding: padding.add(margin),
-            child: child,
-          )
-        : child;
+    return padding.isValid || margin.isValid ? Padding(padding: padding.add(margin), child: child) : child;
   }
 }

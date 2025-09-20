@@ -5,7 +5,6 @@ part 'exception.freezed.dart';
 /// AtomicWidget Exception
 @freezed
 sealed class AtomicWidgetException with _$AtomicWidgetException implements Exception {
-  // ignore: public_member_api_docs
   const factory AtomicWidgetException.shouldUseTemplateWidget() = ShouldUseTemplateWidgetException;
 
   const AtomicWidgetException._();

@@ -4,9 +4,7 @@ import 'package:flutter/material.dart';
 /// Page Widget
 abstract base class PageWidget extends StatelessWidget with AdaptiveScaffold {
   // ignore: public_member_api_docs
-  const PageWidget({
-    super.key,
-  });
+  const PageWidget({super.key});
 }
 
 /// Adaptive Scaffold

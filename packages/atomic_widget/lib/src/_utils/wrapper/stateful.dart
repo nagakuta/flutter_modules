@@ -26,10 +26,7 @@ base mixin WrapperState<T extends StatefulWrapper> on State<T> {
   Widget build(final BuildContext context) {
     final Widget child = buildChild(context);
     return widget.padding.isValid || widget.margin.isValid
-        ? Padding(
-            padding: widget.padding.add(widget.margin),
-            child: child,
-          )
+        ? Padding(padding: widget.padding.add(widget.margin), child: child)
         : child;
   }
 }

@@ -28,67 +28,64 @@ void main() {
 
     final List<LAYOUT_TYPE_FROM_CONSTRAINTS_TEST_CASE> landscapeTestCases =
         List<List<LAYOUT_TYPE_FROM_CONSTRAINTS_TEST_CASE>>.generate(
-      100,
-      growable: false,
-      (final _) => <LAYOUT_TYPE_FROM_CONSTRAINTS_TEST_CASE>[
-        (
-          Size(DLLW + Random().nextInt((1600 - DLLW).round()), Random().nextDouble() * DLLW),
-          LayoutType.desktop,
-        ),
-        (
-          Size(LTLLW + Random().nextInt((DLLW - LTLLW).round()), Random().nextDouble() * LTLLW),
-          LayoutType.largeTablet,
-        ),
-        (
-          Size(STLLW + Random().nextInt((LTLLW - STLLW).round()), Random().nextDouble() * STLLW),
-          LayoutType.smallTablet,
-        ),
-        (
-          Size(LHLLW + Random().nextInt((STLLW - LHLLW).round()), Random().nextDouble() * LHLLW),
-          LayoutType.largeHandset,
-        ),
-        (
-          Size(MHLLW + Random().nextInt((LHLLW - MHLLW).round()), Random().nextDouble() * MHLLW),
-          LayoutType.mediumHandset,
-        ),
-        (
-          Size(SHLLW + Random().nextInt((MHLLW - SHLLW).round()), Random().nextDouble() * SHLLW),
-          LayoutType.smallHandset,
-        ),
-      ],
-    ).expand((final List<LAYOUT_TYPE_FROM_CONSTRAINTS_TEST_CASE> element) => element).toList(growable: false);
+          100,
+          growable: false,
+          (final _) => <LAYOUT_TYPE_FROM_CONSTRAINTS_TEST_CASE>[
+            (Size(DLLW + Random().nextInt((1600 - DLLW).round()), Random().nextDouble() * DLLW), LayoutType.desktop),
+            (
+              Size(LTLLW + Random().nextInt((DLLW - LTLLW).round()), Random().nextDouble() * LTLLW),
+              LayoutType.largeTablet,
+            ),
+            (
+              Size(STLLW + Random().nextInt((LTLLW - STLLW).round()), Random().nextDouble() * STLLW),
+              LayoutType.smallTablet,
+            ),
+            (
+              Size(LHLLW + Random().nextInt((STLLW - LHLLW).round()), Random().nextDouble() * LHLLW),
+              LayoutType.largeHandset,
+            ),
+            (
+              Size(MHLLW + Random().nextInt((LHLLW - MHLLW).round()), Random().nextDouble() * MHLLW),
+              LayoutType.mediumHandset,
+            ),
+            (
+              Size(SHLLW + Random().nextInt((MHLLW - SHLLW).round()), Random().nextDouble() * SHLLW),
+              LayoutType.smallHandset,
+            ),
+          ],
+        ).expand((final List<LAYOUT_TYPE_FROM_CONSTRAINTS_TEST_CASE> element) => element).toList(growable: false);
 
     final List<LAYOUT_TYPE_FROM_CONSTRAINTS_TEST_CASE> portraitTestCases =
         List<List<LAYOUT_TYPE_FROM_CONSTRAINTS_TEST_CASE>>.generate(
-      100,
-      growable: false,
-      (final _) => <LAYOUT_TYPE_FROM_CONSTRAINTS_TEST_CASE>[
-        (
-          Size(DPLW + Random().nextInt((1600 - DPLW).round()), 1600.0 + Random().nextDouble() * DPLW),
-          LayoutType.desktop,
-        ),
-        (
-          Size(LTPLW + Random().nextInt((DPLW - LTPLW).round()), DPLW + Random().nextDouble() * LTPLW),
-          LayoutType.largeTablet,
-        ),
-        (
-          Size(STPLW + Random().nextInt((LTPLW - STPLW).round()), LTPLW + Random().nextDouble() * STPLW),
-          LayoutType.smallTablet,
-        ),
-        (
-          Size(LHPLW + Random().nextInt((STPLW - LHPLW).round()), STPLW + Random().nextDouble() * LHPLW),
-          LayoutType.largeHandset,
-        ),
-        (
-          Size(MHPLW + Random().nextInt((LHPLW - MHPLW).round()), LHPLW + Random().nextDouble() * MHPLW),
-          LayoutType.mediumHandset,
-        ),
-        (
-          Size(SHPLW + Random().nextInt((MHPLW - SHPLW).round()), MHPLW + Random().nextDouble() * SHPLW),
-          LayoutType.smallHandset,
-        ),
-      ],
-    ).expand((final List<LAYOUT_TYPE_FROM_CONSTRAINTS_TEST_CASE> element) => element).toList(growable: false);
+          100,
+          growable: false,
+          (final _) => <LAYOUT_TYPE_FROM_CONSTRAINTS_TEST_CASE>[
+            (
+              Size(DPLW + Random().nextInt((1600 - DPLW).round()), 1600.0 + Random().nextDouble() * DPLW),
+              LayoutType.desktop,
+            ),
+            (
+              Size(LTPLW + Random().nextInt((DPLW - LTPLW).round()), DPLW + Random().nextDouble() * LTPLW),
+              LayoutType.largeTablet,
+            ),
+            (
+              Size(STPLW + Random().nextInt((LTPLW - STPLW).round()), LTPLW + Random().nextDouble() * STPLW),
+              LayoutType.smallTablet,
+            ),
+            (
+              Size(LHPLW + Random().nextInt((STPLW - LHPLW).round()), STPLW + Random().nextDouble() * LHPLW),
+              LayoutType.largeHandset,
+            ),
+            (
+              Size(MHPLW + Random().nextInt((LHPLW - MHPLW).round()), LHPLW + Random().nextDouble() * MHPLW),
+              LayoutType.mediumHandset,
+            ),
+            (
+              Size(SHPLW + Random().nextInt((MHPLW - SHPLW).round()), MHPLW + Random().nextDouble() * SHPLW),
+              LayoutType.smallHandset,
+            ),
+          ],
+        ).expand((final List<LAYOUT_TYPE_FROM_CONSTRAINTS_TEST_CASE> element) => element).toList(growable: false);
 
     group("from size", () {
       test("landscape", () {
@@ -298,16 +295,16 @@ void main() {
 
     final List<WINDOW_TYPE_FROM_CONSTRAINTS_TEST_CASE> testCases =
         List<List<WINDOW_TYPE_FROM_CONSTRAINTS_TEST_CASE>>.generate(
-      100,
-      growable: false,
-      (final _) => <WINDOW_TYPE_FROM_CONSTRAINTS_TEST_CASE>[
-        (Size(ELWW + Random().nextInt((2400 - ELWW).round()), Random().nextDouble() * ELWW), WindowType.extraLarge),
-        (Size(LWW + Random().nextInt((ELWW - LWW).round()), Random().nextDouble() * LWW), WindowType.large),
-        (Size(EWW + Random().nextInt((LWW - EWW).round()), Random().nextDouble() * EWW), WindowType.expanded),
-        (Size(MWW + Random().nextInt((EWW - MWW).round()), Random().nextDouble() * MWW), WindowType.medium),
-        (Size(CWW + Random().nextInt((MWW - CWW).round()), Random().nextDouble() * CWW), WindowType.compact),
-      ],
-    ).expand((final List<WINDOW_TYPE_FROM_CONSTRAINTS_TEST_CASE> element) => element).toList(growable: false);
+          100,
+          growable: false,
+          (final _) => <WINDOW_TYPE_FROM_CONSTRAINTS_TEST_CASE>[
+            (Size(ELWW + Random().nextInt((2400 - ELWW).round()), Random().nextDouble() * ELWW), WindowType.extraLarge),
+            (Size(LWW + Random().nextInt((ELWW - LWW).round()), Random().nextDouble() * LWW), WindowType.large),
+            (Size(EWW + Random().nextInt((LWW - EWW).round()), Random().nextDouble() * EWW), WindowType.expanded),
+            (Size(MWW + Random().nextInt((EWW - MWW).round()), Random().nextDouble() * MWW), WindowType.medium),
+            (Size(CWW + Random().nextInt((MWW - CWW).round()), Random().nextDouble() * CWW), WindowType.compact),
+          ],
+        ).expand((final List<WINDOW_TYPE_FROM_CONSTRAINTS_TEST_CASE> element) => element).toList(growable: false);
 
     test("from size", () {
       for (final (Size size, WindowType expected) in testCases) {

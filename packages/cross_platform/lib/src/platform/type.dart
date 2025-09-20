@@ -26,31 +26,31 @@ enum CrossPlatformType {
   @pragma('vm:prefer-inline')
   @pragma('dart2js:prefer-inline')
   bool get isMaterial => switch (this) {
-        CrossPlatformType.android => true,
-        _ => false,
-      };
+    CrossPlatformType.android => true,
+    _ => false,
+  };
 
   @pragma("vm:platform-const")
   @pragma('vm:prefer-inline')
   @pragma('dart2js:prefer-inline')
   bool get isCupertino => switch (this) {
-        CrossPlatformType.iOS || CrossPlatformType.macOS => true,
-        _ => false,
-      };
+    CrossPlatformType.iOS || CrossPlatformType.macOS => true,
+    _ => false,
+  };
 
   @pragma("vm:platform-const")
   @pragma('vm:prefer-inline')
   @pragma('dart2js:prefer-inline')
   bool get isMobile => switch (this) {
-        CrossPlatformType.android || CrossPlatformType.iOS => true,
-        _ => false,
-      };
+    CrossPlatformType.android || CrossPlatformType.iOS => true,
+    _ => false,
+  };
 
   @pragma("vm:platform-const")
   @pragma('vm:prefer-inline')
   @pragma('dart2js:prefer-inline')
   bool get isWeb => switch (this) {
-        CrossPlatformType.web => true,
-        _ => false,
-      };
+    CrossPlatformType.web => true,
+    _ => false,
+  };
 }

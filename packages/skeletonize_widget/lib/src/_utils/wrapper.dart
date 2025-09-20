@@ -55,12 +55,7 @@ final class SkeletonWrapperState extends State<SkeletonWrapper> {
         ? ShaderMask(
             blendMode: BlendMode.srcATop,
             shaderCallback: (final _) => effect.createShader(
-              Rect.fromLTWH(
-                -offsetWithinSkeleton.dx,
-                -offsetWithinSkeleton.dy,
-                loaderSize.width,
-                loaderSize.height,
-              ),
+              Rect.fromLTWH(-offsetWithinSkeleton.dx, -offsetWithinSkeleton.dy, loaderSize.width, loaderSize.height),
             ),
             child: widget.bone ?? widget.child,
           )

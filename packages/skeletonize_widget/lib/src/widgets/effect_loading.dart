@@ -14,18 +14,15 @@ final class EffectLoading extends StatefulWidget {
     required final bool isLoading,
     required final Widget child,
     super.key,
-  })  : _effect = effect,
-        _isLoading = isLoading,
-        _child = child;
+  }) : _effect = effect,
+       _isLoading = isLoading,
+       _child = child;
 
   /// Shimmer Loading
-  EffectLoading.shimmer({
-    required final bool isLoading,
-    required final Widget child,
-    super.key,
-  })  : _effect = ShimmerEffect(),
-        _isLoading = isLoading,
-        _child = child;
+  EffectLoading.shimmer({required final bool isLoading, required final Widget child, super.key})
+    : _effect = ShimmerEffect(),
+      _isLoading = isLoading,
+      _child = child;
 
   final LinearGradient _effect;
   final bool _isLoading;
@@ -53,10 +50,7 @@ final class EffectLoadingState extends State<EffectLoading> with SingleTickerPro
 
   Size get size => (context.findRenderObject() as RenderBox?)?.size ?? Size.zero;
 
-  Offset getDescendantOffset({
-    required final RenderBox descendant,
-    final Offset offset = Offset.zero,
-  }) {
+  Offset getDescendantOffset({required final RenderBox descendant, final Offset offset = Offset.zero}) {
     final RenderBox? loaderBox = context.findRenderObject() as RenderBox?;
     return descendant.localToGlobal(offset, ancestor: loaderBox);
   }

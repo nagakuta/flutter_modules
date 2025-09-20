@@ -3,11 +3,9 @@ part of '_widget.dart';
 /// Icon Bone
 final class IconBone extends Bone {
   // ignore: public_member_api_docs
-  const IconBone({
-    super.key,
-    final double? size,
-  })  : _size = size,
-        super(width: null, height: null, contextPadding: EdgeInsets.zero, shape: null);
+  const IconBone({super.key, final double? size})
+    : _size = size,
+      super(width: null, height: null, contextPadding: EdgeInsets.zero, shape: null);
 
   final double? _size;
 

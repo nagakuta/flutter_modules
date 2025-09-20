@@ -36,38 +36,38 @@ base mixin AdaptiveWithLayoutType on StatelessWidget {
   /// Build a widget by layout type.
   @protected
   Widget buildLayout(final BuildContext context) => LayoutBuilder(
-        builder: (
-          final BuildContext context,
-          final BoxConstraints constraints,
-        ) =>
-            switch (constraints.layoutType) {
-          LayoutType.desktop => buildDesktop(context) ??
-              buildLargeTablet(context) ??
-              buildSmallTablet(context) ??
-              buildLargeHandset(context) ??
-              buildMediumHandset(context) ??
-              buildSmallHandset(context) ??
-              (throw UnimplementedError()),
-          LayoutType.largeTablet => buildLargeTablet(context) ??
-              buildSmallTablet(context) ??
-              buildLargeHandset(context) ??
-              buildMediumHandset(context) ??
-              buildSmallHandset(context) ??
-              (throw UnimplementedError()),
-          LayoutType.smallTablet => buildSmallTablet(context) ??
-              buildLargeHandset(context) ??
-              buildMediumHandset(context) ??
-              buildSmallHandset(context) ??
-              (throw UnimplementedError()),
-          LayoutType.largeHandset => buildLargeHandset(context) ??
-              buildMediumHandset(context) ??
-              buildSmallHandset(context) ??
-              (throw UnimplementedError()),
-          LayoutType.mediumHandset =>
-            buildMediumHandset(context) ?? buildSmallHandset(context) ?? (throw UnimplementedError()),
-          LayoutType.smallHandset => buildSmallHandset(context) ?? (throw UnimplementedError()),
-        },
-      );
+    builder: (final BuildContext context, final BoxConstraints constraints) => switch (constraints.layoutType) {
+      LayoutType.desktop =>
+        buildDesktop(context) ??
+            buildLargeTablet(context) ??
+            buildSmallTablet(context) ??
+            buildLargeHandset(context) ??
+            buildMediumHandset(context) ??
+            buildSmallHandset(context) ??
+            (throw UnimplementedError()),
+      LayoutType.largeTablet =>
+        buildLargeTablet(context) ??
+            buildSmallTablet(context) ??
+            buildLargeHandset(context) ??
+            buildMediumHandset(context) ??
+            buildSmallHandset(context) ??
+            (throw UnimplementedError()),
+      LayoutType.smallTablet =>
+        buildSmallTablet(context) ??
+            buildLargeHandset(context) ??
+            buildMediumHandset(context) ??
+            buildSmallHandset(context) ??
+            (throw UnimplementedError()),
+      LayoutType.largeHandset =>
+        buildLargeHandset(context) ??
+            buildMediumHandset(context) ??
+            buildSmallHandset(context) ??
+            (throw UnimplementedError()),
+      LayoutType.mediumHandset =>
+        buildMediumHandset(context) ?? buildSmallHandset(context) ?? (throw UnimplementedError()),
+      LayoutType.smallHandset => buildSmallHandset(context) ?? (throw UnimplementedError()),
+    },
+  );
 }
 
 /// Adaptive with window type
@@ -95,26 +95,24 @@ base mixin AdaptiveWithWindowType on StatelessWidget {
   /// Build a widget by window type.
   @protected
   Widget buildLayout(final BuildContext context) => LayoutBuilder(
-        builder: (
-          final BuildContext context,
-          final BoxConstraints constraints,
-        ) =>
-            switch (constraints.windowType) {
-          WindowType.extraLarge => buildExtraLarge(context) ??
-              buildLarge(context) ??
-              buildExpanded(context) ??
-              buildMedium(context) ??
-              buildCompact(context) ??
-              (throw UnimplementedError()),
-          WindowType.large => buildLarge(context) ??
-              buildExpanded(context) ??
-              buildMedium(context) ??
-              buildCompact(context) ??
-              (throw UnimplementedError()),
-          WindowType.expanded =>
-            buildExpanded(context) ?? buildMedium(context) ?? buildCompact(context) ?? (throw UnimplementedError()),
-          WindowType.medium => buildMedium(context) ?? buildCompact(context) ?? (throw UnimplementedError()),
-          WindowType.compact => buildCompact(context) ?? (throw UnimplementedError()),
-        },
-      );
+    builder: (final BuildContext context, final BoxConstraints constraints) => switch (constraints.windowType) {
+      WindowType.extraLarge =>
+        buildExtraLarge(context) ??
+            buildLarge(context) ??
+            buildExpanded(context) ??
+            buildMedium(context) ??
+            buildCompact(context) ??
+            (throw UnimplementedError()),
+      WindowType.large =>
+        buildLarge(context) ??
+            buildExpanded(context) ??
+            buildMedium(context) ??
+            buildCompact(context) ??
+            (throw UnimplementedError()),
+      WindowType.expanded =>
+        buildExpanded(context) ?? buildMedium(context) ?? buildCompact(context) ?? (throw UnimplementedError()),
+      WindowType.medium => buildMedium(context) ?? buildCompact(context) ?? (throw UnimplementedError()),
+      WindowType.compact => buildCompact(context) ?? (throw UnimplementedError()),
+    },
+  );
 }
