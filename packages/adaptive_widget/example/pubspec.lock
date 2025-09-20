@@ -7,7 +7,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.1.0"
+    version: "0.1.1"
   async:
     dependency: transitive
     description:
@@ -52,11 +52,11 @@ packages:
     dependency: "direct overridden"
     description:
       path: "packages/cross_platform"
-      ref: "cross_platform-v0.1.0"
-      resolved-ref: b605240a6b9226c947e1b728b6428d1bb1e289a8
+      ref: "cross_platform-v0.1.1"
+      resolved-ref: bd9e094e65530e46eeb95bce5826f1de9abd7327
       url: "https://github.com/nagakuta/flutter_modules.git"
     source: git
-    version: "0.1.0"
+    version: "0.1.1"
   cupertino_icons:
     dependency: "direct main"
     description:
