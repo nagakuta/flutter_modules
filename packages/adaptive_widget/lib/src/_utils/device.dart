@@ -10,12 +10,7 @@ import '/src/_utils/types.dart';
 part 'device.freezed.dart';
 
 @visibleForTesting
-@Freezed(
-  fromJson: false,
-  toJson: false,
-  map: FreezedMapOptions.none,
-  when: FreezedWhenOptions.none,
-)
+@Freezed(copyWith: true)
 sealed class GoldenDevice with _$GoldenDevice {
   const factory GoldenDevice.iPhoneSE({
     @Default(1.0) final double textScale,
@@ -110,25 +105,25 @@ sealed class GoldenDevice with _$GoldenDevice {
   const GoldenDevice._();
 
   static List<GoldenDevice> get all => const <GoldenDevice>[
-        IPhoneSE(),
-        IPhoneXR(),
-        IPhone12Pro(),
-        IPhone14ProMax(),
-        Pixel7(),
-        GalaxyS8Plus(),
-        GalaxyS20Ultra(),
-        IPadAir(),
-        IPadMini(),
-        IPadPro(),
-        SurfacePro7(),
-        SurfaceDuo(),
-        GalaxyFold(),
-        GalaxyA51(),
-        NestHub(),
-        NestHubMax(),
-        WebBrowser(),
-        FullScreenWebBrowser(),
-      ];
+    IPhoneSE(),
+    IPhoneXR(),
+    IPhone12Pro(),
+    IPhone14ProMax(),
+    Pixel7(),
+    GalaxyS8Plus(),
+    GalaxyS20Ultra(),
+    IPadAir(),
+    IPadMini(),
+    IPadPro(),
+    SurfacePro7(),
+    SurfaceDuo(),
+    GalaxyFold(),
+    GalaxyA51(),
+    NestHub(),
+    NestHubMax(),
+    WebBrowser(),
+    FullScreenWebBrowser(),
+  ];
 
   static List<GoldenDevice> get android =>
       all.where((final GoldenDevice device) => device.platform.isMaterial).toList(growable: false);
@@ -184,25 +179,25 @@ sealed class GoldenDevice with _$GoldenDevice {
       .toList(growable: false);
 
   Size get size => switch (this) {
-        IPhoneSE() => const Size(375, 667),
-        IPhoneXR() => const Size(414, 896),
-        IPhone12Pro() => const Size(390, 844),
-        IPhone14ProMax() => const Size(430, 932),
-        Pixel7() => const Size(412, 915),
-        GalaxyS8Plus() => const Size(360, 740),
-        GalaxyS20Ultra() => const Size(412, 915),
-        IPadAir() => const Size(820, 1180),
-        IPadMini() => const Size(768, 1024),
-        IPadPro() => const Size(1024, 1366),
-        SurfacePro7() => const Size(912, 1368),
-        SurfaceDuo() => const Size(540, 720),
-        GalaxyFold() => const Size(280, 653),
-        GalaxyA51() => const Size(412, 914),
-        NestHub() => const Size(1024, 600),
-        NestHubMax() => const Size(1280, 800),
-        WebBrowser() => const Size(1600, 900),
-        FullScreenWebBrowser() => const Size(1920, 1080),
-      };
+    IPhoneSE() => const Size(375, 667),
+    IPhoneXR() => const Size(414, 896),
+    IPhone12Pro() => const Size(390, 844),
+    IPhone14ProMax() => const Size(430, 932),
+    Pixel7() => const Size(412, 915),
+    GalaxyS8Plus() => const Size(360, 740),
+    GalaxyS20Ultra() => const Size(412, 915),
+    IPadAir() => const Size(820, 1180),
+    IPadMini() => const Size(768, 1024),
+    IPadPro() => const Size(1024, 1366),
+    SurfacePro7() => const Size(912, 1368),
+    SurfaceDuo() => const Size(540, 720),
+    GalaxyFold() => const Size(280, 653),
+    GalaxyA51() => const Size(412, 914),
+    NestHub() => const Size(1024, 600),
+    NestHubMax() => const Size(1280, 800),
+    WebBrowser() => const Size(1600, 900),
+    FullScreenWebBrowser() => const Size(1920, 1080),
+  };
 
   Size get portrait => Size(size.shortestSide, size.longestSide);
 
@@ -211,63 +206,60 @@ sealed class GoldenDevice with _$GoldenDevice {
   Breakpoint get breakpoint => Breakpoint.fromSize(size);
 
   String get name => switch (this) {
-        IPhoneSE() => "iPhoneSE",
-        IPhoneXR() => "iPhoneXR",
-        IPhone12Pro() => "iPhone12Pro",
-        IPhone14ProMax() => "iPhone14ProMax",
-        Pixel7() => "Pixel7",
-        GalaxyS8Plus() => "GalaxyS8Plus",
-        GalaxyS20Ultra() => "GalaxyS20Ultra",
-        IPadAir() => "iPadAir",
-        IPadMini() => "iPadMini",
-        IPadPro() => "iPadPro",
-        SurfacePro7() => "SurfacePro7",
-        SurfaceDuo() => "SurfaceDuo",
-        GalaxyFold() => "GalaxyFold",
-        GalaxyA51() => "GalaxyA51",
-        NestHub() => "NestHub",
-        NestHubMax() => "NestHubMax",
-        WebBrowser() => "WebBrowser",
-        FullScreenWebBrowser() => "FullScreenWebBrowser",
-      };
+    IPhoneSE() => "iPhoneSE",
+    IPhoneXR() => "iPhoneXR",
+    IPhone12Pro() => "iPhone12Pro",
+    IPhone14ProMax() => "iPhone14ProMax",
+    Pixel7() => "Pixel7",
+    GalaxyS8Plus() => "GalaxyS8Plus",
+    GalaxyS20Ultra() => "GalaxyS20Ultra",
+    IPadAir() => "iPadAir",
+    IPadMini() => "iPadMini",
+    IPadPro() => "iPadPro",
+    SurfacePro7() => "SurfacePro7",
+    SurfaceDuo() => "SurfaceDuo",
+    GalaxyFold() => "GalaxyFold",
+    GalaxyA51() => "GalaxyA51",
+    NestHub() => "NestHub",
+    NestHubMax() => "NestHubMax",
+    WebBrowser() => "WebBrowser",
+    FullScreenWebBrowser() => "FullScreenWebBrowser",
+  };
 
   CrossPlatformType get platform => switch (this) {
-        IPhoneSE() ||
-        IPhoneXR() ||
-        IPhone12Pro() ||
-        IPhone14ProMax() ||
-        IPadAir() ||
-        IPadMini() ||
-        IPadPro() =>
-          CrossPlatformType.iOS,
-        Pixel7() ||
-        GalaxyS8Plus() ||
-        GalaxyS20Ultra() ||
-        SurfacePro7() ||
-        SurfaceDuo() ||
-        GalaxyFold() ||
-        GalaxyA51() ||
-        NestHub() ||
-        NestHubMax() =>
-          CrossPlatformType.android,
-        WebBrowser() || FullScreenWebBrowser() => CrossPlatformType.web,
-      };
+    IPhoneSE() ||
+    IPhoneXR() ||
+    IPhone12Pro() ||
+    IPhone14ProMax() ||
+    IPadAir() ||
+    IPadMini() ||
+    IPadPro() => CrossPlatformType.iOS,
+    Pixel7() ||
+    GalaxyS8Plus() ||
+    GalaxyS20Ultra() ||
+    SurfacePro7() ||
+    SurfaceDuo() ||
+    GalaxyFold() ||
+    GalaxyA51() ||
+    NestHub() ||
+    NestHubMax() => CrossPlatformType.android,
+    WebBrowser() || FullScreenWebBrowser() => CrossPlatformType.web,
+  };
 
   double get pixelRatio => switch (this) {
-        IPhoneSE() ||
-        IPhoneXR() ||
-        IPadAir() ||
-        IPadMini() ||
-        IPadPro() ||
-        SurfacePro7() ||
-        NestHub() ||
-        NestHubMax() =>
-          2.0,
-        SurfaceDuo() => 2.5,
-        Pixel7() || GalaxyA51() => 2.6,
-        IPhone12Pro() || IPhone14ProMax() || GalaxyFold() => 3.0,
-        GalaxyS20Ultra() => 3.5,
-        GalaxyS8Plus() => 4.0,
-        _ => 1.0,
-      };
+    IPhoneSE() ||
+    IPhoneXR() ||
+    IPadAir() ||
+    IPadMini() ||
+    IPadPro() ||
+    SurfacePro7() ||
+    NestHub() ||
+    NestHubMax() => 2.0,
+    SurfaceDuo() => 2.5,
+    Pixel7() || GalaxyA51() => 2.6,
+    IPhone12Pro() || IPhone14ProMax() || GalaxyFold() => 3.0,
+    GalaxyS20Ultra() => 3.5,
+    GalaxyS8Plus() => 4.0,
+    _ => 1.0,
+  };
 }

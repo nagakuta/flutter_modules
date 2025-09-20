@@ -8,13 +8,7 @@ import '/src/_utils/_const.dart';
 part 'types.freezed.dart';
 
 /// Breakpoint
-@Freezed(
-  copyWith: false,
-  fromJson: false,
-  toJson: false,
-  map: FreezedMapOptions.none,
-  when: FreezedWhenOptions.none,
-)
+@freezed
 abstract class Breakpoint with _$Breakpoint {
   const factory Breakpoint({
     required final LayoutType layoutType,

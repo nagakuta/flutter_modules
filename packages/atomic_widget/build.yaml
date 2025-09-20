@@ -7,6 +7,19 @@ targets:
     builders:
       freezed:
         enabled: true
+        options:
+          format: true
+          add_implicit_final: true
+          copy_with: false
+          equal: true
+          from_json: false
+          generic_argument_factories: false
+          make_collections_unmodifiable: true
+          map: false
+          to_json: false
+          to_string_override: true
+          union_value_case: none
+          when: false
         generate_for:
           include:
             - lib/src/_utils/exception.dart
