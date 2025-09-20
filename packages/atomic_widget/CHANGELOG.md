@@ -1,3 +1,6 @@
+## 0.1.3
+- build: Bump "Flutter" to `3.32.8`.
+
 ## 0.1.2
 - chore: Append `adaptive_widget` to dependency.
 

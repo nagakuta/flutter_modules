@@ -45,14 +45,14 @@ dependency_overrides:
   adaptive_widget:
     git:
       url: https://github.com/nagakuta/flutter_modules.git
-      ref: adaptive_widget-v0.1.0
+      ref: adaptive_widget-v0.1.1
       path: packages/adaptive_widget
 
   # Cross Platform
   cross_platform:
     git:
       url: https://github.com/nagakuta/flutter_modules.git
-      ref: cross_platform-v0.1.0
+      ref: cross_platform-v0.1.1
       path: packages/cross_platform
 
 # For information on the generic Dart part of this file, see the

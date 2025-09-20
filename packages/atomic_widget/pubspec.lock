@@ -13,11 +13,11 @@ packages:
     dependency: "direct main"
     description:
       path: "packages/adaptive_widget"
-      ref: "adaptive_widget-v0.1.0"
-      resolved-ref: "2c53db6c6aae503c8423090d2bd879c84124bf90"
+      ref: "adaptive_widget-v0.1.1"
+      resolved-ref: "23ed03c05f229cd3742218e8b88aa4b80d5505d0"
       url: "https://github.com/nagakuta/flutter_modules.git"
     source: git
-    version: "0.1.0"
+    version: "0.1.1"
   analyzer:
     dependency: transitive
     description:
@@ -150,11 +150,11 @@ packages:
     dependency: "direct main"
     description:
       path: "packages/cross_platform"
-      ref: "cross_platform-v0.1.0"
-      resolved-ref: b605240a6b9226c947e1b728b6428d1bb1e289a8
+      ref: "cross_platform-v0.1.1"
+      resolved-ref: bd9e094e65530e46eeb95bce5826f1de9abd7327
       url: "https://github.com/nagakuta/flutter_modules.git"
     source: git
-    version: "0.1.0"
+    version: "0.1.1"
   crypto:
     dependency: transitive
     description:
