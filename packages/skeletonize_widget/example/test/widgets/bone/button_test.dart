@@ -1,112 +1,81 @@
+import 'package:alchemist/alchemist.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:golden_toolkit/golden_toolkit.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:skeletonize_widget/src/widgets/bone/_widget.dart';
 
-void main() {
-  group("ButtonBone", () {
-    testGoldens("elevated", (final WidgetTester tester) async {
-      await tester.pumpWidgetBuilder(
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text("Elevated"),
-            ),
-            const ButtonBone.elevated(),
-          ],
+Future<void> main() async {
+  await goldenTest(
+    "ButtonBone",
+    fileName: "button",
+    builder: () => GoldenTestGroup(
+      columns: 2,
+      children: <Widget>[
+        GoldenTestScenario(
+          name: "elevated",
+          child: ElevatedButton(
+            onPressed: () {},
+            child: const Text("Elevated"),
+          ),
         ),
-        wrapper: materialAppWrapper(
-          theme: ThemeData(textTheme: GoogleFonts.notoSansJpTextTheme()),
+        GoldenTestScenario(
+          name: "bone",
+          child: const ButtonBone.elevated(),
         ),
-        surfaceSize: const Size(240, 60),
-      );
-
-      await screenMatchesGolden(tester, "button/elevated");
-    });
-
-    testGoldens("filled", (final WidgetTester tester) async {
-      await tester.pumpWidgetBuilder(
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            FilledButton(
-              onPressed: () {},
-              child: const Text("Filled"),
-            ),
-            const ButtonBone.filled(),
-          ],
+        GoldenTestScenario(
+          name: "filled",
+          child: FilledButton(
+            onPressed: () {},
+            child: const Text("Filled"),
+          ),
         ),
-        wrapper: materialAppWrapper(
-          theme: ThemeData(textTheme: GoogleFonts.notoSansJpTextTheme()),
+        GoldenTestScenario(
+          name: "bone",
+          child: const ButtonBone.filled(),
         ),
-        surfaceSize: const Size(240, 60),
-      );
-
-      await screenMatchesGolden(tester, "button/filled");
-    });
-
-    testGoldens("outlined", (final WidgetTester tester) async {
-      await tester.pumpWidgetBuilder(
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            OutlinedButton(
-              onPressed: () {},
-              child: const Text("Outlined"),
-            ),
-            const ButtonBone.outlined(),
-          ],
+        GoldenTestScenario(
+          name: "outlined",
+          child: OutlinedButton(
+            onPressed: () {},
+            child: const Text("Outlined"),
+          ),
         ),
-        wrapper: materialAppWrapper(
-          theme: ThemeData(textTheme: GoogleFonts.notoSansJpTextTheme()),
+        GoldenTestScenario(
+          name: "bone",
+          child: const ButtonBone.outlined(),
         ),
-        surfaceSize: const Size(240, 60),
-      );
-
-      await screenMatchesGolden(tester, "button/outlined");
-    });
-
-    testGoldens("text", (final WidgetTester tester) async {
-      await tester.pumpWidgetBuilder(
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            TextButton(
-              onPressed: () {},
-              child: const Text("Text"),
-            ),
-            const ButtonBone.text(),
-          ],
+        GoldenTestScenario(
+          name: "text",
+          child: TextButton(
+            onPressed: () {},
+            child: const Text("Text"),
+          ),
         ),
-        wrapper: materialAppWrapper(
-          theme: ThemeData(textTheme: GoogleFonts.notoSansJpTextTheme()),
+        GoldenTestScenario(
+          name: "bone",
+          child: const ButtonBone.text(),
         ),
-        surfaceSize: const Size(240, 60),
-      );
+      ],
+    ),
+  );
 
-      await screenMatchesGolden(tester, "button/text");
-    });
-  });
-
-  testGoldens("IconButtonBone", (final WidgetTester tester) async {
-    await tester.pumpWidgetBuilder(
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-          IconButton.filled(
+  await goldenTest(
+    "IconButtonBone",
+    fileName: "icon_button",
+    builder: () => GoldenTestGroup(
+      columns: 2,
+      children: <Widget>[
+        GoldenTestScenario(
+          name: "icon",
+          child: IconButton.filled(
             onPressed: () {},
             icon: const Icon(Icons.abc),
           ),
-          const IconButtonBone(),
-        ],
-      ),
-      wrapper: materialAppWrapper(),
-      surfaceSize: const Size(120, 60),
-    );
-
-    await screenMatchesGolden(tester, "button/icon");
-  });
+        ),
+        GoldenTestScenario(
+          name: "bone",
+          child: const IconButtonBone(),
+        ),
+      ],
+    ),
+  );
 }

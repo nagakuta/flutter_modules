@@ -59,7 +59,7 @@ scripts:
     packageFilters:
       flutter: true
       dirExists: "test"
-      dependsOn: "golden_toolkit"
+      dependsOn: "alchemist"
       scope: "*_example"
 
   # Clean Up
