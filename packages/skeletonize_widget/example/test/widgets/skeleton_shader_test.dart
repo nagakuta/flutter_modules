@@ -1,16 +1,21 @@
+import 'package:alchemist/alchemist.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:golden_toolkit/golden_toolkit.dart';
 import 'package:skeletonize_widget/src/effects/effect.dart';
 import 'package:skeletonize_widget/src/widgets/bone/_widget.dart';
 import 'package:skeletonize_widget/src/widgets/effect_loading.dart';
 import 'package:skeletonize_widget/src/widgets/skeleton_shader.dart';
 
-void main() {
-  group("SkeletonShader", () {
-    testGoldens("loading", (final WidgetTester tester) async {
-      await tester.pumpWidgetBuilder(
-        Center(
+Future<void> main() async {
+  await goldenTest(
+    "SkeletonShader",
+    fileName: "skeleton_shader",
+    pumpBeforeTest: pumpOnce,
+    builder: () => GoldenTestGroup(
+      columns: 3,
+      children: <Widget>[
+        GoldenTestScenario(
+          name: "loading",
           child: EffectLoading(
             effect: ShimmerEffect(),
             isLoading: true,
@@ -22,20 +27,8 @@ void main() {
             ),
           ),
         ),
-        wrapper: materialAppWrapper(),
-        surfaceSize: const Size(60, 60),
-      );
-
-      await screenMatchesGolden(
-        tester,
-        "skeleton_shader/loading",
-        customPump: (final WidgetTester tester) => tester.pump(),
-      );
-    });
-
-    testGoldens("replaced", (final WidgetTester tester) async {
-      await tester.pumpWidgetBuilder(
-        Center(
+        GoldenTestScenario(
+          name: "replaced",
           child: EffectLoading(
             effect: ShimmerEffect(),
             isLoading: true,
@@ -48,20 +41,8 @@ void main() {
             ),
           ),
         ),
-        wrapper: materialAppWrapper(),
-        surfaceSize: const Size(60, 60),
-      );
-
-      await screenMatchesGolden(
-        tester,
-        "skeleton_shader/replaced",
-        customPump: (final WidgetTester tester) => tester.pump(),
-      );
-    });
-
-    testGoldens("not loading", (final WidgetTester tester) async {
-      await tester.pumpWidgetBuilder(
-        Center(
+        GoldenTestScenario(
+          name: "not loading",
           child: EffectLoading(
             effect: ShimmerEffect(),
             isLoading: false,
@@ -73,15 +54,7 @@ void main() {
             ),
           ),
         ),
-        wrapper: materialAppWrapper(),
-        surfaceSize: const Size(60, 60),
-      );
-
-      await screenMatchesGolden(
-        tester,
-        "skeleton_shader/not_loading",
-        customPump: (final WidgetTester tester) => tester.pump(),
-      );
-    });
-  });
+      ],
+    ),
+  );
 }
